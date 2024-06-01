@@ -1,0 +1,2282 @@
+#+TITLE: Background-Reading: Introduction to Mathematical Thinking
+#+AUTHOR: Agung Tuanany
+#+DATE: 2024-05-17 Fri
+#+OPTIONS:
+#+STARTUP: Course,
+#+TAGS: ossu, math-ossu
+#+TOC: headlines 2
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan, pdfstartview=FitH}
+#+LATEX_HEADER: \usepackage{parskip}
+
+
+* Overview
+
+This course is on [[https://www.coursera.org/learn/mathematical-thinking/home][coursera]] it's divided into 9 weeks of lectures. In every lectures I must run 1-2 hours. introduce by
+[[https://github.com/ossu/math/tree/master][ossu-math]].
+
+
+* Lecture 0 - Welcome
+
+- It's about thinking, not learning new math techniques.
+- How to thinking a problem in certain way, there's no only one way to solve a math.
+- The goal is to understanding, not doing.
+- Try all the exercises.
+- It's not about right or wrong, but on learning how to think about a problem.
+
+- Read this two pdf that introduction to math as the title is (i)"/[[file:./01-Background-Reading-math.pdf][Background-Reading-Math]]/" and (ii)"/[[file:./02-Supplement-Set-Theory-math.pdf][Supplement-Set-Theory-Math]]/"
+
+
+* Summary--Background Reading Math
+
+** What is Mathematics?
+
+This note, is written by [[https://en.wikipedia.org/wiki/Keith_Devlin][Keith Devlin]]. Its the pocket book for coursera course.
+
+Mathematics is not only focusing on learning and applying various procedures to solve a math problems. I've met many
+people who graduated with degrees in such mathematically rich subjects as engineering, physics, computer science, and
+even mathematics itself, who have told me that they went through their entire school and college-level education without
+over gaining a good overview of what constitutes modern mathematics. Only later in life do they sometimes catch a
+glimpse of the true nature of the subjects and come to appreciate the extent of its pervasive role in modern life.
+
+** More than arithmetic
+
+Although mathematics has continued to develop ever since, and shows no sign of stopping, by and large, school
+mathematics comprises the developments together with /just two/ further advances, booth from the seventeenth century:
+(i) *calculus* and (ii) *probability theory*. Virtually nothing from the last three hundred years has found its way into
+the classroom. Yet of the mathematics used in today's worlds was developed in the last two hundred years!
+
+At the start of the twentieth century, mathematics could reasonably be regarded as consisting of about twelve distinct
+subjects: arithmetic, geometry, calculus, and several more. Today, between sixty and seventy distinct category would
+be a reasonable figure. some subjects, like algebra or topology, have split into various subfields; others, such as
+complexity theory or dynamical system theory, are completely new areas of study.
+
+In the 1980s to the emergence of new definition of mathematics as the /science of patterns/. According to this
+description, the mathematicians identifies and analyzes abstract patterns--numerical patterns, patterns of shape,
+patterns of motion, patterns of behavior, voting patterns in a population, pattern of repeating chance events, and so
+on. Those pattern can be either real or imagined, visual or mental, static or dynamic, qualitative or quantitative,
+utilitarian or recreational. They can arise from the world around us, from the pursuit of science, or from the inner
+workings of the humand mind.
+
+** Mathematical Notation
+
+- The mathematicians' reliance on abstract notation is a reflection of the abstract nature of the pattern study
+
+- In the case of various kinds of abstract, formal patterns and absctract structures, the most appropriate means of
+  description and analysis is mathematics, using mathematical notations, concepts, and procedures. For instance, the
+  symbolic notation of algebra is the most appropriate means of describing and analyzing general behavioral properties
+  of addition and multiplication.
+
+- Example, The commutative law for addition could be written in English as:
+
+  \begin{center}
+    \textit{"When two number are added, their order is not important"}
+  \end{center}
+
+  However, it is usually written in the symbolic form
+
+  \[
+  m + n = n + m
+  \]
+
+- The introduction of symbolic mathematics in its modern form is generally credited to the French mathematician
+  [[https://en.wikipedia.org/wiki/Fran%C3%A7ois_Vi%C3%A8te][François Viète]] in the sixteenth century.
+
+- The earliest appearance of algebraic notation seems to have been in the work of [[https://en.wikipedia.org/wiki/Diophantus][Diophantus]], who lived in the
+  Alexandria some time around 250 /CE./
+
+- In the middle of the nineteenth century, to the adoption of a new and different conception of the mathematics, where
+  the primary focus was no longer on performing calculation or computing answer, but /formulating/ and understanding
+  /abstract concepts relationships/. This was a shift in emphasis from /doing to understanding/. Mathematical objects were
+  no longer thought of as given primarily by formulas, but rather as carriers of conceptual properties.
+
+** Modern College-level Mathematics
+
+- Up to about 150 years ago, mathematicians still regard mathematics as primarily about /calculation/. That is,
+  proficiency at mathematics essentially meant being able to carry out calculations or manipulate symbolic expressions
+  to solve problems. By and large, high school mathematics is still very much based on that earlier tradition.
+
+- Mathematicians in nineteenth century, realize that some of the methods they had develop to solve important, real-world
+  problems had consequences they *could not explain* (counter intuitive) For example, one such, the [[https://en.wikipedia.org/wiki/Banach-Tarski_paradox][/Banach--Tarski
+  Paradox]]/, says you can, in principle, take a sphere and cut it up in such a way that you can reassemble it to form
+  two identical spheres each the same size as the original one.
+
+  It became clear, then, that mathematics can lead to realms where the only understanding is through the mathematics
+  itself. (Because the mathematics is correct, the Banach--Tarski result had to be accepted as a fact, even though is
+  defies our imagination).
+
+- This introspection led, in the middle of nineteenth century, to the adoption of a new different conception of the
+  mathematics, where the primary focus was no longer on performing a calculation or computing an answer, but formulating
+  and /understanding abstract concepts and relationshis/. This was a shift in emphasis form /doing/ to /understanding/.
+
+  Mathematical object are no longer thought of as given primarily by formulas, but rather as carriers of conceptual
+  properties. Proving something was no longer a matter of transforming terms in accordance with rules, but a process of
+  logical deduction form concepts.
+
+- If you, as college math student, find yourself reeling after your first encouter with this "/new math/", you can lay
+  the blame at the feet mathematicians [[https://en.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet][Lejeune Dirichlet]], [[https://en.wikipedia.org/wiki/Richard_Dedekind][Richard Dedekind]], [[https://en.wikipedia.org/wiki/Bernhard_Riemann][Bernhard Riemann]], and all the others who
+  ushered (guide) in the new approach.
+
+  As a fortaste of what is come, I'll give one example of the shift. Prior to the nineteenth century, mathematicians
+  were used to the fact that a formula \(y = x^2 + 3x - 5\) specifies a /function/ that produces a new number \(y\)
+  from any given number \(x\).
+
+- The revolutionary Dirichlet came along and said, forget the formula concentrate on what the function /does/ in terms of
+  input--output behavior. A /function,/ according to Dirichlet, *is any rule that produces new number from old*. The rule
+  does not have to be specified by an algebraic formula. In fact, there's no reason to restrict your attention to
+  numbers. /A function can be any rule that takes objects of one kind and produces new object from them/.
+
+
+\begin{center}
+  If \(x\) is rational, set \(f(x) = 0\); if \(x\) is irrational, set \(f(x) = 1\).
+\end{center}
+
+- Mathematicians began to study the properties of such /absctract/ functions, specified not by some formula but by their
+  behavior. For example, does the function have the property that when you present it with different starting values it
+  always produces different answers? (This property is called /injectivity/)
+
+- /"epsilon-delta definition"/ (a formal way of defining what it means for a function to be continuous at point in
+  calculus).
+
+- Again, in 1850s, Riemann defined a complex function by /its property of differeantiability/, rather than a formula,
+  which he regarded as secondary.
+
+- The /residue classes/ defined by Karl Friedrich Gaus (1777 - 1855), were meet in algebra, were a forerunner of the
+  approach--now standard--whereby a mathematical structure is defined as a set endowed (provide) with certain
+  operations. whose behavior are specified axioms (truth).
+
+- Taking his lead from Gaus, Dedekind examined the new concepts of /ring/, /field/, and /ideal/--each of which was defined as
+  collection of objects endowed with certain operations. (Again, these are concepts you are likely to encounter soon in
+  your post-calculus mathematics education.)
+
+- To mathematicians before and after 1800s, both calculation and understanding has always been important. The nineteenth
+  century revolution merely the /emphasis/ regarding which of the two the subjects was really about and which played the
+  derivative or supporting role.
+
+- Unfortunately, the message that reached to nation's school teachers in the 1960s was often, "/Forget calcution skill,
+  just concentrate on concepts./". This ludicrous and ultimately disastrous strategy led the satirist Tom Lehrer to quip
+  in his song /New Math/, "Its the method that's important, never mind if you don't get the right answer"
+
+- There are educational arguments that says, "The humand mind has to achieve a certain level of mastery of computation
+  with abstract mathematical entities before it's is able to reason about their properties"
+
+** Why are you having to learn this stuff?
+
+- It should be clear by now that the nineteenth century shift from a /computational view/ of mathematics to a
+  /conceptual one/ was a change within the professional mathematical community. Computation (and getting the right
+  answer) remains just as important as ever, and even more widely used than at any time in history.
+
+  So, what is more important? (i) computational or (ii) conceptual?, for the reason in my clear mine, I take the last
+  arguments that brought by Tom Lehrer and friends, that method (concept) is important, never mind if you had the wrong
+  answer.
+
+- As a result today, instead of just learning procedures to solve the problems, college-level math student today /also/
+  (i,e., /in addition/) are expected to master the underlying concepts and be able to justify the method they use.
+
+- Is it reasonable to require this? Granted that the professional mathematicians--whose job is to develop new
+  mathematics and certify its correctness--need such conceptual understanding, why make it a requirement for those who
+  goal is to pursue a career in which mathematics is merely a tool? (Engineering for example.)
+
+  there are two answers, both of which have a high degree validity. (SPOILER: It only appears that there are two answer.
+  On deeper analysis, they turn out to be the same.)
+
+  (i) First, education is not solely about the acquisition of specific tools to use in a subsequent career. As one of
+  the greatest creations of human civilization, mathematics should be thought alongside science, literature, history,
+  and art in order to pass along the jewels of our culture from one generation to the next. We human are far more than
+  the jobs we do and the career we pursue. Education is a preparation for life, and only part of that is the mastery of
+  specific work skill.
+
+  (ii) The second answer address the tools-for-work issue.
+
+- Over many years, we have grown accustomed to the fact that advancement in an industrial society requires a workforce
+  that has mathematical skills. But if you look more closely, those skills fall into two categories. (i) The first
+  category comprises people who, given a mathematical problem (i.e., a problem already formulated in mathematical
+  terms), can find its mathematical solution. (ii) The second category comprises (be made up of) people who can take a
+  new problem, say in manufacturing, identify and describe key features of the problem mathematically, and use that
+  mathematical description to analyze the problem in a precise fashion.
+
+- There will always be a need for people with mastery of a range of mathematical techniques, who are able to work alone
+  for long periods, deeply focused on a specific mathematical problem, and our education system should support their
+  development. We called this new kind of individuals is "Innovative mathematical thinkers"
+
+- The increasing complexity in mathematics led mathematicians in the nineteenth century to shift (broaden, if you
+  prefer) the focusedfrom computational skills to the underlying, foundational, conceptual thinking ability.
+
+- So now you know not only why mathematicians in the nineteenth century shifted the focus of mathematical research, but
+  also why, from 1950s onwards, collage mathematics students were expected to master conceptual mathematical thinkings
+  as well. In other words, you now know hwy your college or university wants you to take that transition course, and
+  perhaps work your way through this book.
+
+#  LocalWords:  onwards
+
+
+* Summary--Supplement Set Theory math
+
+You can open [[file:./02-Supplement-Set-Theory-math.pdf][Supplement Set Theory math]] this paper.
+
+- What is axiom?
+  - Axiom are basic statement accepted as true in mathematics and other fields.
+  - Axiom are used to build a robust and consistent system of reasoning and proof.
+  - Axiom in math are not always intuitive or obvious (clear), but they are critical to understanding and solving
+    real-world problem
+
+- What mean intuitive?
+  - using or based on what one feels to be true even without conscious reasoning; instinctive.
+
+- Almost every key statement of mathematics, the axiom, conjecture (presumption), hypothesis,and theorem is a positive
+  or negative version of one of four linguistic forms.
+
+- What is Hypothesis?
+  - A hypothesis is an initial assumption proposition proposed as a basis or further research.
+  - In mathematics, a hypothesis is a statement that has not been proven but is assumed to be true for the purposes of
+    analysis or experiment.
+  - Hypotheses are used to guide research and experiments to prove or disprove them.
+
+- What is Conjecture?
+  - A statement that is proposed to be true based on existing evidence, but for which no rigor proof is available.
+  - Conjecture often arise from repeated observations and experiments, but cannot be considered theorems until there is
+    a formal proof.
+  - e.g: One famous conjecture is Goldbach's conjecture which states that *every even number greater than 2 can be
+    written as the sum of two prime numbers*. This conjecture has not been formally proven to date, although it has been
+    tested for many cases.
+
+    example:
+    - 4 = 2 + 2 (both prime numbers)
+    - 6 = 3 + 3 (both prime numbers)
+    - 8 = 4 + 4 (both prime numbers)
+
+- What is Theorem?
+  - A theorem is a mathematical statement that has been proven to be true based on logic and rules in mathematics.
+  - Theorem are usually proven through a series of logical arguments that connect an initial hypothesis with desired
+    conclusion.
+
+- Relationship Between Hypotheses, Conjectures, and Theorems
+  - A hypothesis is an initial assumption that can be tested through experimentation or observations
+  - A conjecture is a statement that is proposed based on evidence or pattern found, but has not been formally proven.
+  - A theorem is a conjecture that has been proven to be true through logical arguments and mathematical rules.
+
+    In the process of mathematical thinking, a person often start with hypothesis, then through observations and
+    experimentation, they can develop a conjecture. If this conjecture can be proven with rigor, then it will become a
+    theorem. This process is at the heart of discovery and proof in mathematics.
+
+- In University mathemetics is not focused on learning procedures to solved the problem, it's about *thinking a sand
+  away*.
+
+- In summary, "/thinking a sand away/" encapsulated the essence of a methodical, persistent, and detail-oriented approach
+  to mathematical problem-solving. It highlights the importance of gradual progress, patience, and the accumulation of
+  small insights that collectively lead to significant breakthroughs in understanding and solving mathematical problems.
+
+
+* Assignment-1 -- Lecture Introductory Material
+
+This material pdf is [[file:./reading-material/04-assignment-week-1--mathematical-thinking.pdf][here]].
+
+** *Q*: Find Two unambiguous (but natural sounding) sentences equivalent to the sentence "The man saw the woman with a telescope", the (i) first where the man has the telescope, (ii) the second where the woman has the telescope.
+
+*A*: The first sentence specifies the man has the telescope, and the second specifies that the woman has the telescope.
+
+- The man, using a telescope. saw the woman.
+
+- The man saw the woman who held a telescope.
+
+** *Q*: For each of the three ambiguous newspaper headlines I stated in the lecture, rewrite it in a way that avoids the amusing second meaning, while retaining the brevity of a typical headline:
+
+- Sisters reunited after ten years in checkout line at Safeway.
+
+- Large hole appears in High Street. City authorities are looking into it.
+
+- Mayor says bus passengers should be belted.
+
+*A*:
+
+- Emotional Reunion: Sisters Separated for Decade Reconnect at Safeway.
+
+  This clarifies the emotional impact of the reunion and avoids the checkout line being the focus.
+
+- Sinkhole Discovered on High Street; Investigation Underway.
+
+  This clarifies the nature of the hole and replaces "looking to it" with a more formal term.
+
+- Mayor Urges Seatbelt Use for Bus Passengers.
+
+  This directly states the mayor's recommendation instead of implying forces.
+
+** *Q*: The following notice was posted on the wall of a hospital emergency room:
+
+\begin{center}
+ \text{NO HEAD INJURY IS TOO TRIVIAL TO IGNORE}
+\end{center}
+
+formulate to avoid the unintended second reading. (The context for this sentence is so strong that many people have
+difficulty seeing there is an alternative meaning)
+
+*A*: The original sentence suffers from a grammatical oddity called "depth charge sentence." It utilized a double negative
+(o...too") that can be misinterpreted. Here are a few reformulated option to avoid unintended second reading:
+
+- "*Always take head injuries seriously*."
+
+  This is direct and clear statement emphasizing the importance of not ignoring head injuries.
+
+- "*Seek medical attention for any head injuries*."
+
+  This instructs to get checked by a medical professional for any head injury, regardless of perceived severity.
+
+- "*Don't underestimate the potential seriousness of head injury*.'
+
+  This emphasizes the potential danger of head injuries, even if they seem minor.
+
+- "*Even minor head injuries require evaluation*."
+
+  This focuses on the need for medical assessment, even for seemingly minor bumps.
+
+** *Q*: You often see the following notice posted in elevators:
+
+\begin{center}
+   \text{IN CASE OF FIRE, DO NOT USE ELEVATOR}
+\end{center}
+
+This one always amuse me. Comment on the two meanings and reformulate to avoid unintended second reading. (Again,
+given the context for this notice, the ambiguity is not problematic)
+
+*A*: You're absolutely right! The above notice is a classic example of a misplaced modifier. Here's a breakdown of the two
+meaning and some reformulated options:
+
+- *Unintended Meaning:*
+
+  The intended meaning is to instcut people not to use the elevators in case of fire. However, due the misplaced
+  modifier "DO NOT", the sentence could be interpreted as saying it's important take note of something about using
+  the elevator during a fire.
+
+  - *Intended Meaning*:
+
+    If there is a fire, do not use the elevator.
+
+  - *Reformulated Options*:
+
+    - *Use Stairs in Case of Fire*. This is a simple and direct message that focuses on the alternative action to take.
+
+    - *Fire: Take Stairs, Not Elevators*. This version emphasizes the urgency of the situation and reinforces the
+      alternative by explicitly mentioning it.
+
+    - *In Case of Fire, Evacuate by Stairs*. This clarifies the reason for avoiding the elevators and emphasizes using
+      the stairs for evacuation.
+
+      All these options remove the ambiguity and clearly instruct people to utilize the stairs during a fire emergency.
+
+  - *Humor in the Ambiguity*:
+
+    The amusement comes from the unexpected interpretation created by the misplaced modifier. While the ambiguity might
+    not be a major safety concern in this specific context (everyone knows elevators are bad in fires), it highlights
+    the importance of clear and concise communication, especially in safety instruction.
+
+** *Q*: Official documents often contain one or more pages that are empty apart from one sentence at he bottom:
+
+\begin{center}
+    \text{This page intentionally left blank}
+\end{center}
+
+Does the sentence make a true statement? What is the purpose of making such a statement? What reformulation of the
+Sentence would avoid any logical problems about truth? (Once again, the context means that in practice everyone
+understands the intended meaning and there is no problem. But the formulation of a similar sentence in mathematics at
+the start of the twentieth century destroyed on prominent mathematician's seminal work and led to a major revolution
+in an entire branch of mathematics)
+
+*A:* The above sentence does make a true statement in the context of the document itself. However, it can be seen as
+*logically odd* statement because it seems to imply the page itself has some level of consciousness and decided to be
+blank.
+
+Here's a breakdown of the purpose and some reformulations:
+
+*Purpose*:
+
+- *Maintain document integrity*; Empty pages can occur due to numbering requirements or formatting. This statement
+  clarifies that the blank page is intentional and not a printing error.
+
+- *Prevent confusion*; It avoids readers from thinking something is missing or the document is incomplete.
+
+  *Reformulations to Avoid Logical Problems*:
+
+  - *Intentionally Left Blank*. (Simpler, avoids the pronoun "this")
+  - *Page Left Blank*. (Focuses on the page itself)
+  - *Document Continues on Next Page*. (If applicable, indicates continuation)
+
+    These options remove the implication of sentience (sensibility) and focus on the page's intended state.a
+
+
+*Historical Example*:
+
+The reference to mathematician's work likely refers to Bertand Russel's discover of paradox within Gotlob Frege's
+set theory. Frege's systems relied on the concept of a "universal set" containing all sets, leading to a
+contradiction. This highlights the importance of clear definitions and avoiding logical inconsistencies, even in
+seemingly simple statement.
+
+*Context Matters*:
+
+While the original sentence might be clear in practice, using more precise language can avoid ambiguity and
+potential logical issues, especially in formal contexts.
+
+** *Q*: Find (and provide citations for) three examples of published sentences whose literal meaning is (clearly) not what the writer intended. [This is much easier than you might think. Ambiguity is very common]
+
+*A*:
+
+- "*I'm gonna make him an offer he can't refuse*"
+  - Literal meaning: The offer is so good that is impossible for the recipient to refuse it.
+  - Intended meaning: The offer comes with an implied threat of violence if it refused, making it impossible to
+    refuse out of fear for one's life.
+  - Source: "The Godfather" (1972)
+
+- "*Kind these days have no respect*"
+  - Literal meaning: Children literearly have no capacity for respect.
+  - Intended meaning: Is to express disapproval of certain behaviors exhibited by some children, implying a lack
+    of respect towards elders authority figures.
+  - Source: Everyday conversations, popular media.
+
+- "*The president approval rating has hit rock bottom*"
+  - Literal meaning: Suggest the president's approval rating is physically at the lowest possible point.
+  - Intended meaning: The approval rating is very low, possibly the lowest it's been in the president's term or
+    history.
+  - Source: Times Magazine article.
+
+** *Q*: Comment on the sentence "The temperature is hot today." You hear people say things like this all the time. And everyone understands what is meant. But using language in this sloppy way in mathematics would be disastrous.
+
+*A*: The sentence "The temperature is hot today" is a common in every language. While it is generally understood by most
+people, it contains imprecision that would be unacceptable in mathematical or scientific contexts. Here's detailed
+commentary on this sentence and the importance of precision in mathematical language:
+
+- *everyday Understanding*
+
+  - *Common Usage*:
+
+    In everday conversation, when somebody says "The temperature is hot today", they mean that the temperature is higher
+    than usual or higher than what is considered comfortable. The exact numerical of the temperature is not specified,
+    but the listener infers the meaning based on context, personal experience, and cultural norms.
+
+  - *Contextual Clarity*:
+
+    Despite the lack of precision, the context usually provides enough information for the listener to understand the
+    speaker's intent. For instance, it's summertime, "not" might imply temperature above 35\textdegree{}C. In contrast,
+    if it's winter, "hot" might mean an unusual warm spell of perhaps 20\textdegree{}C (68\textdegree{}F).
+
+  - *Avoiding Sloppines*:
+
+    Using precise language ensures that statement are universally understood, regardless of the reader's or listener's
+    background. This is crucial in fields where accuracy and clarity are essential, such as mathematics, physics,
+    engineering, and medicine.
+
+- *Potential Consequences of Sloppy Language*
+
+  while the sentence "The temperature is hot today" is perfectly acceptable in casual conversation, it exemplifies the
+  kind or imprecision that would be problematic in mathematics and scientific discourse. In these fields, precision and
+  clarity are essential to ensure accurate communication, understanding, and results. Adopting a precise language helps
+  avoid ambiguity and errors, ensuring that statements are universally understood and correctly interpreted.
+
+** *Q*: How would you show that not every number of the form (\(N = (p_1 \cdot p_2 \cdot p_3 \cdot ... \cdot p_n) + 1)\) is prime, where (\p1, p2, p3, \dots, pn\) is the list of all prime numbers?
+
+*A*:
+- *Steps to Provide Counterexample*
+
+  - Define the form of \(N\):
+
+    \(N = (p_1 \cdot p_2 \cdot p_3 \cdot \dots \cdot p_n) + 1\)
+
+    Were \((p1, p2, p3, \dots, p_n)\) are the first \(n\) prime numbers.
+
+  - Choose a specific \(n\):
+
+    let's choose \(n = 5\), so the first prime numbers are \(2, 3, 5, 7\) and \(11\).
+
+  - Calculate \(N\):
+
+    \(N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11) + 1\)
+    \(N = (2310) + 1 = 2311\)
+
+  - Check if \(N\) is Prime:
+
+    - To check if 2311 is prime, we can try dividing it by prime numbers less than a \(\sqrt{2311} \approx 48\).
+
+    - We test divisibility by 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, and 43.
+
+    Upon testing, we find that:
+    \[
+    2311 = 47 X 49
+    \]
+
+    Thus, 2311 is not a prime number because it can be factored into 47 and 49 (and since 49 itself is 7 x 7).
+
+
+- *Conclusion*
+
+  Since 2311 is not a prime number, it serves as a counterexample to show that not every number of the form \(N = (p1
+  \cdot2 \cdot p3 ... \cdot p_n) +1\) is prime. This demonstrates that the formula does not always yield a prime number.
+
+- you can check [[file:./check-prime-number-original.el][lisp code]] here.
+
+** *Q*: Provide a context and a sentence within that context, where the word /and/ occurs five times in succession, with no other word between those five occurrences. (You are allowed to use punctuation)
+
+*A*: Sentence: "Hiking and camping and exploring the city and going to the concert and staying in for a move night - we can do it all!"
+
+** *Q*: Provide a context and sentence within that context, where the words /and/, /or/, /and/, /or/, /and/, /or/, /and/ occur in that order, with no other word between them. (Again, you can use punctuation.)
+
+*A:*
+- Context: A chef is creating a new vegetarian dish and is brainstorming potential ingredients. They want to incorporate
+  a variety of textures and flavors.
+
+- Sentence: "Bell peppers and eggplant, and or zucchini and mushrooms, and or spinach and kale - so many delicious
+  options!"
+
+- Explanation:
+
+  - "Bell peppers and eggplant" is definitive choice.
+
+  - "and or zucchini and mushroom" suggest either zucchini and mushroom can be used, or they can be excluded entirely.
+
+  - "and or spinach and kale" offers another option - either spinach and kale can be included, or neither.
+
+
+* Lecture-2 Analysis of Language -- The Logical Combinators
+
+- Remember, the goal of this course is to acquire a certain way of thinking, not to solve problems by given deadline.
+- The only way to develop a new way of thinking, is to keep trying to think in different ways.
+- The assignment are designed to guide your thinking attempts in productive directions.
+- In becoming precise about our use of language, in mathematical context, we've develop precise unambiguous definitions
+  of the connecting words, /and/, /or/, and /not/.
+
+** 'AND' -- \(\land\) combinator
+
+- The standard abbreviation that mathematicians use for /and/ is
+  # \(\land \)
+  \[
+  \wedge
+  \]
+
+  For example, we can write mathematical notation for formula,"pi is bigger than 3 and less than 3.2", like:
+
+  \[
+  (\pi < 3) \wedge (\pi > 32)
+  \]
+
+  In fact for this example where we're just talking about position of numbers of real line there's and even simpler
+  notation we would typically write:
+
+  \[
+  3 < \pi < 3.2
+  \]
+
+  The other examples, 'phi' and 'psi', if we have two statements 'phi' and 'psi' means that they're both true.
+
+  \[
+  \phi \wedge \psi
+  \]
+
+  Well if \phi and \psi are individually true, then conjunction \( \phi \wedge \psi \) will be true.
+
+  \begin{center}
+      If \(\phi\), \(\psi\) are both true, then \(\phi\)  \(\wedge\) \(\psi\) will be ture
+  \end{center}
+
+  under what circumstances will "phi" and "psi" is false?
+
+  \begin{center}
+      If \(\phi\) or \(\psi\) are false, then \(\phi \wedge\psi\) will be false
+  \end{center}
+
+  This might seem very self evident and trivial, but already this definition leads to a rather suprising conclusion.
+
+  \begin{center}
+    \(\phi \wedge \psi\) means the same as \(\psi \wedge \phi\)
+  \end{center}
+
+- In mathematical palettes, conjunction is commutative. Nut that's not a case for the use of the word, and, in everday English.
+  for example:
+
+  \begin{center}
+    \textit{"John took the free kick and the ball wen into the net"}
+  \end{center}
+
+  That doesn't mean the same as the sentence:
+
+  \begin{center}
+    \textit{"the ball went into the net and John took the free kick"}
+  \end{center}
+
+  They're both conjunction and the two conjunction are the same. One of them is "John took the free kick" and other one
+  is "the ball went into the net."
+
+  But anyone's who's familiar with soccer realizes that these two sentences have very different meaning.
+
+  The fact is, in everyday English, the world /and/ is not always commutative. Sometimes it is, but not always.
+
+
+- What is commutative in mathematics term means?
+
+  In mathematics, the term "conjunction" refers to an operation where the order in which you perform it does not effect
+  the final result. When applied to conjunction (usually denotes by "and"), commutative means that:
+
+  \begin{center}
+    \text{"Statement A and Statement B"}
+
+    \text{"Statement B and Statement A"}
+  \end{center}
+
+  These two phrasings convey the same meaning. The order doesn't change the truth value of the combined statemet.
+
+- Let see what you make of this one.
+
+  \begin{center}
+    \text{"A: it rained on Saturday"}
+
+    \text{"B: it snowed on Saturday"}
+  \end{center}
+
+  Question, does the conjunction A \( \wedge \) B accurately reflect the meaning of the sentence, "it rained and snowed on
+  Saturday"?
+
+  Although I can think of situations in which the answer would be *NO*, in general I would be inclined (tend) to say the
+  answer is *YES*.
+
+- A useful way to represent a definition like above, is with a propositional truth table.
+
+  |---+-----+-----+---------+---|
+  |   | <c> | <c> |   <c>   |   |
+  |   |  \phi  |  \psi  | \phi  \wedge  \psi |   |
+  |---+-----+-----+---------+---|
+  | / |  <  |  <  |    <    | > |
+  |   |  T  |  T  |    T    |   |
+  |---+-----+-----+---------+---|
+  |   |  T  |  F  |    F    |   |
+  |---+-----+-----+---------+---|
+  |   |  F  |  F  |    F    |   |
+  |---+-----+-----+---------+---|
+  |   |  F  |  F  |    F    |   |
+  |---+-----+-----+---------+---|
+
+  So in one simple table above, we've captured the entire definition of \phi and \psi.
+
+  This emphasize the fact that the truth of the conjunction depends on the truth and falsity of the two conjuncts. The
+  definition was entirely in terms of truth and falsity.
+
+  That's going to be the case for all definitions that we're going to give in order to make language precise. They're
+  going to depend upon /truth/ and /falsity/ *not* upon meaning or logical connections.
+
+** 'OR' -- \(\lor\) Combinator
+
+- We want to be able assert the "/statement A is true *or* Statement B is true/". For instance we might want to saying:
+
+  \begin{center}
+    \text{\(a\) > \(0\) or the equation \(x^2 + a = 0\) has a real root}
+  \end{center}
+
+  Or maybe we want to say
+
+  \begin{center}
+    \text{\(ab = 0\) if \(a = 0\) or \(b = 0\)}
+  \end{center}
+
+  Those are both statement that we get, when we combine two sub statement with the word /or/. Both statement are in fact
+  true, but there's a difference between them. The meaning of /or/ is not the same in the first sentence as it is in the
+  second sentence, there's no possibility of both parts being true at the same time.
+
+  Either (\(a\) > \(0\)) is going to be positive, or (\(x^2 + a = 0\)) will have a real root. They can't both
+  occur. if "/a/" is positive, then (\(x^2 + a\)) does not actually have a real root.
+
+  In the case of the second sentence, they could both occur together. To get (\(ab = 0\)) it's enough if (\(a\)) is
+  (\(0\)), it's enough if (\(b\)) is (\(0\)). So these two are different.
+
+  In the first case we have an */exclusive/--or*, in the second we have an */inclusive/--or*.
+
+  Incidentally it doesn't matter if you try to enforce the exclusivity by putting an either in front of it. If you look at
+  the way the word either operates, if you say either this "/or/" that, then what happens is that the either simply
+  reinforces an exclusive "/or/" if one happens to be there.
+
+  In the case of the second one, you could say (\(ab = 0\)) or (\(a = 0\)) or (\(b = 0\)). And in fact, that doesn't
+  enforce the exclusivity at all. We just accept the fact that they could both be true.
+
+  In other words, the word "/or/" in English is ambiguous. And we rely on the context to disambiguity.
+
+  In mathematics it's different. We simply can't afford to have ambiguity floating around. We have to make a choice
+  between either the "*exclusive--or*" or the "*inclusive--or*".
+
+  For various reasons it turns out to be more convenient in mathematics to adopt the "inclusive use".
+
+- The mathematical symbol we use to denote the inclusive--or is a (\(\lor\)), known as */disjunctive symbol/*
+
+  In example:
+
+  \begin{center}
+  \(\phi, \psi\): \(\phi \lor \psi\) means \((\phi\) or \(\psi)\) (or both)
+  \end{center}
+
+  The sentence of (\(\phi \lor \psi \)) is called a "disjunction of phi and psi".
+
+  And relative to the disjunction, the constituents phi and psi are called disjuncts.
+
+  \begin{center}
+  \text{ \(\phi, \psi \) are called disjuncts of (\( \phi \lor \psi \))}
+  \end{center}
+
+  Remember: \(\phi\) or \(\psi\)  means _at least one_ of \(\phi\), \(\psi\) is true.
+
+- The following rather silly statement is true.
+
+  \[
+  (3 < 5) \lor (1 = 0)
+  \]
+
+  Silly examples above are actually quite useful in mathematics because they help us understand what a definition means.
+
+  Above statement is true even though one of the disjuncts is patently false. So this emphasizes the fact that for a
+  disctinaction to be true, all you need to do is find one of the disjunct which is true, doesn't matter if one or more
+  of the other disjunct is apparently false.
+
+- Here is a quick quiz:
+
+  \begin{center}
+  \text{let A be the sentence, it will rain tomorrow}
+  \text{let B be the sentence, it will be dry tomorrow}
+  \end{center}
+
+  Does the disjunction (A \(\vee\) B) accurately reflect the meaning of the sentence, tomorrow it will rain or it will be
+  dray all day?
+
+  The answer clearly *NO*. If that comes as suprise to you, you need to think about the definition of *OR* a little bit
+  longer, and see what's going on here.
+
+
+- A useful way to represent a definition like above, is with a propositional truth table.
+
+  |---+-----+-----+---------+---|
+  |   | <c> | <c> |   <c>   |   |
+  |   |  \phi  |  \psi  | \phi  \vee  \psi |   |
+  |---+-----+-----+---------+---|
+  | / |  <  |  <  |    <    | > |
+  |   |  T  |  T  |    T    |   |
+  |---+-----+-----+---------+---|
+  |   |  T  |  F  |    T    |   |
+  |---+-----+-----+---------+---|
+  |   |  F  |  F  |    T    |   |
+  |---+-----+-----+---------+---|
+  |   |  F  |  F  |    F    |   |
+  |---+-----+-----+---------+---|
+
+** 'NOT' -- \(\neg\) Combinator
+
+(\neg) Combinator
+
+- If (\(\psi\)) is a sentence, then we want to be able to say that (\(\psi \) is false), we can write it down:
+
+  \begin{center}
+    \text{\(\psi:\) (not- \(\psi\)) or (\(\neg\psi\))}
+  \end{center}
+
+- We call  _(\(\neg\psi\))_ is the negation of \(\psi\).
+
+  \begin{center}
+    \text{if \(\psi\) is true, then (\(\neg \psi)\) is false.}
+    \text{if \(\psi\) is false, then (\(\neg \psi)\) is true.}
+  \end{center}
+
+- We often use special notations in particular circumstances. For example, we would typically write:
+
+  \[
+  x \not= y
+  \]
+
+  # \[
+  # \(x \neq y \)
+  # \]
+
+  instead of:
+
+  \[
+  \neg (x = y)
+  \]
+
+- We have to little bit careful. For example, I would write
+
+  \[
+  \neg (a < x <= b)
+  \]
+
+  Rather than
+
+  \[
+  a \not < x \not\le b
+  \]
+
+  # \[
+  #  \(a \not < x \nleq b\)
+  # \]
+
+  The first one is better then the last.
+
+  The first one is completely /unambiguous/. It means that it's not the case that \(x\) is between \(a\) and \(b\).
+
+  The last one, well, you could agree it means that, but it's really /ambiguous/ as to exactly what's going on here.
+
+  We should always go for clarity in the case of mathematics. Remember, the whole point of this precision that we try to
+  introduce is to avoid ambiguities to avoid confusion. Because in more advanced situation, all we're going to have rely
+  upon is the language. Then we need make sure that we're using language in a non ambiguous and reliable way.
+
+
+- Let's look at this sentence,
+
+  \begin{center}
+    \text{"All foreign cars are badly made."}
+  \end{center}
+
+  What's the negation of this sentence. Let me give you 4 possibilities. I would like you to think for a minute as to
+  which one of these things is the negation of that original sentence.
+
+  | / | <   | <  | <                                         | < | <c> | > |
+  |---+-----+----+-------------------------------------------+---+-----+---|
+  |   | (X) | A. | All foreign cars are well made            |   |  F  |   |
+  |---+-----+----+-------------------------------------------+---+-----+---|
+  |   | (X) | B. | All foreign cars are not badly made       |   |  F  |   |
+  |---+-----+----+-------------------------------------------+---+-----+---|
+  |   | (?) | C. | At least one foreign car is well made     |   |  T  |   |
+  |---+-----+----+-------------------------------------------+---+-----+---|
+  |   | (?) | D. | At least one foreign car is not badly mad |   |  T  |   |
+  |---+-----+----+-------------------------------------------+---+-----+---|
+
+  (*A*). Is actually a very common one for beginner to pick. If you think about what the sentence really means, it's
+  obviously no this one, this is not a negation. Why? Is the original sentence true? No, of course it's not. There are
+  many good cars that are foreign made.
+
+  The premise sentence ("all foreign car are badly made") is false sentence is false, then its negation is going to be
+  true.
+
+  But the sentence (A) isn't true. It's not the case that all foreign cars are well made, it's false; so that can't be
+  the negation.
+
+  What about (*B*)? same reasoning, that can't be the negation because it's simply not the case that all foreign cars are
+  not badly made, okay, for those are false statements. These are false, so they can't be the negation of a false
+  sentence.
+
+  The negation of false sentence is going to have to be true. So Whatever the negation of the original sentence is, that
+  negation will have something that's true; And we know what's true and false in terms of cars being well made.
+
+  Is this (*C*) one true? Yeah, that's true.
+
+  Is this (*D*) true? Well, these are both true.
+
+  So these are both possibilities for the negation of the original sentence; And this is still not a quiz, but I'm going
+  to leave for a little while to think about this one. Which one of above sentence do you think is the negation of?
+  We'll come back to this. I'm going to introduce some formal notation from sort of algebraic notation and eventually
+  we'll be able to reason precisely, to see which one of these two last sentence or maybe a different thins is the
+  actual negation of the original sentence.
+
+  But let me stress a point I made a minute ago and I didn't write anything down. Look at the following sentence,
+
+  \begin{center}
+    \text{"All domestic cars are well made"}
+  \end{center}
+
+  I've actually had the students over the years who have though that, above sentence is negation of original sentence.
+
+  Why are they saying that? Because they're saying, the original sentence says something about all foreign cars, and the
+  last sentence ("All domestic cars are well made") says about all cars that are not foreign.
+
+  So there is sort of negation going on between two sentences, but it's not the negation of the original sentence. How do
+  I know it's not the negation of the original sentence? Because the original sentence is false, therefore whatever the
+  negation is, is going to have to be true.
+
+  Well, the last sentence isn't true. The last sentence is also false. It can't possibly have been a negation of the
+  original sentence. In fact the last sentence really falls a long way of one being a negation for original sentence, for
+  the following reason.
+
+  The original sentence is about foreign cars. That's what it's talking about, it has nothing todo with domestic cars,
+  it's purely talking about foreign cars.
+
+  So the negation can only possibly talking about /foreign cars/. The 4 sentences above were good candidates for the
+  negation because they talked about foreign cars.
+
+  The last sentence ("All domestic cars are well made") isn't even it the ballpark for being a negation because is not
+  talking about foreign cars, it's talking about domestic cars.
+
+  Negating a word in a sentence, is not all the same as negating the sentence.
+
+  The last sentence. is a really bad choice.
+
+- Let's going to very simple truth table for NOT (\neg),
+
+  |---+-----+------+---|
+  |   | <c> | <c>  |   |
+  |   |  \phi  | \neg  \psi |   |
+  |---+-----+------+---|
+  | / |  <  |  <   | > |
+  |   |  T  |  F   |   |
+  |---+-----+------+---|
+  |   |  F  |  T   |   |
+  |---+-----+------+---|
+
+- With all above, you should be in a position to complete [[file:./reading-material/06-assigment-2-week-1-mathematical-thinking.pdf][assignment two]].
+
+- The last example, about the negation of the sentence all foreign cars are badly made, should I think, illustrate why
+  we're devoting time to making simple bits of language precise. To figure out what the correct language is, we relied
+  on our knowledge of the everyday world.
+
+  That's fine for statement about the everyday world we're familiar with, but in a lot of mathematics, we're dealing
+  with an unfamiliar world; And we can't fall back on what we already know, we have to rely purely on the language we
+  use to describe that world.
+
+  When we've taken our study of language far enough, we'll be able to look at that foreign cast statement again, and use
+  rigorous mathematical reasoning to determine exactly what it's negation is.
+
+- Well, that brings us to the end of the first week. How you gettin on?
+
+  For most of you, this will seem like a very strange course; And certainly won't look much like mathematics. That's
+  because you've only been exposed to school math. This course is about the transition to University level mathematics,
+  which, in some ways, is very different.
+
+  There isn't much material; and as a result the lecture are short. I'm not providing you with new method or procedures.
+  I'm trying to help you learn to think a different way.
+
+  Doing that is mostly up to you. It has to be. If you're at all like me and pretty well every other mathematician I
+  know, you're going to find it hard and frustrating, and it's going to take some time.
+
+  You should definitely attempt all the assignments that I give out *after each lecture*.
+
+  Doing those assignments, both on your own and in collaboration with others is really the heart of this course. Yeah,
+  sure you can watch the lecture several times. But you'll find that it almost never tells you the answer. Or even how
+  to get the answer in the way you're familiar with from highschool.
+
+  It's like learning to ride a bike. Someone can ride up and down in front of you for hours telling you how they do it.
+  But you won't learn to ride from watching them or having them explain to you, you have to keep trying it for yourself
+  and failing until it eventually clicks.
+
+  This is a very different way of learning that you are used to, at least in mathematics.
+
+  As well as the assignment, there is also a weekly problem set. The problem sets comprise assignment question that
+  count directly towards your grade.
+
+  Because this course designed for many thousand of students, it's impossible to look at everyone's work and provide
+  feedback, so we have to rely on automated grading. This means that the questions are posed in multiple choice format.
+  But these are not at all like the in lecture quizzes. Those are supposed to be answered while on the spot. The problem
+  set questions will require considerable time.
+
+  This is not ideal. For those material in this course, whether you get particular questions right or wrong, it's pretty
+  insignificant.
+
+  It's your thinking process that's important. But we can't check that automatically.
+
+  Asking you to answer multiple questions is like checking your health by taking your temperature. It tells us something
+  and can alert you and others that something is wrong, but it's pretty limited. Still, checking temperature is better
+  than nothing and the same is true for the problem set grading.
+
+  What I'd like you to do is to try to grade your own work and that if other in whatever study group you from and you
+  should definitely try to get into one.
+
+
+
+* Assignment-2 -- Lecture Introductory Material
+
+This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematical-thinking.pdf][here]]
+
+** Q: Simplify the following symbolic statement as much as youcan, leaving your answer in the standard symbolic form. (In case you are not familiar with the notation, I'll answer the first one for you.)
+
+1. \((\pi > 0) \wedge (\pi < 10)\) - [Answer: \((0 < \pi < 10)\)]
+
+2. \((p \ge 7) \wedge (p < 12)\)
+
+3. \((x > 5) \wedge (x < 7)\)
+
+4. \((x < 4) \wedge  (x < 6)\)
+
+5. \((y < 4) \wedge (y^2 < 9)\)
+
+5. \((x \ge 0) \wedge (x \le 0))\)
+
+*A*:
+
+1. \((\pi > 0) \wedge (\pi < 10)\) - [Answer: \((0 < \pi < 10 )\)]
+
+   - \pi > 0: \pi greater than 0.
+   - \pi < 10: \pi less than 0.
+   - \wedge: This mean "and", so both condition must be true.
+
+   simplified form:
+   \[
+   (0 < \pi < 10)
+   \]
+
+   *Explanation*: this means \pi is greater than \(0\) and less than \(10\). \pi is a constant approximately equal to \(3.14),
+   which is indeed between \(0\) and \(10\). This combined inequality shows the range of values (in this case, just
+   verifying tat \pi is within that range).
+
+2. \((p \ge 7) \wedge (p < 12)\)
+
+   - \(p \ge 7\): \(p\) is greater or equal to 7.
+   - \(p < 12\): \(p\) is less than 12.
+   - \wedge: This mean "and", so both condition must be true.
+
+   simplified form:
+   \[
+   (7 \le p < 12)
+   \]
+
+   *Explanation*: This means \(p\) is greater than or equal to \(7\) and less than \(12\) The variable \(p\) can take any value
+   starting from \(7\) up to, but not including \(12\). This interval includes \(7\) and any number just below \(12\).
+
+3. \((x > 5) (x < 7)\)
+
+   - \(x > 5\): x is greater than 5.
+   - \(x < 7\): x is less than 7.
+   - \wedge: This mean "and", so both condition must be true.
+
+   Simplified form:
+   \[
+   (5 < x < 7)
+   \]
+
+   *Explanation*: This means \(x\) is greater than 5 and less than 7. The variable \(x\) can be any number between 5 and
+   7, but it cannot be exactly 5 or 7. It covers number like 5.1, 6 and 6.9.
+
+4. \((x < 4) \wedge  (x < 6)\)
+
+   - \(x < 4\): \(x\) is less than 4
+   - \(x < 6\): \(x\) is less than 4.
+   - \wedge: this mean "and", so both condition must be true.
+
+     Simplified form:
+
+     - since \(x\ < 4\) is stricter than \(x < 6\) (if \(x\) less than 4, it will automatically be less than 6), the
+       combined condition can be simplified to:
+
+     \[
+     (x < 4)
+     \]
+
+     *Explanation*: This means \(x\) is less than \(4\). Since \(x < 4\) is a stricter condition than \(x < 6\), \(x\) must
+     be less than \(4\) to satisfy both inequalities. This interval covers all number less than \(4\), like \(3, -1\) and
+     \(10\).
+
+5. \((y < 4) \wedge (y^2 < 9)\)
+
+   - \(y <4\): \(y\) is less than 4.
+   - \(y^2 < 9\): the square of \(y\) is less than 9.
+   - \wedge: this mean "and", so both condition must be true.
+
+   First, let's solve \((y^2 < 9\))
+
+   - Solving \(y^2 = 9\) gives (\(y = 3\))  or (\(y = - 3\))
+
+   - So, \(y^2 = 9\) means \(y\) is between \(3\) and \(-3\)
+
+   Now, we need to combine (\(y< 4\)) with (\(-3 < y < 3\)). The stricter condition is (\(-3 < y < 3\)) since it lies
+   entirely with \(y < 4\).
+
+   Simplified form:
+
+   \[
+   ( -3 < y < 4)
+   \]
+
+   *Explanation*: The condition \(y < 4\) is combinend with \(y^2 < 9\), which means \(y\) is between \(-3\) and \(3\)
+   (since any number squared must less than \(9\) to satisfy the inequality). The stricter condition is \(-3 < y 3\),
+   meaning \(y\) can be number between \(-3\) and \(3\) but cannot exactly \(-3\) and \(3\).
+
+6. \((x \ge 0) \wedge (x \le 0)\)
+
+   - \(x \ge 0\): \(x\) is greater than or equal to \(0\)
+   - \(x \le 0\): \(x\) is less than or equal to \(0\)
+
+   For \(x\) to satisfy both conditions, it must be exactly \(0\) because that's only number that is both greater than
+   equal to \(0\) and less than equal to \(0\).
+
+   Simplified form:
+
+   \[
+   (x = 0)
+   \]
+
+   *Explanation*: this means \(x\) must be greater than or equal to \(0\) and less than or equal to \(0\) at the same
+   time. the only number that satisfies both condition is \(0\). Therefore, \(x\) can only be \(0\).
+
+** *Q*: Express each of your simplified statement from the question 1 in natural English.
+
+*A*: I have answered completely in question 1, (i) explanation the question, (ii) simplified form, and (iii) explanation
+why and how the changes. Just read carefully.
+
+** *Q*: What strategy would you adopt to show that the conjunction \(\phi_1 \lor \phi_2 \vee \dots \phi_n\) is true?
+
+*A*:
+
+To explain how to show the truth of conjunction \(\phi_1 \lor \phi_2 \lor \dots \phi_n\) (which mean at least one of the statement \(\phi_1 \lor
+\phi_2 \lor \dots \phi_n\) is true), we can adopt a straight forward strategy. Here's you can approach it step-by-step:
+
+*Understanding the Symbol and Logic*
+
+1. Symbols:
+
+   - \lor: this symbol means "or". It used to connect statement (called proposition or \(\phi_i/))
+
+   - \(\phi_1, \phi_2 \dots, \phi_n \): These are different proposition or statement that can be either true or false.
+
+2. Conjunction \(\phi_1, \phi_2 \dots, \phi_n\):
+
+   - This means that at least one of the proposition \(\phi_1, \phi_2, \dots, \phi_n\) is true.
+
+   - To show that the whole conjunction is true, we need to show that at least one of these individual proposition is
+     true.
+
+*Strategy to Prove \(\phi_1, \phi_2 \dots, \phi_n\)*:
+
+1. Identify Each Proposition:
+
+   - Clearly state what each proposition \(\phi_1, \phi_2 \dots, \phi_n\), represent.
+
+   - For example, if \(\phi_1\) is "it is raining", \(\phi_2\) is "it is snowing", and \(\phi_3\) is "it is cloudy", then \(\phi_1
+     \lor \phi_2 \lor \phi_3\) means "it is either raining or snowing or cloudy".
+
+2. Check Each Proposition:
+
+   - Evaluate each proposition to see if it is true.
+
+   - For example, check the weather conditions to see if any of the statements about the weather are true.
+
+3. Find at least One True Proposition:
+
+   - To prove the conjunction \(\phi_1 \lor \phi_2 \lor \dots \lor \phi_n\), you need to find at least one proposition that is true
+
+   - If you can show that, for example, \(\phi_2\) is true (e.g "it is snowing" is true), then the entire conjunction
+     \(\phi_1 \lor \phi_2 \lor \dots \lor \phi_n\) is true.
+
+4. Conclusion:
+
+   - If at least one proposition is true, the whole conjunction is true.
+
+   - If none of the proposition are true, then the conjunction is false.
+
+
+*Example to Illustrate the Strategy*
+
+Imagine we have the followwing propositions:
+
+- \(\phi_1\): "I have an apple"
+
+- \(\phi_2\): "I have a banana."
+
+- \(\phi_3\): "I have a cherry."
+
+  The conjunction is \(\phi_1 \lor \phi_2 \lor \phi_3), which means "I have an apple or I have a banana or I have a cherry."
+
+  *Steps to Prove the Conjunction*:
+
+  1. Check if \(\phi_1\) ("I have an apple") is true.
+
+     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+
+     - If no, move to the next proposition.
+
+  2. Check if \(\phi_2\) ("I have a banana") is true.
+
+     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+
+     - If no, move to the next proposition.
+
+  3. Check if \(\phi_3\) ("I have a cherry") is true.
+
+     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+
+     - If no, then \(\phi_1 \lor \phi_2 \lor \phi_3) is false because none of the individual proposition are true.
+
+       *Why This Strategy is Works*:
+
+       - *Logical Structure*: The "or" operator in logic only requires one of the statement to be true for the whole
+         conjunction to be true.
+
+       - *Systematic Checkking*: By evaluating each proposition, you can conclude that the entire conjunction is true without
+         needing to check the remaining propositions.
+
+       *Summary*
+
+       To show that a conjunction like \(\phi_1 \lor \phi_2 \lor \dots \lor \phi_n\) is true, you need to:
+
+       1. Identify and understand each proposition.
+
+       2. Check each proposition to see if it is true.
+
+       3. Conclude that the entire conjunction is true if at least one proposition is true.
+
+       By following strategy, you can effectively demonstrate the truth of a conjunction in logical statement.
+
+** *Q*: What strategy would you adopt to show that the conjunction \(\phi_1 \lor \phi_2 \vee \dots \phi_n\) is false?
+
+*A*: To show that the conjunction \(\phi_1 \lor \phi_2 \vee \dots \phi_n\) is false:
+
+1. Identify and understand each proposition.
+
+2. Evaluate each proposition to determine if it false.
+
+3. Confirm that all proposition is false.
+
+4. Conclude the entire conjunction is false if none of the individual proposition are true.
+
+
+This strategy ensure systematically check each condition and clearly demonstrate that the entire set of
+propositionfails to meet the "or" condition, thus proving the conjunction false.
+
+** *Q*: Simplify the following symbolic statements as much as you can, leaving your answer in a standard symbolic form (assuming you are familiar with the notation) and express each of your simplified statements in natural English
+
+1. \(\neg (\pi > 3.2)\)
+
+2. \(\neg *(x < 0\))
+
+3. \(\neg (x^2 > 0\))
+
+4. \(\neg (x = 1\))
+
+5. \(\neg \neg \psi\)
+
+
+*A*:
+
+1. \(\neg (\pi > 3.2)\)
+
+   -- *Symbols*:
+
+   - \(\neg\): This symbol means "not".
+
+   - \(\pi\): This is the mathematical constant pi (approximately 3.14).
+
+   - \(>\) This means "greater than"
+
+   - \(\approx\) This means "approximately equal to; close in value, but not necessarily exactly equal".
+
+   -- *Statement* \(\neg (\pi > 3.2)\):
+
+   - This means "not (pi is greater than 3.2)".
+
+   -- *Simplification*:
+
+   - if \(\pi\) is not greater than 3.2, then \(\pi\) must be less than or equal to 3.2.
+
+   - \(\pi \approx 3.14\) so \(\pi\) is indeed greater than 3.2, but for the purpose of simplification, we just consider the logical transformation.
+
+   -- *Simplified form*:
+
+   \[
+   (\pi \le 3.2)
+   \]
+
+   -- *Natural English*: Pi is less than or equal to 3.2.
+
+2. \(\neg (x < 0)\)
+
+   -- *Symbols*:
+
+   - \(\neg\): This symbol means "not".
+
+   - \(<\): This means "less than"
+
+   -- *Statement* \(\neg (x < 0)\):
+
+   - This means "not (x is less than 0)".
+
+   -- *Simplification*:
+
+   - if \(x\) is not less than 0, then \(x\) must be greater than or equal to 0.
+
+   -- *Simplified form*:
+
+   \[
+   (x \ge 0)
+   \]
+
+   -- *Natural English*: \(x\) is greater than or equal to 0.
+
+3. \(\neg (x^2 > 0)\)
+
+   -- *Symbols*:
+
+   - \(\neg\): This symbol means "not".
+
+   - \(>\): This means "greater than"
+
+   - \(x^2\): This means \(x\) squared (or \(x\) multiplied by itself).
+
+   -- *Statement* \(\neg (x^2 > 0)\):
+
+   - This means "not (x squared is greater than 0)".
+
+   -- *Simplification*:
+
+   - if \(x^2\) is not greater than 0, then \(x^2\) must be greater than or equal to 0.
+
+   - The square of any real number \(x\) is always non-negative (either 0 or positive).
+
+   - So \(x^2\) can only be equal to 0.
+
+   -- *Simplified form*:
+
+   \[
+   (x^2 = 0)
+   \]
+
+   -- *Natural English*: \(x\) squared is equal to 0.
+
+4. \(\neg(x = 1)\)
+
+   -- *Symbols*:
+
+   - \(\neg\): This symbol means "not".
+
+   - \(=\): This means "equal to"
+
+
+-- *Statement* \(x \equal 1)\):
+
+- This means "not (x is equal to 1)".
+
+  -- *Simplification*:
+
+  - if \(x\) is not equal to 1, then \(x\) can be any value except 1.
+
+    -- *Simplified form*:
+
+    \[
+    (x \neq 1)
+    \]
+
+    -- *Natural English*: \(x\) is not equal to 1.
+
+5. \(\neg \neg \psi \)
+
+   -- *Symbols*:
+
+   - \(\neg\): This symbol means "not".
+
+   - \(\psi\): This placeholder for any statement or proposition.
+
+
+-- *Statement* \(\neg \neg \psi)\):
+
+- This means "not (not \psi)".
+
+  -- *Simplification*:
+
+  - A double negation cancels out. Saying "not (not \(\psi\))" is the same as saying \(\psi\).
+
+    -- *Simplified form*:
+
+    \[
+    (\psi)
+    \]
+
+    -- *Natural English*: The statement \(\psi\)
+
+** *Q*: Let \(D\) be the statement "The dollar is strong", \(Y\) the statement "The Yuan is strong", and \(T\) the  statement "New US-China trade agreement signed". Express the main content of each of the following (fictitious) newspaper headlines in logical notation. (Note that logical notation captures truth, but not the many nuances and inferences of natural language.) How would you justify and defend your answers?
+
+1. Dollar and Yuan both strong.
+2. Yuan weak despite new trade agreement, but Dollar remains strong.
+3. Dollar and Yuan can't both be strong at the same time.
+
+*A*:
+
+1. *Dollar and Yuan both strong*.
+
+   *Logical Notation*: \((D \wedge Y)\)
+
+   *Explanation*:
+
+   - *Symbols*:
+
+     - \(\wedge\): This symbol means "and".
+
+   - The headlines states that both dollar and yuan are strong, which directly translate to "The dollar is strong" and
+     "The yuan is strong"
+
+2. *Yuan week despite new trade agreement, but Dollar remains strong*.
+
+   *Logical Notation*: \((\neg Y \wedge T) \wedge D\)
+
+   *Explanation*:
+
+   - *Symbols*:
+
+     - \(\neg\): This symbol means "not".
+
+     - \(\wedge\): This symbol means "and".
+
+     - The headlines three main points:
+
+       - The yuan is weak (\(\neg Y)\)
+
+       - A new trade agreement has been signed (\(T\))
+
+       - Despite these, the dollar remains strong (\(D\))
+
+     - Combining these points, we first state that the yuan is weak and the trade agreement is signed (\(\neg Y \wedge T)\). Then
+       we add that the dollar remains strong (\(\neg Y \wedge T) \wedge D\).
+
+3. *Dollar and Yuan can't both be strong at the same time*.
+
+   *Logical Notation*: \(\neg (D \land Y))
+
+   *Explanation*:
+
+   - *Symbols*:
+
+     - \(\neg\): This symbol means "not".
+
+     - \(\wedge\): This symbol means "and".
+
+     - The headlines indicates that is not possible for both the dollar and the yuan to be strong simultaneously.
+
+     - This is expressed by saying is not true that both \(D\) and \(Y\) are true at the same time.
+
+
+*Summary*:
+
+1. *Dollar and Yuan both strong*
+
+   - *Logical Notation*: \((D \wedge Y)\)
+
+   - *Justification*: The headline states a straightforward conjunction of two conditions: both the dollar and the yuan
+     being strong.
+
+2. *Yuan weak despite new trade agreement, but dollar remains strong*.
+
+   - *Logical Notation*: \((\neg Y \land T) \land D\)
+
+   - *Justification*: The headline describe a scenario where the yuan is weak \((\neg Y)\) despite a new trade agreement \((T\)),
+     and additionally, the dollar remains strong \((D\)). This combine these conditions using logical "and".
+
+2. *Dollar and Yuan can't both be string at the same time*.
+
+   - *Logical Notation*: \(\neg (d \land Y)\)
+
+   - *Justification*: The headline express a mutual exclusivity, meaning it is not possible for both and the dollar and
+     the yuan to be strong at the same time. This is captured by the negation of the conjunction of both statement being
+     true.
+
+These Logical notations capture the essence of the headlines, focusing on the truth conditions described by each statement.
+
+
+* Summary Lecture-2
+
+** Negation (NOT)
+
+- Symbol: (\(\neg\))
+
+- Meaning: "Negation" means "not". It used to state that someting is not true.
+
+- Example:
+
+  - Statement: "The sky is blue."
+
+  - Negation: "The sky is not blue."
+
+- Symbolic From: If \(P\) is a statement, then \(\neg P\) means "not \(P\)."
+
+- Example in Symbol: If \(P\) is the statement "It is raining." then \(\neg P\) is the statement "It is not raining."
+
+** conjunction (AND)
+
+- Symbol: (\(\land\))
+
+- Meaning: "Conjunction" means "and". It used to combine two statement, and both statement must be true for the
+  conjunction to be true.
+
+- Example:
+
+  - Statement 1: "I have an apple."
+
+  - Statement 2: "I have a banana."
+
+  - Conjunction: "I have an apple and I have a banana."
+
+- Symbolic Form: If \(P\) an \(Q\) are statement then \((P \land Q)\) means "both \(P\) and \(Q\)."
+
+- Example in Symbol: If \(P\) is the statement "I have a pen" and \(Q\) is the statement "I have a notebook." then \((P
+  \land Q)\) is the statement "I have a pen and I have a notebook."
+
+** Disjunction (OR)
+
+- Symbol: \(\lor\)
+
+- Meaning: "Disjunction" means "or". It used to combine two statement, and at least one of the statement must be true
+  for the disjunction to be true.
+
+- Example:
+
+  - Statement 1: "I will go to the park."
+
+  - Statement 2: "I will go to the beach."
+
+  - Disjunction: "I will go to the park or I will go to the beach."
+
+- Symbolic Form: If \(P\) and \(Q\) are statement,l then \(P \lor Q\) means "either \(P\) or \(Q\) or both."
+
+- Example in Symbols: If \(P\) is the statement "I like ice cream" and \(Q\) is the statement "I like cake,"
+  then \(P\) and \(Q\) is the statement "I like ice cream or I like cake."
+
+** Examples and Justifications*
+
+1. *Negation*:
+
+   - Statement: "The light is on."
+
+   - Negation: "The light is not on."
+
+   - Explanation: Negation flips the truth value of a statement. If the original statement is true, the negation is
+     false, and vice versa.
+
+2. *Conjunction*:
+
+   - Statement 1: "I have my homework."
+
+   - Statement 2: "I have my textbook."
+
+   - Conjunction: "I have my homework and I have my textbook."S
+
+   - Explanation: Both parts of the conjunction must be true for the whole statement to be true. If either part is
+     false, the conjunction is false.
+
+3. *Disjunction*:
+
+   - Statement 1: "It is sunny."
+
+   - Statement 2: "It is warm."
+
+   - Disjunction: "It is sunny or it is warm."
+
+   - Explanation: At least one part of the disjunction must be true for the whole statement to be true. If both parts
+     are false, the disjunction is false.
+
+
+** Summary:
+
+- Negation (\(\neg\)): Indicates the opposite of statement.
+
+  - Example: \(\neg P\) means "not \(P\)".
+
+- Conjunction (\(\land\)): Combines two statements where both must be true.
+
+  - Example: \(P \land Q\) means "both \(P\) and \(Q\)".
+
+- Disjunction (\(\lor\)): Combines two statements where at least one must be true.
+
+  - Example: \(P \lor Q\) mans "either \(P\) or \(Q\) or both".
+
+
+These logical operators help us form complex statements and reason about their truth values in a structured way.
+
+
+* Problem SET 1
+
+This problem set focuses on material in Lectures 1 and 2, so I recommend you to watch both lectures and attempt
+Assignment-1 and Assignment-2 before submitting your answers.
+
+** Is it possible for one of \((\phi \land \psi) \land 0\) and \(\phi \land (\psi \land 0)\) to be true and the others false? (If not, then the associative property hold for conjunction)
+
+*A*: To determine whether the associative property holds for conjunction, let's analyze the expression \((\phi \land \psi) \land 0\)
+and \(\phi \land (\psi \land 0)\).
+
+*Understanding the Expression*:
+
+1. \((\phi \land \psi) \land 0\):
+
+   - \(\phi\) and \(\phi\) are logical statements.
+
+   - \(\land\) represent the logical AND operation.
+
+   - \(0\) represents the logical value FALSE.
+
+2. \(\phi \land (\psi \land 0)\):
+
+   - Similarly, \(\phi\), \(\psi\), \(\land\), and \(0\) have the same meanins as above.
+
+
+*Evaluating Each Expression*
+
+*Expression-1*: \((\phi \land \psi) \land 0\)
+
+- The expression \((\phi \land \psi)\) evaluates to TRUE if both \(\phi\) and \(\psi\) are TRUE; otherwise, it evaluates to FALSE.
+
+- Regardless of the value of \((\phi \land \psi)\)m when ANDed with \(0\) (FALSE), the result will always be FALSE.
+
+
+So, \((\phi \land \psi) \land 0\) is always FALSE.
+
+*Expression-2*: \(\phi \land (\psi \land 0)\)
+
+- The expression \((\psi \land 0)\) evaluates to FALSE, because anything ANDed with \(0\) is FALSE.
+
+- Regardless of the values of \(\phi\), when ANDed with FALSE, the result will always be FALSE.
+
+  So,  \(\phi \land (\psi \land 0)\) is always FALSE.
+
+
+*Conclusion*:
+
+Both \((\phi \land \psi) \land 0\) and \(\phi \land (\psi \land 0)\) are always FALSE. Therefore, it is not possible for one of these expression
+to be true while the other is false.
+
+
+*Associative Property*
+
+The associative property for conjunction states that:
+
+\[
+(\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
+\]
+
+In this case, substituting \(0\) (FALSE) for \(i\):
+
+\[
+(\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
+\]
+
+Since both expressions evaluate to FALSE, this demonstrates that the associative property holds for conjunction in
+this context.
+
+** \(0\) represents the logical value FALSE. How to determine that \(0\) is FALSE in math?
+
+*A*: In mathematics and computer science, the value 0 is often used to represent the logical value FALSE. This convention
+comes from binary logic, where:
+
+- 0 represent *FALSE*
+
+- 1 represent *TRUE*
+
+*Reasoning*:
+
+1. *Binary Logic*: Computers use binary (base-2) number systems for calculations, where the two digits are 0 and 1. In
+   this system:
+
+   - 0 means there is no presence of signal or the condition is not met (FALSE).
+
+   - 1 means there is a presence of signal or the condition is met (TRUE).
+
+2. *Truth Tables*: In truth tables for logical operations, 0 is universally used to represent FALSE. For example in
+   the AND operation truth table:
+
+   |---+---+---+---+---+---+---|
+   | / | < | < | < | < | < | > |
+   |   | 0 | \land | 0 | = | 0 |   |
+   |---+---+---+---+---+---+---|
+   |   | 0 | \land | 1 | = | 0 |   |
+   |---+---+---+---+---+---+---|
+   |   | 1 | \land | 0 | = | 0 |   |
+   |---+---+---+---+---+---+---|
+   |   | 1 | \land | 1 | = | 1 |   |
+   |---+---+---+---+---+---+---|
+
+3. *Programming*: In most programming language, 0 is used to represent FALSE conditional statements and logical
+   operations. For example, C and Python
+
+   - *`if (0)`* will not execute the block of code because 0 is treated as FALSE.
+
+   - *`if (1)`* will execute the block of code because 1 is treated as TRUE.
+
+*Summary*
+
+- *0 as FALSE*: In logic, 0 represent FALSE because it follows the binary system where 0 means "no signal" or
+  "condition not met".
+
+** What different between \(\phi\) and \(\psi\)?
+
+*A*: In logical expression, \(\phi\) (phi) and \(\psi\) (psi) are placeholder for any logical statements or propositions. they
+don't have an inherent difference; They are used to represent different logical conditions or statements.
+
+*Examples and Justification*:
+
+1. *Example with Specific Statement*:
+
+   - Let \(\phi\) represent the statement "it is raining."
+
+   - Let \(\psi\) represent the statement "I have an umbrella."
+
+2. *Using Conjunction (AND)*:
+
+   - \(\phi \land \psi\) would mean "It raining and I have an umbrella."
+
+   - This statement is true only if both "it is raining" and "I have an umbrella" are truth.
+
+3. *Using Disjunction (OR)*:
+
+   - \(\phi \lor \psi\) would mean "It raining or I have an umbrella."
+
+   - This statement is true if either "it is raining" is true, or "I have an umbrella" is truth, or both true.
+
+4. *Using Negation (NOT)*:
+
+   - \(\neg \phi\) would mean "It is not raining."
+
+   - \(\neg \psi\) would mean "I do not have an umbrella"
+
+
+*Justification for Using Different Symbols*:
+
+1. *Clarity*: Using different symbols helps to distinguish between different statements or propositions, making it
+   clear which conditions or statement we are referring to in logical expression.
+
+2. *Complex Expressions*: In complex logical expression, it is necessary to have different symbols to represent
+   different statements. For examples like \(((\phi \land \psi) \lor (\neg \psi \land X)\)), having different symbols help to understand
+   the structure and meaning of the expression.
+
+*Summary*
+- *\(\phi\) and \(\psi\)*: These are placeholder for logical statements or propositions. They can represent any condition,
+  and using different symbol helps to distinguish between conditions in logical expressions.
+
+** Is it possible for one of \(\phi \lor \psi) \lor 0\) and \(\phi \lor (\psi \lor 0)\) to be true and the other false? (If not, then the associative property holds for disjunction.)
+
+*A*: To determine wether the associative property holds for disjunction, let's analyze the expressions \(\phi \lor \psi) \lor 0\) and
+\(\phi \lor (\psi \lor 0)\).
+
+*Understanding the Expression*:
+
+1. \((\phi \lor \psi) \lor 0\):
+
+   - \(\phi\) and \(\psi\) are logical statements.
+
+   - \(\lor\) represent the logical OR operation.
+
+   - \(0\) represent the logical value FALSE.
+
+2. \(\phi \lor (\psi \lor 0)\):
+
+   - Similarly, \(\phi, \psi, \lor, 0\) have the same meaning as above.
+
+*Evaluating Each Expression*
+
+*Expression-1*: \((\phi \lor \psi) \lor 0\)
+
+- The expression \((\phi \lor \psi)\) evaluates to TRUE if either \(\phi\) or \(\psi\) or both are TRUE.
+
+- The disjunction of this result with 0(FALSE) does not change the result, because \(A \lor 0 = A\) for any logical
+  statement \(A\).
+
+*Expression-2*: \(\phi \lor (\psi \lor 0)\)
+
+- The expression \((\psi \lor 0)\) evaluates to \(\psi\), because the OR operation with 0(FALSE) does not change the result
+  \(B \lor 0 = B\) for any logical statement \(B\).
+
+- The disjunction of \(\phi\) with \(\psi\) is the same as \(\phi \lor \psi\).
+
+So, \(\phi \lor (\psi \lor \phi)\) is also equivalent to \(\phi \lor \psi\).
+
+*Conclusion*
+
+Both \((\phi \lor \psi) \lor 0\) and \(\phi \lor (\psi \lor 0)\) are equivalent to \(\phi \lor \psi\). Therefore, it is not possible for one of these
+expressions to be true while the others is false.
+
+
+*Associative Property*
+
+The associative property for disjunction states that:
+
+\[
+\((\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)\)
+\]
+
+In this case, substituting 0(FALSE) for \(i\):
+
+\[
+(\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)
+\]
+
+Since both expression simplify to \(\phi \lor \psi\), this demonstrates that the associative property holds for disjunction in
+this context.
+
+** Is it possible for one of \(\phi \land (\psi \lor 0)\) and \((\phi \land \psi) \lor (\phi \lor 0)\) to be true and the other false? (If not, then the distributive property holds for conjunctions across disjunction.)
+
+*A*: Let's go through the simplification step by step, with clear symbol and reasoning for each expression.
+
+*Expression*:
+
+1. \(\phi \land (\psi \lor 0)\)
+
+2. \((\phi \land \psi) \lor \(\phi \land 0)\)
+
+*Simplifying Each Expression*:
+
+*Expression-1*: \(\phi \land (\psi \lor 0)\)
+
+1. Evaluate the inside of parentheses first:
+
+   - \(\psi \lor 0\): Since \(0\) represent FALSE, the OR operation \((\psi \lor 0\)) is equivalent to just \(\psi\). This is because
+
+     \[
+     \psi \lor 0 = \psi
+     \]
+
+   - This simplifies our expression to:
+
+     \[
+     \phi \land (\psi \lor 0) \equiv \phi \land \psi\)
+     \]
+
+*Expression-2*: \((\phi \land \psi) \lor 0\)
+
+1. Evaluate each part inside the parentheses:
+
+   - \(\phi \land \psi\) remain as it is.
+
+   - \(\phi \land 0\): Since \(0\) represent FALSE, the AND operation \((\phi \land 0)\) is equivalent to just \(\phi \land \psi\). This is
+     because:
+
+     \[
+     \phi \land 0 = 0
+     \]
+
+2. *Simplify the OR operation*:
+
+   - \((\phi \land \psi) \lor 0\): Since \(0\) represent FALSE, the OR operation \((\phi \land \psi) \lor 0\) is equivalent to just \(\phi \land \psi\)
+
+*Conclusion*:
+
+Both expression simplify to the same result:
+
+\[
+\(\phi \land (\psi \lor 0)  = \phi \land \psi\)
+\]
+
+\[
+\((\phi \land \psi) \lor (\phi \land 0) = \phi \land \psi\)
+\]
+
+Since \(\phi \land (\psi \lor 0)\) and \((\phi \land \psi) \lor (\phi \land 0)\) bot simplify to \(\phi \land \psi\), it is not possible to be TRUE while the other
+is false.
+
+This equivalent holds true because both expression reduce to \(\phi \land \psi\)
+
+
+*Distributive Property*:
+
+This confirms that the distributive property holds for conjunction over disjunction:
+
+\[
+\phi \land \psi = (\phi \land \psi) \lor \(\phi \land 0)
+\]
+
+When \(\theta\) is \(0\) (FALSE), this becomes:
+
+\[
+\phi \land (\psi \lor 0) = (\phi \land \psi) \lor (\phi \land 0)
+\]
+
+- Both sides simplify to \(\phi \land \psi\), demonstrating the property holds in context.
+
+** Is it possible for one of \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land \(\phi \lor 0)\) to be true and the other false? (If not, then the distributive property holds for disjunction across conjunctions.)
+
+*A*: To determine wether the distributive property holds for disjunction (OR) across conjunction (AND), let's analyze the
+expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 0)\).
+
+*Understanding the Expression*:
+
+1. \(\phi \lor (\psi \land 0)\)
+
+    - \(\phi\) and \(\psi\) are logical statements.
+
+    - \(\lor\) represent the logical OR operation.
+
+    - \(\land\) represent the logical ND operation.
+
+    - \(0\) represent the logical value FALSE.
+
+2.  \((\phi \lor \psi) \land (\phi \lor 0)\)
+
+    - Similarly, \(\phi, \psi, \lor, \land\) and \(0\) have the same meanings as above.
+
+*Simplifying Each Expression*:
+
+*Expression-1*: \(\phi \lor (\psi \land 0)\)
+
+    1. *Evaluate the inside of the parentheses first*:
+
+       - \(\psi \land 0\): Since 0 represent FALSE, the AND operation \(\psi \land 0\) is always FALSE. This is because:
+
+         \[
+            \psi \land 0 = 0
+         \]
+
+       - This simplifies our expression to:
+
+         \[
+            \phi \lor (\psi \land 0) = \psi \lor 0
+         \]
+
+    2. *Simplify the OR statement*:
+
+       - \(\phi \lor 0\): Since 0 represent FALSE, the OR operation \(\phi \lor 0\) does not change the value of \(\phi\). This is
+         because:
+
+         \[
+            \phi \lor 0 = \phi
+         \]
+
+    So, \(\phi \lor (\psi \land 0)\) simplifies to \(\phi\)
+
+*Expression-2*: \((\phi \lor \psi) \land (\phi \lor 0)\)
+
+
+    1. *Evaluate each part inside parentheses*:
+
+       - \(\phi \lor \phi\) remains as it is.
+
+       - \(\phi \lor 0\) simplifies to \(\phi\), because the OR with FALSE does not change the value f \(\phi\):
+
+         \[
+            \phi \lor 0 = \phi
+         \]
+
+
+       - This simplifies our expression to:
+
+         \[
+            (\phi \lor \psi) \lor (\phi \lor 0) = (\phi \lor \psi) \land \phi
+         \]
+
+    1. *Simplify the AND operation*:
+
+       - The expression \((\phi \lor \psi) \land \phi\) simplifies to \(\phi), because for any \(\phi\) and \(\psi\):
+
+         \[
+            (\psi \lor \phi) \land \phi = \phi
+         \]
+
+       - This is because if \(\phi\) is true, then \(\phi \land \phi\) is true, and if \(\phi\) is false, \((\phi \lor \psi) \land \phi\) will still be
+         false.
+
+    So, \((\phi \lor \psi) \land (\phi \lor 0)\) simplifies to \(\phi\).
+
+
+    *Conclusion*
+
+    Both \(\phi \lor (\phi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 0)\) simplify to \(\phi\). Therefore, it is not possible for one of these
+    expression to be true while the other is false.
+
+    *Distributive Property*
+
+    The distributive property for disjunction over conjunction states that:
+
+    \[
+        \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
+    \]
+
+    In this case, substituting 0(FALSE) for \(i\):
+
+    \[
+        \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
+    \]
+
+    Since both expression simplify to \(\phi\), this demonstrate that the distributive property holds for disjunction over
+    conjunction in this context.
+
+** Is showing that the negation \(\neg \phi\) is true equivalent to showing that \(\phi\) is false?
+
+*A*: Yes, showing that the negation \(\neg \phi\) is true indeed equivalent to showing that \(\phi\) is false. This is fundamental
+ principle logic.
+
+ *Explanation*
+
+ In logical terms, a proposition \(\phi\) can either be true of false, but not both (the law of excluded middle). The
+ negation of proposition \(\phi\), written as \(\neg \phi\), is true if and only if \(\phi\) is false. Conversely \(\neg \phi\) is false if
+ and only if \(\phi\) is true.
+
+*Why This is True*
+
+1. *Negation Definition*:
+
+   - The negation of \(\phi\), denoted \(\neg \phi\), is true when \(\phi\) is false.
+
+   - Te negation of \(\phi\), denoted \(\neg \phi\), is false when \(\phi\) is true.
+
+2. *Truth Table*:
+
+  |---+-----+------+---|
+  |   | <c> | <c>  |   |
+  |   |  \phi  | \neg  \psi |   |
+  |---+-----+------+---|
+  | / |  <  |  <   | > |
+  |   |  T  |  F   |   |
+  |---+-----+------+---|
+  |   |  F  |  T   |   |
+  |---+-----+------+---|
+
+3. *Logical Equivalent*:
+
+   - If \(\neg \phi\) is true, by definition, \(\phi\) must be false.
+
+   - If \(\neg \phi\) is false, by definition, \(\phi\) must be true.
+
+
+*Practical Example*:
+
+1. Statement: \(\phi\): "It is raining."
+
+2. Negation: \(\neg \phi\): "It is not raining."
+
+
+- If "It is not raining" \((\neg \phi)\) is true, then the statement "it is raining" \((\phi)\) must false.
+
+- Conversely, if "It is not raining" \((\neg \phi)\) is false, then the statement "it is raining" \((\phi)\) must true.
+
+
+*Conclusion*
+
+Therefore, showing \(\neg \phi\) is true is logically equivalent to showing that \(\phi\) is false. This relationship is a core
+concept in propositional logic, and is used extensively in mathematical proofs, logical arguments, and computer science.
+
+** Assuming you know nothing more about Alice, which of (a) -- (e) is most likely? (Or does (f) hold?)
+
+1. Alice is a rock star and works in a bank.
+
+2. Alice is quiet and works in a bank.
+
+3. Alice is quiet and reserved and works in a bank.
+
+4. Alice is honest and works in a bank.
+
+5. Alice works in a bank.
+
+6. None of these is more less likely.
+
+*A*: To determine which of the given statement about Alice is most likely, we need to use logical reasoning and
+    probability principle. Since we know nothing more about Alice, we should rely on the principle of simplicity and
+    generality, Also known as [[https://en.wikipedia.org/wiki/Occam's_razor][Occam's Razor]]. This principle suggest that the simplest explanation or assumption is
+    typically the most likely.
+
+    Let's break down each statement and use logical symbol to represent them:
+
+    1. *Alice is a rock star and works in a bank*.
+
+       - \(R \land B\)
+
+       - \(R\): Alice is a rock star.
+
+       - \(B\): Alice works in a bank.
+
+    2. *Alice is quiet and works in a bank*.
+
+       - \(Q \land B\)
+
+       - \(Q\): Alice is quiet.
+
+       - \(B\): Alice works in a bank.
+
+    3. *Alice is quiet and reserved and works in a bank*.
+
+       - \(Q \land R \land B\)
+
+       - \(Q\): Alice is quiet.
+
+       - \(R\): Alice is reserved.
+
+       - \(B\): Alice works in a bank.
+
+    4. *Alice is honest and works in a bank*.
+
+       - \(H \land B\)
+
+       - \(Q\): Alice is honest.
+
+       - \(B\): Alice works in a bank.
+
+    5. *Alice work in a bank*.
+
+       - \(B\): Alice works in a bank.
+
+    6. *None of these is more or less likely*.
+
+       - This statement suggest that no particular information given about Alice influences the likehood of her working
+         in a bank more than any other.
+
+    *Logical Analysis*
+
+    We will use basic probability and logical principles to analyze these statements. Since we know nothing about else
+    about Alice, we should assume that base probability of her having any specific characteristic (like being a rock
+    star, quiet, reserved, or honest) is independent of her working in a bank.
+
+    *Simplifying the Problem*:
+
+        - \(R \land B\): Alice is both a rock star and works in a bank.
+
+        - \(Q \land B\): Alice is both quiet and works in a bank.
+
+        - \(Q \land R \land B\): Alice is quiet, reserved, and works in a bank.
+
+        - \(H \land B\): Alice is both honest and works in a bank.
+
+        - \(B\): Alice works in a bank.
+
+        The simplest and most general statement is \(B\) (Alice works in a bank) without any additional specific
+        characteristic. This is because \(B\) alone makes a fewest assumption and introduces the least amount additional
+        information.
+
+    *Logical Argument*
+
+    To formalize this, let's use the concept of probability:
+
+        - Let \(P(X)\) denote the probability of event \(X\)
+
+            1. \(P (R \land B) \leq P (B)\): The probability that Alice is both a rock star and works in a bank cannot exceed
+               the probability that she works in a bank.
+
+            2. \(P (Q \land B) \le P(B)\): The probability that Alice is both quiet and works in a bank cannot exceed the
+               probability that she works in a bank.
+
+            3. \(P (Q \land R \land B) \le P(B)\): The probability that Alice is both quiet, reserved and works in a bank cannot
+               exceed the probability that she works in a bank.
+
+            4. \(P (H \land B) \le P(B)\): The probability that Alice is both honest and works in a bank cannot exceed the
+               probability that she works in a bank.
+
+        Since each conjunction (i.e, combining two or more characteristics with \(\land\)) must have a probability that is
+        less than or equal to the probability of \(B\), the simplest assumption is that Alice is works in a bank
+        (statement 5).
+
+    *Conclusion*
+
+    Statement 5 (Alice is works in a bank) is the most likely statement given the information provided.
+
+    *In Natural Language*
+
+    Given no additional information about Alice, the simplest and least assumptive statement is that she works in a
+    bank. Adding more characteristics (like being a rock star, quiet, reserved, or honest) only decreases the likehood
+    since it adds more conditions that need to be meet simultaneously.
+
+    Thus, the logical and probabilistic reasoning shows that the simplest, least specific statement (Alice works in a
+    bank) is the most likely to be true.
+
+** Identify which is of the following are true (where \(x\) denotes an arbitrary real number.) If you do not select a particular statement, the system will assume you think it is false.
+
+1. \((x > 0) \land (x \le 10)\) means \(0 \le x \le 10\)
+
+2. \((x \ge 0) \land (x^2 < 9)\) means \(0 \le x < 3\)
+
+3. \((x \ge 0) \land (x \le 0)\) means \(x = 0\)
+
+4. There is no \(x\) for which \((x < 4) \land (x > 4)\)
+
+5. \(-5 \le x \le 5\) means \(x\) is at most 5 units from 0.
+
+6. \(-5 < x < 5\) implies that \(x\) cannot be exactly 5 units from 0.
+
+7. \((x \ge 0) \lor (x < 0)\)
+
+8. \((0 = 1) \lor (x < 0)\)
+
+9. If \(x > 0 \lor x < 0\) then \(x \ne 0\)
+
+10. If \(x^2 = 9\) then \(x = 3 \lor x = -3\)
+
+
+*A*: Let's evaluate each statement to determine whether it is true or false, and provide the necessary mathematics.
+
+
+1. *Statement-1: \((x > 0) \land (x \le 10)\) means \(0 \le x \le 10\)*
+
+   *FALSE*:
+
+   - The expression  \((x > 0) \land (x \le 10)\) means that \(x\) is greater than 0 and less than or equal to 10.
+
+   - \((x \le x \le 10\) means \(x\) is greater than or equal to 0 and less or equal to 10.
+
+   - Notice that \((x > 0)\) means \(x\) cannot be 0, while \((0 \le x \le 10)\) includes 0.
+
+   - Therefore, the statement is FALSE because they don't mean the same thing.
+
+   *True Statement*:
+
+   - \((x > 0) \land (x \le 10)\) means \(0 \le x \le 10\)
+
+2. *Statement-2 \((x \ge 0) \land (x^2 < 9)\) means \(0 \le x < 3\)*
+
+   *TRUE*:
+
+   - \((x \ge 0) \land (x^2 < 9)\) means \(x\) is greater than or equal 0 and the square of \(x\) is less than 9.
+
+   - The condition \((x^2 < 9)\) means \(x\) must be between -3 and 3.
+
+   - Combined with \(x \ge 0\), we only consider the non-negative part of the range.
+
+   - Therefore, \(x\) must be between 0 and 3, not including 3.
+
+3. *Statement-3 \((x \ge 0) \land (x \le 0)\) means \(x = 0\)*
+
+   *TRUE*:
+
+   - \((x \ge 0) \land (x \le 0)\) means \(x\) is greater than or equal to 0 and less than or equal to 0.
+
+   - The only number that satisfies both condition is 0.
+
+4. *Statement-4 There is no \(x\) for which \((x < 4) \land (x > 4)\)*
+
+   *TRUE*:
+
+   - \((x < 4) \land (x > 4)\) is contradiction because no real number can be both less than 4 and greater than 4 at the same time.
+
+5. *Statement-5 \(-5 \le x \le 5\) means \(x\) is at most 5 units from 0*.
+
+   *TRUE*:
+
+   - \(-5 \le x \le 5\) means \(x\) lies within the interval from -5 to 5.
+
+   - This means \(x\) is a most 5 units away from 0.
+
+6. *Statement-6 \(-5 < x < 5\) implies that \(x\) cannot be exactly 5 units from 0*.
+
+   *TRUE*:
+
+   - \(-5 < x < 5\) means \(x\) is strictly between -5 and 5.
+
+   - This range excludes \(x = -5\) and \(x = 5\)
+
+   - Therefore, \(x\) cannot be exactly 5 units from 0.
+
+7. *Statement-7 \((x \ge 0) \lor (x < 0)\)*
+
+   *TRUE*:
+
+   - \((x \ge 0) \lor (x < 0)\) means \(x\) is either non-negative (greater than or equal to 0) or negative (less than 0)
+
+   - This cover all possible real number, because every real number is either non-negative or negative.
+
+8. *Statement-8 \((0 = 1) \lor (x < 0)\)*
+
+   *FALSE*:
+
+   - \((0 = 1) \lor (x < 0)\) means either \(0 = 1\) is true or \(x\) is less than 0.
+
+   - Since \(0 = 1\) is always false, the statement depends entirely on \(x < 0\)
+
+   *True Statement*:
+
+   - \(x < 0\) (as \(0 = 1)\ is always false).
+
+9. *Statement-9 If \(x > 0 \lor x < 0\) then \(x \ne 0\)*
+
+   *TRUE*:
+
+   - \(x > 0) means \(x\) is positive.
+
+   - \(x < 0\) means \(x\) is negative.
+
+   - \(if x > 0 \lor x < 0\) (meaning \(x\) is either positive or negative), then \(x\) cannot be 0.
+
+10. *Statement-10 If \(x^2 = 9\) then \(x = 3 \lor x = -3\)*
+
+    *TRUE*:
+
+    - \(x^2 = 9\) means \(x\) squared is 9.
+
+    - The solution to this equation are \(x = 3\) and \(x = -3\)
+
+    - Therefore, if \(x^2 = 9\) then \(x\) must be either 3 or -3.
+
+
+*Summary*:
+
+    False   : (x>0)∧(x≤10)(x>0)∧(x≤10) means 0<x≤100<x≤10.
+    True    : (x≥0)∧(x2<9)(x≥0)∧(x2<9) means 0≤x<30≤x<3.
+    True    : (x≥0)∧(x≤0)(x≥0)∧(x≤0) means x=0x=0.
+    True    : There is no xx for which (x<4)∧(x>4)(x<4)∧(x>4).
+    True    : −5≤x≤5−5≤x≤5 means xx is at most 5 units from 0.
+    True    : −5<x<5−5<x<5 implies that xx cannot be exactly 5 units from 0.
+    True    : (x≥0)∨(x<0)(x≥0)∨(x<0).
+    False   : x<0x<0 (as 0=10=1 is always false).
+    True    : If x>0∨x<0x>0∨x<0 then x≠0x=0.
+    True    : If x2=9x2=9 then x=3∨x=−3x=3∨x=−3.
