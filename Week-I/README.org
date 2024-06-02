@@ -246,6 +246,7 @@ You can open [[file:./02-Supplement-Set-Theory-math.pdf][Supplement Set Theory m
     tested for many cases.
 
     example:
+
     - 4 = 2 + 2 (both prime numbers)
     - 6 = 3 + 3 (both prime numbers)
     - 8 = 4 + 4 (both prime numbers)
@@ -270,7 +271,6 @@ You can open [[file:./02-Supplement-Set-Theory-math.pdf][Supplement Set Theory m
 - In summary, "/thinking a sand away/" encapsulated the essence of a methodical, persistent, and detail-oriented approach
   to mathematical problem-solving. It highlights the importance of gradual progress, patience, and the accumulation of
   small insights that collectively lead to significant breakthroughs in understanding and solving mathematical problems.
-
 
 * Assignment-1 -- Lecture Introductory Material
 
@@ -336,9 +336,11 @@ difficulty seeing there is an alternative meaning)
 
 ** *Q*: You often see the following notice posted in elevators:
 
+#+BEGIN_LaTex
 \begin{center}
    \text{IN CASE OF FIRE, DO NOT USE ELEVATOR}
 \end{center}
+#+END_LaTex
 
 This one always amuse me. Comment on the two meanings and reformulate to avoid unintended second reading. (Again,
 given the context for this notice, the ambiguity is not problematic)
@@ -346,33 +348,33 @@ given the context for this notice, the ambiguity is not problematic)
 *A*: You're absolutely right! The above notice is a classic example of a misplaced modifier. Here's a breakdown of the two
 meaning and some reformulated options:
 
-- *Unintended Meaning:*
+*Unintended Meaning:*
 
-  The intended meaning is to instcut people not to use the elevators in case of fire. However, due the misplaced
-  modifier "DO NOT", the sentence could be interpreted as saying it's important take note of something about using
-  the elevator during a fire.
+The intended meaning is to instcut people not to use the elevators in case of fire. However, due the misplaced
+modifier "DO NOT", the sentence could be interpreted as saying it's important take note of something about using
+the elevator during a fire.
 
-  - *Intended Meaning*:
+*Intended Meaning*:
 
-    If there is a fire, do not use the elevator.
+If there is a fire, do not use the elevator.
 
-  - *Reformulated Options*:
+*Reformulated Options*:
 
-    - *Use Stairs in Case of Fire*. This is a simple and direct message that focuses on the alternative action to take.
+- *Use Stairs in Case of Fire*. This is a simple and direct message that focuses on the alternative action to take.
 
-    - *Fire: Take Stairs, Not Elevators*. This version emphasizes the urgency of the situation and reinforces the
-      alternative by explicitly mentioning it.
+- *Fire: Take Stairs, Not Elevators*. This version emphasizes the urgency of the situation and reinforces the
+  alternative by explicitly mentioning it.
 
-    - *In Case of Fire, Evacuate by Stairs*. This clarifies the reason for avoiding the elevators and emphasizes using
-      the stairs for evacuation.
+- *In Case of Fire, Evacuate by Stairs*. This clarifies the reason for avoiding the elevators and emphasizes using
+  the stairs for evacuation.
 
-      All these options remove the ambiguity and clearly instruct people to utilize the stairs during a fire emergency.
+All these options remove the ambiguity and clearly instruct people to utilize the stairs during a fire emergency.
 
-  - *Humor in the Ambiguity*:
+*Humor in the Ambiguity*:
 
-    The amusement comes from the unexpected interpretation created by the misplaced modifier. While the ambiguity might
-    not be a major safety concern in this specific context (everyone knows elevators are bad in fires), it highlights
-    the importance of clear and concise communication, especially in safety instruction.
+The amusement comes from the unexpected interpretation created by the misplaced modifier. While the ambiguity might not
+be a major safety concern in this specific context (everyone knows elevators are bad in fires), it highlights the
+importance of clear and concise communication, especially in safety instruction.
 
 ** *Q*: Official documents often contain one or more pages that are empty apart from one sentence at he bottom:
 
