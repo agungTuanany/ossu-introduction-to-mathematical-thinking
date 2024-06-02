@@ -69,19 +69,15 @@ workings of the humand mind.
 
 - Example, The commutative law for addition could be written in English as:
 
-  #+BEGIN_LaTex
   \begin{center}
     \textit{"When two number are added, their order is not important"}
   \end{center}
-  #+END_LaTex
 
   However, it is usually written in the symbolic form
 
-  #+BEGIN_LaTex
   \[
   m + n = n + m
   \]
-  #+END_LaTex
 
 - The introduction of symbolic mathematics in its modern form is generally credited to the French mathematician
   [[https://en.wikipedia.org/wiki/Fran%C3%A7ois_Vi%C3%A8te][François Viète]] in the sixteenth century.
@@ -130,11 +126,9 @@ workings of the humand mind.
   does not have to be specified by an algebraic formula. In fact, there's no reason to restrict your attention to
   numbers. /A function can be any rule that takes objects of one kind and produces new object from them/.
 
-  #+BEGIN_LaTex
   \begin{center}
     If \(x\) is rational, set \(f(x) = 0\); if \(x\) is irrational, set \(f(x) = 1\).
   \end{center}
-  #+END_LaTex
 
 - Mathematicians began to study the properties of such /absctract/ functions, specified not by some formula but by their
   behavior. For example, does the function have the property that when you present it with different starting values it
@@ -336,11 +330,9 @@ difficulty seeing there is an alternative meaning)
 
 ** *Q*: You often see the following notice posted in elevators:
 
-#+BEGIN_LaTex
 \begin{center}
    \text{IN CASE OF FIRE, DO NOT USE ELEVATOR}
 \end{center}
-#+END_LaTex
 
 This one always amuse me. Comment on the two meanings and reformulate to avoid unintended second reading. (Again,
 given the context for this notice, the ambiguity is not problematic)
@@ -378,11 +370,9 @@ importance of clear and concise communication, especially in safety instruction.
 
 ** *Q*: Official documents often contain one or more pages that are empty apart from one sentence at he bottom:
 
-#+BEGIN_LaTex
 \begin{center}
     \text{This page intentionally left blank}
 \end{center}
-#+END_LaTex
 
 Does the sentence make a true statement? What is the purpose of making such a statement? What reformulation of the
 Sentence would avoid any logical problems about truth? (Once again, the context means that in practice everyone
@@ -505,11 +495,9 @@ commentary on this sentence and the importance of precision in mathematical lang
   - We test divisibility by 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, and 43.
 
   Upon testing, we find that:
-  #+BEGIN_LaTex
   \[
   2311 = 47 X 49
   \]
-  #+END_LaTex
 
   Thus, 2311 is not a prime number because it can be factored into 47 and 49 (and since 49 itself is 7 x 7).
 
@@ -554,77 +542,59 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
   - The standard abbreviation that mathematicians use for /and/ is
     # \(\land \)
-    #+BEGIN_LaTex
     \[
     \wedge
     \]
-    #+END_LaTex
 
     For example, we can write mathematical notation for formula,"pi is bigger than 3 and less than 3.2", like:
 
-    #+BEGIN_LaTex
     \[
     (\pi < 3) \wedge (\pi > 32)
     \]
-    #+END_LaTex
 
     In fact for this example where we're just talking about position of numbers of real line there's and even simpler
     notation we would typically write:
 
-    #+BEGIN_LaTex
     \[
     3 < \pi < 3.2
     \]
-    #+END_LaTex
 
     The other examples, 'phi' and 'psi', if we have two statements 'phi' and 'psi' means that they're both true.
 
-    #+BEGIN_LaTex
     \[
     \phi \wedge \psi
     \]
-    #+END_LaTex
 
     Well if \phi and \psi are individually true, then conjunction \( \phi \wedge \psi \) will be true.
 
-    #+BEGIN_LaTex
     \begin{center}
         If \(\phi\), \(\psi\) are both true, then \(\phi\)  \(\wedge\) \(\psi\) will be ture
     \end{center}
-    #+END_LaTex
 
     under what circumstances will "phi" and "psi" is false?
 
-    #+BEGIN_LaTex
     \begin{center}
         If \(\phi\) or \(\psi\) are false, then \(\phi \wedge\psi\) will be false
     \end{center}
-    #+END_LaTex
 
     This might seem very self evident and trivial, but already this definition leads to a rather suprising conclusion.
 
-    #+BEGIN_LaTex
     \begin{center}
       \(\phi \wedge \psi\) means the same as \(\psi \wedge \phi\)
     \end{center}
-    #+END_LaTex
 
   - In mathematical palettes, conjunction is commutative. Nut that's not a case for the use of the word, and, in everday English.
     for example:
 
-    #+BEGIN_LaTex
     \begin{center}
       \textit{"John took the free kick and the ball wen into the net"}
     \end{center}
-    #+END_LaTex
 
     That doesn't mean the same as the sentence:
 
-    #+BEGIN_LaTex
     \begin{center}
       \textit{"the ball went into the net and John took the free kick"}
     \end{center}
-    #+END_LaTex
 
     They're both conjunction and the two conjunction are the same. One of them is "John took the free kick" and other one
     is "the ball went into the net."
@@ -638,25 +608,21 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
     In mathematics, the term "conjunction" refers to an operation where the order in which you perform it does not effect
     the final result. When applied to conjunction (usually denotes by "and"), commutative means that:
 
-    #+BEGIN_LaTex
     \begin{center}
       \text{"Statement A and Statement B"}
 
       \text{"Statement B and Statement A"}
     \end{center}
-    #+END_LaTex
 
     These two phrasings convey the same meaning. The order doesn't change the truth value of the combined statemet.
 
   - Let see what you make of this one.
 
-    #+BEGIN_LaTex
     \begin{center}
       \text{"A: it rained on Saturday"}
 
       \text{"B: it snowed on Saturday"}
     \end{center}
-    #+END_LaTex
 
     Question, does the conjunction A \( \wedge \) B accurately reflect the meaning of the sentence, "it rained and snowed on
     Saturday"?
@@ -692,19 +658,15 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
 - We want to be able assert the "/statement A is true *or* Statement B is true/". For instance we might want to saying:
 
-  #+BEGIN_LaTex
   \begin{center}
     \text{\(a\) > \(0\) or the equation \(x^2 + a = 0\) has a real root}
   \end{center}
-  #+END_LaTex
 
   Or maybe we want to say
 
-  #+BEGIN_LaTex
   \begin{center}
     \text{\(ab = 0\) if \(a = 0\) or \(b = 0\)}
   \end{center}
-  #+END_LaTex
 
   Those are both statement that we get, when we combine two sub statement with the word /or/. Both statement are in fact
   true, but there's a difference between them. The meaning of /or/ is not the same in the first sentence as it is in the
@@ -736,31 +698,25 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
   In example:
 
-  #+BEGIN_LaTex
   \begin{center}
   \(\phi, \psi\): \(\phi \lor \psi\) means \((\phi\) or \(\psi)\) (or both)
   \end{center}
-  #+END_LaTex
 
   The sentence of (\(\phi \lor \psi \)) is called a "disjunction of phi and psi".
 
   And relative to the disjunction, the constituents phi and psi are called disjuncts.
 
-  #+BEGIN_LaTex
   \begin{center}
   \text{ \(\phi, \psi \) are called disjuncts of (\( \phi \lor \psi \))}
   \end{center}
-  #+END_LaTex
 
   Remember: \(\phi\) or \(\psi\)  means _at least one_ of \(\phi\), \(\psi\) is true.
 
 - The following rather silly statement is true.
 
-  #+BEGIN_LaTex
   \[
   (3 < 5) \lor (1 = 0)
   \]
-  #+END_LaTex
 
   Silly examples above are actually quite useful in mathematics because they help us understand what a definition means.
 
@@ -770,12 +726,10 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
 - Here is a quick quiz:
 
-  #+BEGIN_LaTex
   \begin{center}
   \text{let A be the sentence, it will rain tomorrow}
   \text{let B be the sentence, it will be dry tomorrow}
   \end{center}
-  #+END_LaTex
 
   Does the disjunction (A \(\vee\) B) accurately reflect the meaning of the sentence, tomorrow it will rain or it will be
   dray all day?
@@ -803,28 +757,22 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
 - If (\(\psi\)) is a sentence, then we want to be able to say that (\(\psi \) is false), we can write it down:
 
-  #+BEGIN_LaTex
   \begin{center}
     \text{\(\psi:\) (not- \(\psi\)) or (\(\neg\psi\))}
   \end{center}
-  #+END_LaTex
 
 - We call  _(\(\neg\psi\))_ is the negation of \(\psi\).
 
-    #+BEGIN_LaTex
   \begin{center}
     \text{if \(\psi\) is true, then (\(\neg \psi)\) is false.}
     \text{if \(\psi\) is false, then (\(\neg \psi)\) is true.}
   \end{center}
-  #+END_LaTex
 
 - We often use special notations in particular circumstances. For example, we would typically write:
 
-  #+BEGIN_LaTex
   \[
   x \not= y
   \]
-  #+END_LaTex
 
   # \[
   # \(x \neq y \)
@@ -832,27 +780,21 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
   instead of:
 
-  #+BEGIN_LaTex
   \[
   \neg (x = y)
   \]
-  #+END_LaTex
 
 - We have to little bit careful. For example, I would write
 
-  #+BEGIN_LaTex
   \[
   \neg (a < x <= b)
   \]
-  #+END_LaTex
 
   Rather than
 
-  #+BEGIN_LaTex
   \[
   a \not < x \not\le b
   \]
-  #+END_LaTex
 
   # \[
   #  \(a \not < x \nleq b\)
@@ -870,11 +812,9 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
 - Let's look at this sentence,
 
-  #+BEGIN_LaTex
   \begin{center}
     \text{"All foreign cars are badly made."}
   \end{center}
-  #+END_LaTex
 
   What's the negation of this sentence. Let me give you 4 possibilities. I would like you to think for a minute as to
   which one of these things is the negation of that original sentence.
@@ -919,11 +859,9 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
   But let me stress a point I made a minute ago and I didn't write anything down. Look at the following sentence,
 
-  #+BEGIN_LaTex
   \begin{center}
     \text{"All domestic cars are well made"}
   \end{center}
-  #+END_LaTex
 
   I've actually had the students over the years who have though that, above sentence is negation of original sentence.
 
@@ -1050,11 +988,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    simplified form:
 
-   #+BEGIN_LaTex
    \[
    (0 < \pi < 10)
    \]
-   #+END_LaTex
 
    *Explanation*: this means \pi is greater than \(0\) and less than \(10\). \pi is a constant approximately equal to \(3.14),
    which is indeed between \(0\) and \(10\). This combined inequality shows the range of values (in this case, just
@@ -1068,11 +1004,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    simplified form:
 
-   #+BEGIN_LaTex
    \[
    (7 \le p < 12)
    \]
-   #+END_LaTex
 
    *Explanation*: This means \(p\) is greater than or equal to \(7\) and less than \(12\) The variable \(p\) can take any value
    starting from \(7\) up to, but not including \(12\). This interval includes \(7\) and any number just below \(12\).
@@ -1085,11 +1019,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    Simplified form:
 
-   #+BEGIN_LaTex
    \[
    (5 < x < 7)
    \]
-   #+END_LaTex
 
    *Explanation*: This means \(x\) is greater than 5 and less than 7. The variable \(x\) can be any number between 5 and
    7, but it cannot be exactly 5 or 7. It covers number like 5.1, 6 and 6.9.
@@ -1105,11 +1037,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
      - since \(x\ < 4\) is stricter than \(x < 6\) (if \(x\) less than 4, it will automatically be less than 6), the
        combined condition can be simplified to:
 
-     #+BEGIN_LaTex
      \[
      (x < 4)
      \]
-     #+END_LaTex
 
      *Explanation*: This means \(x\) is less than \(4\). Since \(x < 4\) is a stricter condition than \(x < 6\), \(x\) must
      be less than \(4\) to satisfy both inequalities. This interval covers all number less than \(4\), like \(3, -1\) and
@@ -1132,11 +1062,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    Simplified form:
 
-   #+BEGIN_LaTex
    \[
    ( -3 < y < 4)
    \]
-   #+END_LaTex
 
    *Explanation*: The condition \(y < 4\) is combinend with \(y^2 < 9\), which means \(y\) is between \(-3\) and \(3\)
    (since any number squared must less than \(9\) to satisfy the inequality). The stricter condition is \(-3 < y 3\),
@@ -1152,11 +1080,9 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    Simplified form:
 
-   #+BEGIN_LaTex
    \[
    (x = 0)
    \]
-   #+END_LaTex
 
    *Explanation*: this means \(x\) must be greater than or equal to \(0\) and less than or equal to \(0\) at the same
    time. the only number that satisfies both condition is \(0\). Therefore, \(x\) can only be \(0\).
@@ -1323,11 +1249,9 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
-    #+BEGIN_LaTex
    \[
    (\pi \le 3.2)
    \]
-   #+END_LaTex
 
    -- *Natural English*: Pi is less than or equal to 3.2.
 
@@ -1349,11 +1273,9 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
-   #+BEGIN_LaTex
    \[
    (x \ge 0)
    \]
-   #+END_LaTex
 
    -- *Natural English*: \(x\) is greater than or equal to 0.
 
@@ -1381,11 +1303,9 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
-   #+BEGIN_LaTex
    \[
    (x^2 = 0)
    \]
-   #+END_LaTex
 
    -- *Natural English*: \(x\) squared is equal to 0.
 
@@ -1407,11 +1327,9 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
     -- *Simplified form*:
 
-    #+BEGIN_LaTex
     \[
     (x \neq 1)
     \]
-    #+END_LaTex
 
     -- *Natural English*: \(x\) is not equal to 1.
 
@@ -1433,11 +1351,9 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
     -- *Simplified form*:
 
-    #+BEGIN_LaTex
     \[
     (\psi)
     \]
-    #+END_LaTex
 
     -- *Natural English*: The statement \(\psi\)
 
@@ -1685,19 +1601,15 @@ to be true while the other is false.
 
 The associative property for conjunction states that:
 
-#+BEGIN_LaTex
 \[
 (\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
 \]
-#+END_LaTex
 
 In this case, substituting \(0\) (FALSE) for \(i\):
 
-#+BEGIN_LaTex
 \[
 (\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
 \]
-#+END_LaTex
 
 Since both expressions evaluate to FALSE, this demonstrates that the associative property holds for conjunction in
 this context.
@@ -1836,19 +1748,15 @@ expressions to be true while the others is false.
 
 The associative property for disjunction states that:
 
-#+BEGIN_LaTex
 \[
 \((\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)\)
 \]
-#+END_LaTex
 
 In this case, substituting 0(FALSE) for \(i\):
 
-#+BEGIN_LaTex
 \[
 (\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)
 \]
-#+END_LaTex
 
 Since both expression simplify to \(\phi \lor \psi\), this demonstrates that the associative property holds for disjunction in
 this context.
@@ -1871,19 +1779,15 @@ this context.
 
    - \(\psi \lor 0\): Since \(0\) represent FALSE, the OR operation \((\psi \lor 0\)) is equivalent to just \(\psi\). This is because
 
-     #+BEGIN_LaTex
      \[
      \psi \lor 0 = \psi
      \]
-     #+END_LaTex
 
    - This simplifies our expression to:
 
-     #+BEGIN_LaTex
      \[
      \phi \land (\psi \lor 0) \equiv \phi \land \psi\)
      \]
-     #+END_LaTex
 
 *Expression-2*: \((\phi \land \psi) \lor 0\)
 
@@ -1894,11 +1798,9 @@ this context.
    - \(\phi \land 0\): Since \(0\) represent FALSE, the AND operation \((\phi \land 0)\) is equivalent to just \(\phi \land \psi\). This is
      because:
 
-     #+BEGIN_LaTex
      \[
      \phi \land 0 = 0
      \]
-     #+END_LaTex
 
 2. *Simplify the OR operation*:
 
@@ -1908,17 +1810,13 @@ this context.
 
 Both expression simplify to the same result:
 
-#+BEGIN_LaTex
 \[
 \(\phi \land (\psi \lor 0)  = \phi \land \psi\)
 \]
-#+END_LaTex
 
-#+BEGIN_LaTex
 \[
 \((\phi \land \psi) \lor (\phi \land 0) = \phi \land \psi\)
 \]
-#+END_LaTex
 
 Since \(\phi \land (\psi \lor 0)\) and \((\phi \land \psi) \lor (\phi \land 0)\) bot simplify to \(\phi \land \psi\), it is not possible to be TRUE while the other
 is false.
@@ -1929,19 +1827,15 @@ This equivalent holds true because both expression reduce to \(\phi \land \psi\)
 
 This confirms that the distributive property holds for conjunction over disjunction:
 
-#+BEGIN_LaTex
 \[
 \phi \land \psi = (\phi \land \psi) \lor \(\phi \land 0)
 \]
-#+END_LaTex
 
 When \(\theta\) is \(0\) (FALSE), this becomes:
 
-#+BEGIN_LaTex
 \[
 \phi \land (\psi \lor 0) = (\phi \land \psi) \lor (\phi \land 0)
 \]
-#+END_LaTex
 
 - Both sides simplify to \(\phi \land \psi\), demonstrating the property holds in context.
 
@@ -1974,30 +1868,24 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
        - \(\psi \land 0\): Since 0 represent FALSE, the AND operation \(\psi \land 0\) is always FALSE. This is because:
 
-         #+BEGIN_LaTex
          \[
          \psi \land 0 = 0
          \]
-         #+END_LaTex
 
        - This simplifies our expression to:
 
-         #+BEGIN_LaTex
          \[
          \phi \lor (\psi \land 0) = \psi \lor 0
          \]
-         #+END_LaTex
 
     2. *Simplify the OR statement*:
 
        - \(\phi \lor 0\): Since 0 represent FALSE, the OR operation \(\phi \lor 0\) does not change the value of \(\phi\). This is
          because:
 
-         #+BEGIN_LaTex
          \[
          \phi \lor 0 = \phi
          \]
-         #+END_LaTex
 
     So, \(\phi \lor (\psi \land 0)\) simplifies to \(\phi\)
 
@@ -2009,29 +1897,23 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
        - \(\phi \lor 0\) simplifies to \(\phi\), because the OR with FALSE does not change the value f \(\phi\):
 
-         #+BEGIN_LaTex
          \[
          \phi \lor 0 = \phi
          \]
-         #+END_LaTex
 
        - This simplifies our expression to:
 
-         #+BEGIN_LaTex
          \[
          (\phi \lor \psi) \lor (\phi \lor 0) = (\phi \lor \psi) \land \phi
          \]
-         #+END_LaTex
 
     1. *Simplify the AND operation*:
 
        - The expression \((\phi \lor \psi) \land \phi\) simplifies to \(\phi), because for any \(\phi\) and \(\psi\):
 
-         #+BEGIN_LaTex
          \[
          (\psi \lor \phi) \land \phi = \phi
          \]
-         #+END_LaTex
 
        - This is because if \(\phi\) is true, then \(\phi \land \phi\) is true, and if \(\phi\) is false, \((\phi \lor \psi) \land \phi\) will still be
          false.
@@ -2047,19 +1929,15 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
     The distributive property for disjunction over conjunction states that:
 
-    #+BEGIN_LaTex
     \[
     \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
     \]
-    #+END_LaTex
 
     In this case, substituting 0(FALSE) for \(i\):
 
-    #+BEGIN_LaTex
     \[
     \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
     \]
-    #+END_LaTex
 
     Since both expression simplify to \(\phi\), this demonstrate that the distributive property holds for disjunction over
     conjunction in this context.
