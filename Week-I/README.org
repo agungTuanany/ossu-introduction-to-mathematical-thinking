@@ -69,15 +69,19 @@ workings of the humand mind.
 
 - Example, The commutative law for addition could be written in English as:
 
+  #+BEGIN_LaTex
   \begin{center}
     \textit{"When two number are added, their order is not important"}
   \end{center}
+  #+END_LaTex
 
   However, it is usually written in the symbolic form
 
+  #+BEGIN_LaTex
   \[
   m + n = n + m
   \]
+  #+END_LaTex
 
 - The introduction of symbolic mathematics in its modern form is generally credited to the French mathematician
   [[https://en.wikipedia.org/wiki/Fran%C3%A7ois_Vi%C3%A8te][François Viète]] in the sixteenth century.
@@ -126,10 +130,11 @@ workings of the humand mind.
   does not have to be specified by an algebraic formula. In fact, there's no reason to restrict your attention to
   numbers. /A function can be any rule that takes objects of one kind and produces new object from them/.
 
-
-\begin{center}
-  If \(x\) is rational, set \(f(x) = 0\); if \(x\) is irrational, set \(f(x) = 1\).
-\end{center}
+  #+BEGIN_LaTex
+  \begin{center}
+    If \(x\) is rational, set \(f(x) = 0\); if \(x\) is irrational, set \(f(x) = 1\).
+  \end{center}
+  #+END_LaTex
 
 - Mathematicians began to study the properties of such /absctract/ functions, specified not by some formula but by their
   behavior. For example, does the function have the property that when you present it with different starting values it
@@ -371,9 +376,11 @@ meaning and some reformulated options:
 
 ** *Q*: Official documents often contain one or more pages that are empty apart from one sentence at he bottom:
 
+#+BEGIN_LaTex
 \begin{center}
     \text{This page intentionally left blank}
 \end{center}
+#+END_LaTex
 
 Does the sentence make a true statement? What is the purpose of making such a statement? What reformulation of the
 Sentence would avoid any logical problems about truth? (Once again, the context means that in practice everyone
@@ -401,7 +408,6 @@ Here's a breakdown of the purpose and some reformulations:
   - *Document Continues on Next Page*. (If applicable, indicates continuation)
 
     These options remove the implication of sentience (sensibility) and focus on the page's intended state.a
-
 
 *Historical Example*:
 
@@ -473,43 +479,44 @@ commentary on this sentence and the importance of precision in mathematical lang
 ** *Q*: How would you show that not every number of the form (\(N = (p_1 \cdot p_2 \cdot p_3 \cdot ... \cdot p_n) + 1)\) is prime, where (\p1, p2, p3, \dots, pn\) is the list of all prime numbers?
 
 *A*:
-- *Steps to Provide Counterexample*
+*Steps to Provide Counterexample*
 
-  - Define the form of \(N\):
+- Define the form of \(N\):
 
-    \(N = (p_1 \cdot p_2 \cdot p_3 \cdot \dots \cdot p_n) + 1\)
+  \(N = (p_1 \cdot p_2 \cdot p_3 \cdot \dots \cdot p_n) + 1\)
 
-    Were \((p1, p2, p3, \dots, p_n)\) are the first \(n\) prime numbers.
+  Were \((p1, p2, p3, \dots, p_n)\) are the first \(n\) prime numbers.
 
-  - Choose a specific \(n\):
+- Choose a specific \(n\):
 
-    let's choose \(n = 5\), so the first prime numbers are \(2, 3, 5, 7\) and \(11\).
+  let's choose \(n = 5\), so the first prime numbers are \(2, 3, 5, 7\) and \(11\).
 
-  - Calculate \(N\):
+- Calculate \(N\):
 
-    \(N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11) + 1\)
-    \(N = (2310) + 1 = 2311\)
+  \(N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11) + 1\)
+  \(N = (2310) + 1 = 2311\)
 
-  - Check if \(N\) is Prime:
+- Check if \(N\) is Prime:
 
-    - To check if 2311 is prime, we can try dividing it by prime numbers less than a \(\sqrt{2311} \approx 48\).
+  - To check if 2311 is prime, we can try dividing it by prime numbers less than a \(\sqrt{2311} \approx 48\).
 
-    - We test divisibility by 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, and 43.
+  - We test divisibility by 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, and 43.
 
-    Upon testing, we find that:
-    \[
-    2311 = 47 X 49
-    \]
+  Upon testing, we find that:
+  #+BEGIN_LaTex
+  \[
+  2311 = 47 X 49
+  \]
+  #+END_LaTex
 
-    Thus, 2311 is not a prime number because it can be factored into 47 and 49 (and since 49 itself is 7 x 7).
+  Thus, 2311 is not a prime number because it can be factored into 47 and 49 (and since 49 itself is 7 x 7).
 
+*Conclusion*
 
-- *Conclusion*
+Since 2311 is not a prime number, it serves as a counterexample to show that not every number of the form \(N = (p1
+\cdot2 \cdot p3 ... \cdot p_n) +1\) is prime. This demonstrates that the formula does not always yield a prime number.
 
-  Since 2311 is not a prime number, it serves as a counterexample to show that not every number of the form \(N = (p1
-  \cdot2 \cdot p3 ... \cdot p_n) +1\) is prime. This demonstrates that the formula does not always yield a prime number.
-
-- you can check [[file:./check-prime-number-original.el][lisp code]] here.
+you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
 ** *Q*: Provide a context and a sentence within that context, where the word /and/ occurs five times in succession, with no other word between those five occurrences. (You are allowed to use punctuation)
 
@@ -543,134 +550,159 @@ commentary on this sentence and the importance of precision in mathematical lang
 
 ** 'AND' -- \(\land\) combinator
 
-- The standard abbreviation that mathematicians use for /and/ is
-  # \(\land \)
-  \[
-  \wedge
-  \]
+  - The standard abbreviation that mathematicians use for /and/ is
+    # \(\land \)
+    #+BEGIN_LaTex
+    \[
+    \wedge
+    \]
+    #+END_LaTex
 
-  For example, we can write mathematical notation for formula,"pi is bigger than 3 and less than 3.2", like:
+    For example, we can write mathematical notation for formula,"pi is bigger than 3 and less than 3.2", like:
 
-  \[
-  (\pi < 3) \wedge (\pi > 32)
-  \]
+    #+BEGIN_LaTex
+    \[
+    (\pi < 3) \wedge (\pi > 32)
+    \]
+    #+END_LaTex
 
-  In fact for this example where we're just talking about position of numbers of real line there's and even simpler
-  notation we would typically write:
+    In fact for this example where we're just talking about position of numbers of real line there's and even simpler
+    notation we would typically write:
 
-  \[
-  3 < \pi < 3.2
-  \]
+    #+BEGIN_LaTex
+    \[
+    3 < \pi < 3.2
+    \]
+    #+END_LaTex
 
-  The other examples, 'phi' and 'psi', if we have two statements 'phi' and 'psi' means that they're both true.
+    The other examples, 'phi' and 'psi', if we have two statements 'phi' and 'psi' means that they're both true.
 
-  \[
-  \phi \wedge \psi
-  \]
+    #+BEGIN_LaTex
+    \[
+    \phi \wedge \psi
+    \]
+    #+END_LaTex
 
-  Well if \phi and \psi are individually true, then conjunction \( \phi \wedge \psi \) will be true.
+    Well if \phi and \psi are individually true, then conjunction \( \phi \wedge \psi \) will be true.
 
-  \begin{center}
-      If \(\phi\), \(\psi\) are both true, then \(\phi\)  \(\wedge\) \(\psi\) will be ture
-  \end{center}
+    #+BEGIN_LaTex
+    \begin{center}
+        If \(\phi\), \(\psi\) are both true, then \(\phi\)  \(\wedge\) \(\psi\) will be ture
+    \end{center}
+    #+END_LaTex
 
-  under what circumstances will "phi" and "psi" is false?
+    under what circumstances will "phi" and "psi" is false?
 
-  \begin{center}
-      If \(\phi\) or \(\psi\) are false, then \(\phi \wedge\psi\) will be false
-  \end{center}
+    #+BEGIN_LaTex
+    \begin{center}
+        If \(\phi\) or \(\psi\) are false, then \(\phi \wedge\psi\) will be false
+    \end{center}
+    #+END_LaTex
 
-  This might seem very self evident and trivial, but already this definition leads to a rather suprising conclusion.
+    This might seem very self evident and trivial, but already this definition leads to a rather suprising conclusion.
 
-  \begin{center}
-    \(\phi \wedge \psi\) means the same as \(\psi \wedge \phi\)
-  \end{center}
+    #+BEGIN_LaTex
+    \begin{center}
+      \(\phi \wedge \psi\) means the same as \(\psi \wedge \phi\)
+    \end{center}
+    #+END_LaTex
 
-- In mathematical palettes, conjunction is commutative. Nut that's not a case for the use of the word, and, in everday English.
-  for example:
+  - In mathematical palettes, conjunction is commutative. Nut that's not a case for the use of the word, and, in everday English.
+    for example:
 
-  \begin{center}
-    \textit{"John took the free kick and the ball wen into the net"}
-  \end{center}
+    #+BEGIN_LaTex
+    \begin{center}
+      \textit{"John took the free kick and the ball wen into the net"}
+    \end{center}
+    #+END_LaTex
 
-  That doesn't mean the same as the sentence:
+    That doesn't mean the same as the sentence:
 
-  \begin{center}
-    \textit{"the ball went into the net and John took the free kick"}
-  \end{center}
+    #+BEGIN_LaTex
+    \begin{center}
+      \textit{"the ball went into the net and John took the free kick"}
+    \end{center}
+    #+END_LaTex
 
-  They're both conjunction and the two conjunction are the same. One of them is "John took the free kick" and other one
-  is "the ball went into the net."
+    They're both conjunction and the two conjunction are the same. One of them is "John took the free kick" and other one
+    is "the ball went into the net."
 
-  But anyone's who's familiar with soccer realizes that these two sentences have very different meaning.
+    But anyone's who's familiar with soccer realizes that these two sentences have very different meaning.
 
-  The fact is, in everyday English, the world /and/ is not always commutative. Sometimes it is, but not always.
+    The fact is, in everyday English, the world /and/ is not always commutative. Sometimes it is, but not always.
 
+  - What is commutative in mathematics term means?
 
-- What is commutative in mathematics term means?
+    In mathematics, the term "conjunction" refers to an operation where the order in which you perform it does not effect
+    the final result. When applied to conjunction (usually denotes by "and"), commutative means that:
 
-  In mathematics, the term "conjunction" refers to an operation where the order in which you perform it does not effect
-  the final result. When applied to conjunction (usually denotes by "and"), commutative means that:
+    #+BEGIN_LaTex
+    \begin{center}
+      \text{"Statement A and Statement B"}
 
-  \begin{center}
-    \text{"Statement A and Statement B"}
+      \text{"Statement B and Statement A"}
+    \end{center}
+    #+END_LaTex
 
-    \text{"Statement B and Statement A"}
-  \end{center}
+    These two phrasings convey the same meaning. The order doesn't change the truth value of the combined statemet.
 
-  These two phrasings convey the same meaning. The order doesn't change the truth value of the combined statemet.
+  - Let see what you make of this one.
 
-- Let see what you make of this one.
+    #+BEGIN_LaTex
+    \begin{center}
+      \text{"A: it rained on Saturday"}
 
-  \begin{center}
-    \text{"A: it rained on Saturday"}
+      \text{"B: it snowed on Saturday"}
+    \end{center}
+    #+END_LaTex
 
-    \text{"B: it snowed on Saturday"}
-  \end{center}
+    Question, does the conjunction A \( \wedge \) B accurately reflect the meaning of the sentence, "it rained and snowed on
+    Saturday"?
 
-  Question, does the conjunction A \( \wedge \) B accurately reflect the meaning of the sentence, "it rained and snowed on
-  Saturday"?
+    Although I can think of situations in which the answer would be *NO*, in general I would be inclined (tend) to say the
+    answer is *YES*.
 
-  Although I can think of situations in which the answer would be *NO*, in general I would be inclined (tend) to say the
-  answer is *YES*.
+  - A useful way to represent a definition like above, is with a propositional truth table.
 
-- A useful way to represent a definition like above, is with a propositional truth table.
+    |---+-----+-----+---------+---|
+    |   | <c> | <c> |   <c>   |   |
+    |   |  \phi  |  \psi  | \phi  \wedge  \psi |   |
+    |---+-----+-----+---------+---|
+    | / |  <  |  <  |    <    | > |
+    |   |  T  |  T  |    T    |   |
+    |---+-----+-----+---------+---|
+    |   |  T  |  F  |    F    |   |
+    |---+-----+-----+---------+---|
+    |   |  F  |  F  |    F    |   |
+    |---+-----+-----+---------+---|
+    |   |  F  |  F  |    F    |   |
+    |---+-----+-----+---------+---|
 
-  |---+-----+-----+---------+---|
-  |   | <c> | <c> |   <c>   |   |
-  |   |  \phi  |  \psi  | \phi  \wedge  \psi |   |
-  |---+-----+-----+---------+---|
-  | / |  <  |  <  |    <    | > |
-  |   |  T  |  T  |    T    |   |
-  |---+-----+-----+---------+---|
-  |   |  T  |  F  |    F    |   |
-  |---+-----+-----+---------+---|
-  |   |  F  |  F  |    F    |   |
-  |---+-----+-----+---------+---|
-  |   |  F  |  F  |    F    |   |
-  |---+-----+-----+---------+---|
+    So in one simple table above, we've captured the entire definition of \phi and \psi.
 
-  So in one simple table above, we've captured the entire definition of \phi and \psi.
+    This emphasize the fact that the truth of the conjunction depends on the truth and falsity of the two conjuncts. The
+    definition was entirely in terms of truth and falsity.
 
-  This emphasize the fact that the truth of the conjunction depends on the truth and falsity of the two conjuncts. The
-  definition was entirely in terms of truth and falsity.
-
-  That's going to be the case for all definitions that we're going to give in order to make language precise. They're
-  going to depend upon /truth/ and /falsity/ *not* upon meaning or logical connections.
+    That's going to be the case for all definitions that we're going to give in order to make language precise. They're
+    going to depend upon /truth/ and /falsity/ *not* upon meaning or logical connections.
 
 ** 'OR' -- \(\lor\) Combinator
 
 - We want to be able assert the "/statement A is true *or* Statement B is true/". For instance we might want to saying:
 
+  #+BEGIN_LaTex
   \begin{center}
     \text{\(a\) > \(0\) or the equation \(x^2 + a = 0\) has a real root}
   \end{center}
+  #+END_LaTex
 
   Or maybe we want to say
 
+  #+BEGIN_LaTex
   \begin{center}
     \text{\(ab = 0\) if \(a = 0\) or \(b = 0\)}
   \end{center}
+  #+END_LaTex
 
   Those are both statement that we get, when we combine two sub statement with the word /or/. Both statement are in fact
   true, but there's a difference between them. The meaning of /or/ is not the same in the first sentence as it is in the
@@ -702,25 +734,31 @@ commentary on this sentence and the importance of precision in mathematical lang
 
   In example:
 
+  #+BEGIN_LaTex
   \begin{center}
   \(\phi, \psi\): \(\phi \lor \psi\) means \((\phi\) or \(\psi)\) (or both)
   \end{center}
+  #+END_LaTex
 
   The sentence of (\(\phi \lor \psi \)) is called a "disjunction of phi and psi".
 
   And relative to the disjunction, the constituents phi and psi are called disjuncts.
 
+  #+BEGIN_LaTex
   \begin{center}
   \text{ \(\phi, \psi \) are called disjuncts of (\( \phi \lor \psi \))}
   \end{center}
+  #+END_LaTex
 
   Remember: \(\phi\) or \(\psi\)  means _at least one_ of \(\phi\), \(\psi\) is true.
 
 - The following rather silly statement is true.
 
+  #+BEGIN_LaTex
   \[
   (3 < 5) \lor (1 = 0)
   \]
+  #+END_LaTex
 
   Silly examples above are actually quite useful in mathematics because they help us understand what a definition means.
 
@@ -730,17 +768,18 @@ commentary on this sentence and the importance of precision in mathematical lang
 
 - Here is a quick quiz:
 
+  #+BEGIN_LaTex
   \begin{center}
   \text{let A be the sentence, it will rain tomorrow}
   \text{let B be the sentence, it will be dry tomorrow}
   \end{center}
+  #+END_LaTex
 
   Does the disjunction (A \(\vee\) B) accurately reflect the meaning of the sentence, tomorrow it will rain or it will be
   dray all day?
 
   The answer clearly *NO*. If that comes as suprise to you, you need to think about the definition of *OR* a little bit
   longer, and see what's going on here.
-
 
 - A useful way to represent a definition like above, is with a propositional truth table.
 
@@ -760,26 +799,30 @@ commentary on this sentence and the importance of precision in mathematical lang
 
 ** 'NOT' -- \(\neg\) Combinator
 
-(\neg) Combinator
-
 - If (\(\psi\)) is a sentence, then we want to be able to say that (\(\psi \) is false), we can write it down:
 
+  #+BEGIN_LaTex
   \begin{center}
     \text{\(\psi:\) (not- \(\psi\)) or (\(\neg\psi\))}
   \end{center}
+  #+END_LaTex
 
 - We call  _(\(\neg\psi\))_ is the negation of \(\psi\).
 
+    #+BEGIN_LaTex
   \begin{center}
     \text{if \(\psi\) is true, then (\(\neg \psi)\) is false.}
     \text{if \(\psi\) is false, then (\(\neg \psi)\) is true.}
   \end{center}
+  #+END_LaTex
 
 - We often use special notations in particular circumstances. For example, we would typically write:
 
+  #+BEGIN_LaTex
   \[
   x \not= y
   \]
+  #+END_LaTex
 
   # \[
   # \(x \neq y \)
@@ -787,21 +830,27 @@ commentary on this sentence and the importance of precision in mathematical lang
 
   instead of:
 
+  #+BEGIN_LaTex
   \[
   \neg (x = y)
   \]
+  #+END_LaTex
 
 - We have to little bit careful. For example, I would write
 
+  #+BEGIN_LaTex
   \[
   \neg (a < x <= b)
   \]
+  #+END_LaTex
 
   Rather than
 
+  #+BEGIN_LaTex
   \[
   a \not < x \not\le b
   \]
+  #+END_LaTex
 
   # \[
   #  \(a \not < x \nleq b\)
@@ -817,12 +866,13 @@ commentary on this sentence and the importance of precision in mathematical lang
   introduce is to avoid ambiguities to avoid confusion. Because in more advanced situation, all we're going to have rely
   upon is the language. Then we need make sure that we're using language in a non ambiguous and reliable way.
 
-
 - Let's look at this sentence,
 
+  #+BEGIN_LaTex
   \begin{center}
     \text{"All foreign cars are badly made."}
   \end{center}
+  #+END_LaTex
 
   What's the negation of this sentence. Let me give you 4 possibilities. I would like you to think for a minute as to
   which one of these things is the negation of that original sentence.
@@ -867,9 +917,11 @@ commentary on this sentence and the importance of precision in mathematical lang
 
   But let me stress a point I made a minute ago and I didn't write anything down. Look at the following sentence,
 
+  #+BEGIN_LaTex
   \begin{center}
     \text{"All domestic cars are well made"}
   \end{center}
+  #+END_LaTex
 
   I've actually had the students over the years who have though that, above sentence is negation of original sentence.
 
@@ -995,9 +1047,12 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
    - \wedge: This mean "and", so both condition must be true.
 
    simplified form:
+
+   #+BEGIN_LaTex
    \[
    (0 < \pi < 10)
    \]
+   #+END_LaTex
 
    *Explanation*: this means \pi is greater than \(0\) and less than \(10\). \pi is a constant approximately equal to \(3.14),
    which is indeed between \(0\) and \(10\). This combined inequality shows the range of values (in this case, just
@@ -1010,9 +1065,12 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
    - \wedge: This mean "and", so both condition must be true.
 
    simplified form:
+
+   #+BEGIN_LaTex
    \[
    (7 \le p < 12)
    \]
+   #+END_LaTex
 
    *Explanation*: This means \(p\) is greater than or equal to \(7\) and less than \(12\) The variable \(p\) can take any value
    starting from \(7\) up to, but not including \(12\). This interval includes \(7\) and any number just below \(12\).
@@ -1024,9 +1082,12 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
    - \wedge: This mean "and", so both condition must be true.
 
    Simplified form:
+
+   #+BEGIN_LaTex
    \[
    (5 < x < 7)
    \]
+   #+END_LaTex
 
    *Explanation*: This means \(x\) is greater than 5 and less than 7. The variable \(x\) can be any number between 5 and
    7, but it cannot be exactly 5 or 7. It covers number like 5.1, 6 and 6.9.
@@ -1042,9 +1103,11 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
      - since \(x\ < 4\) is stricter than \(x < 6\) (if \(x\) less than 4, it will automatically be less than 6), the
        combined condition can be simplified to:
 
+     #+BEGIN_LaTex
      \[
      (x < 4)
      \]
+     #+END_LaTex
 
      *Explanation*: This means \(x\) is less than \(4\). Since \(x < 4\) is a stricter condition than \(x < 6\), \(x\) must
      be less than \(4\) to satisfy both inequalities. This interval covers all number less than \(4\), like \(3, -1\) and
@@ -1067,9 +1130,11 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    Simplified form:
 
+   #+BEGIN_LaTex
    \[
    ( -3 < y < 4)
    \]
+   #+END_LaTex
 
    *Explanation*: The condition \(y < 4\) is combinend with \(y^2 < 9\), which means \(y\) is between \(-3\) and \(3\)
    (since any number squared must less than \(9\) to satisfy the inequality). The stricter condition is \(-3 < y 3\),
@@ -1085,9 +1150,11 @@ This material pdf is [[file:./reading-material/06-assigment-2-week-1-mathematica
 
    Simplified form:
 
+   #+BEGIN_LaTex
    \[
    (x = 0)
    \]
+   #+END_LaTex
 
    *Explanation*: this means \(x\) must be greater than or equal to \(0\) and less than or equal to \(0\) at the same
    time. the only number that satisfies both condition is \(0\). Therefore, \(x\) can only be \(0\).
@@ -1158,47 +1225,47 @@ Imagine we have the followwing propositions:
 
 - \(\phi_3\): "I have a cherry."
 
-  The conjunction is \(\phi_1 \lor \phi_2 \lor \phi_3), which means "I have an apple or I have a banana or I have a cherry."
+The conjunction is \(\phi_1 \lor \phi_2 \lor \phi_3), which means "I have an apple or I have a banana or I have a cherry."
 
-  *Steps to Prove the Conjunction*:
+*Steps to Prove the Conjunction*:
 
-  1. Check if \(\phi_1\) ("I have an apple") is true.
+1. Check if \(\phi_1\) ("I have an apple") is true.
 
-     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+   - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
 
-     - If no, move to the next proposition.
+   - If no, move to the next proposition.
 
-  2. Check if \(\phi_2\) ("I have a banana") is true.
+2. Check if \(\phi_2\) ("I have a banana") is true.
 
-     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+   - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
 
-     - If no, move to the next proposition.
+   - If no, move to the next proposition.
 
-  3. Check if \(\phi_3\) ("I have a cherry") is true.
+3. Check if \(\phi_3\) ("I have a cherry") is true.
 
-     - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
+   - If yes, then \(\phi_1 \lor \phi_2 \lor \phi_3) is true, and you're done.
 
-     - If no, then \(\phi_1 \lor \phi_2 \lor \phi_3) is false because none of the individual proposition are true.
+   - If no, then \(\phi_1 \lor \phi_2 \lor \phi_3) is false because none of the individual proposition are true.
 
-       *Why This Strategy is Works*:
+*Why This Strategy is Works*:
 
-       - *Logical Structure*: The "or" operator in logic only requires one of the statement to be true for the whole
-         conjunction to be true.
+- *Logical Structure*: The "or" operator in logic only requires one of the statement to be true for the whole
+  conjunction to be true.
 
-       - *Systematic Checkking*: By evaluating each proposition, you can conclude that the entire conjunction is true without
-         needing to check the remaining propositions.
+- *Systematic Checkking*: By evaluating each proposition, you can conclude that the entire conjunction is true without
+  needing to check the remaining propositions.
 
-       *Summary*
+*Summary*
 
-       To show that a conjunction like \(\phi_1 \lor \phi_2 \lor \dots \lor \phi_n\) is true, you need to:
+To show that a conjunction like \(\phi_1 \lor \phi_2 \lor \dots \lor \phi_n\) is true, you need to:
 
-       1. Identify and understand each proposition.
+   1. Identify and understand each proposition.
 
-       2. Check each proposition to see if it is true.
+   2. Check each proposition to see if it is true.
 
-       3. Conclude that the entire conjunction is true if at least one proposition is true.
+   3. Conclude that the entire conjunction is true if at least one proposition is true.
 
-       By following strategy, you can effectively demonstrate the truth of a conjunction in logical statement.
+By following strategy, you can effectively demonstrate the truth of a conjunction in logical statement.
 
 ** *Q*: What strategy would you adopt to show that the conjunction \(\phi_1 \lor \phi_2 \vee \dots \phi_n\) is false?
 
@@ -1211,7 +1278,6 @@ Imagine we have the followwing propositions:
 3. Confirm that all proposition is false.
 
 4. Conclude the entire conjunction is false if none of the individual proposition are true.
-
 
 This strategy ensure systematically check each condition and clearly demonstrate that the entire set of
 propositionfails to meet the "or" condition, thus proving the conjunction false.
@@ -1255,9 +1321,11 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
+    #+BEGIN_LaTex
    \[
    (\pi \le 3.2)
    \]
+   #+END_LaTex
 
    -- *Natural English*: Pi is less than or equal to 3.2.
 
@@ -1279,9 +1347,11 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
+   #+BEGIN_LaTex
    \[
    (x \ge 0)
    \]
+   #+END_LaTex
 
    -- *Natural English*: \(x\) is greater than or equal to 0.
 
@@ -1309,9 +1379,11 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    -- *Simplified form*:
 
+   #+BEGIN_LaTex
    \[
    (x^2 = 0)
    \]
+   #+END_LaTex
 
    -- *Natural English*: \(x\) squared is equal to 0.
 
@@ -1323,7 +1395,6 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    - \(=\): This means "equal to"
 
-
 -- *Statement* \(x \equal 1)\):
 
 - This means "not (x is equal to 1)".
@@ -1334,9 +1405,11 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
     -- *Simplified form*:
 
+    #+BEGIN_LaTex
     \[
     (x \neq 1)
     \]
+    #+END_LaTex
 
     -- *Natural English*: \(x\) is not equal to 1.
 
@@ -1348,7 +1421,6 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
    - \(\psi\): This placeholder for any statement or proposition.
 
-
 -- *Statement* \(\neg \neg \psi)\):
 
 - This means "not (not \psi)".
@@ -1359,9 +1431,11 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
     -- *Simplified form*:
 
+    #+BEGIN_LaTex
     \[
     (\psi)
     \]
+    #+END_LaTex
 
     -- *Natural English*: The statement \(\psi\)
 
@@ -1425,7 +1499,6 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
      - This is expressed by saying is not true that both \(D\) and \(Y\) are true at the same time.
 
-
 *Summary*:
 
 1. *Dollar and Yuan both strong*
@@ -1451,7 +1524,6 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
      true.
 
 These Logical notations capture the essence of the headlines, focusing on the truth conditions described by each statement.
-
 
 * Summary Lecture-2
 
@@ -1544,7 +1616,6 @@ These Logical notations capture the essence of the headlines, focusing on the tr
    - Explanation: At least one part of the disjunction must be true for the whole statement to be true. If both parts
      are false, the disjunction is false.
 
-
 ** Summary:
 
 - Negation (\(\neg\)): Indicates the opposite of statement.
@@ -1559,9 +1630,7 @@ These Logical notations capture the essence of the headlines, focusing on the tr
 
   - Example: \(P \lor Q\) mans "either \(P\) or \(Q\) or both".
 
-
 These logical operators help us form complex statements and reason about their truth values in a structured way.
-
 
 * Problem SET 1
 
@@ -1587,7 +1656,6 @@ and \(\phi \land (\psi \land 0)\).
 
    - Similarly, \(\phi\), \(\psi\), \(\land\), and \(0\) have the same meanins as above.
 
-
 *Evaluating Each Expression*
 
 *Expression-1*: \((\phi \land \psi) \land 0\)
@@ -1595,7 +1663,6 @@ and \(\phi \land (\psi \land 0)\).
 - The expression \((\phi \land \psi)\) evaluates to TRUE if both \(\phi\) and \(\psi\) are TRUE; otherwise, it evaluates to FALSE.
 
 - Regardless of the value of \((\phi \land \psi)\)m when ANDed with \(0\) (FALSE), the result will always be FALSE.
-
 
 So, \((\phi \land \psi) \land 0\) is always FALSE.
 
@@ -1607,26 +1674,28 @@ So, \((\phi \land \psi) \land 0\) is always FALSE.
 
   So,  \(\phi \land (\psi \land 0)\) is always FALSE.
 
-
 *Conclusion*:
 
 Both \((\phi \land \psi) \land 0\) and \(\phi \land (\psi \land 0)\) are always FALSE. Therefore, it is not possible for one of these expression
 to be true while the other is false.
 
-
 *Associative Property*
 
 The associative property for conjunction states that:
 
+#+BEGIN_LaTex
 \[
 (\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
 \]
+#+END_LaTex
 
 In this case, substituting \(0\) (FALSE) for \(i\):
 
+#+BEGIN_LaTex
 \[
 (\phi \land \psi) \land 0 = \phi \land (\psi \land 0)
 \]
+#+END_LaTex
 
 Since both expressions evaluate to FALSE, this demonstrates that the associative property holds for conjunction in
 this context.
@@ -1706,7 +1775,6 @@ don't have an inherent difference; They are used to represent different logical 
 
    - \(\neg \psi\) would mean "I do not have an umbrella"
 
-
 *Justification for Using Different Symbols*:
 
 1. *Clarity*: Using different symbols helps to distinguish between different statements or propositions, making it
@@ -1762,20 +1830,23 @@ So, \(\phi \lor (\psi \lor \phi)\) is also equivalent to \(\phi \lor \psi\).
 Both \((\phi \lor \psi) \lor 0\) and \(\phi \lor (\psi \lor 0)\) are equivalent to \(\phi \lor \psi\). Therefore, it is not possible for one of these
 expressions to be true while the others is false.
 
-
 *Associative Property*
 
 The associative property for disjunction states that:
 
+#+BEGIN_LaTex
 \[
 \((\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)\)
 \]
+#+END_LaTex
 
 In this case, substituting 0(FALSE) for \(i\):
 
+#+BEGIN_LaTex
 \[
 (\phi \lor \psi) \lor 0 = \phi \lor (\psi \lor 0)
 \]
+#+END_LaTex
 
 Since both expression simplify to \(\phi \lor \psi\), this demonstrates that the associative property holds for disjunction in
 this context.
@@ -1798,15 +1869,19 @@ this context.
 
    - \(\psi \lor 0\): Since \(0\) represent FALSE, the OR operation \((\psi \lor 0\)) is equivalent to just \(\psi\). This is because
 
+     #+BEGIN_LaTex
      \[
      \psi \lor 0 = \psi
      \]
+     #+END_LaTex
 
    - This simplifies our expression to:
 
+     #+BEGIN_LaTex
      \[
      \phi \land (\psi \lor 0) \equiv \phi \land \psi\)
      \]
+     #+END_LaTex
 
 *Expression-2*: \((\phi \land \psi) \lor 0\)
 
@@ -1817,9 +1892,11 @@ this context.
    - \(\phi \land 0\): Since \(0\) represent FALSE, the AND operation \((\phi \land 0)\) is equivalent to just \(\phi \land \psi\). This is
      because:
 
+     #+BEGIN_LaTex
      \[
      \phi \land 0 = 0
      \]
+     #+END_LaTex
 
 2. *Simplify the OR operation*:
 
@@ -1829,33 +1906,40 @@ this context.
 
 Both expression simplify to the same result:
 
+#+BEGIN_LaTex
 \[
 \(\phi \land (\psi \lor 0)  = \phi \land \psi\)
 \]
+#+END_LaTex
 
+#+BEGIN_LaTex
 \[
 \((\phi \land \psi) \lor (\phi \land 0) = \phi \land \psi\)
 \]
+#+END_LaTex
 
 Since \(\phi \land (\psi \lor 0)\) and \((\phi \land \psi) \lor (\phi \land 0)\) bot simplify to \(\phi \land \psi\), it is not possible to be TRUE while the other
 is false.
 
 This equivalent holds true because both expression reduce to \(\phi \land \psi\)
 
-
 *Distributive Property*:
 
 This confirms that the distributive property holds for conjunction over disjunction:
 
+#+BEGIN_LaTex
 \[
 \phi \land \psi = (\phi \land \psi) \lor \(\phi \land 0)
 \]
+#+END_LaTex
 
 When \(\theta\) is \(0\) (FALSE), this becomes:
 
+#+BEGIN_LaTex
 \[
 \phi \land (\psi \lor 0) = (\phi \land \psi) \lor (\phi \land 0)
 \]
+#+END_LaTex
 
 - Both sides simplify to \(\phi \land \psi\), demonstrating the property holds in context.
 
@@ -1888,29 +1972,34 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
        - \(\psi \land 0\): Since 0 represent FALSE, the AND operation \(\psi \land 0\) is always FALSE. This is because:
 
+         #+BEGIN_LaTex
          \[
-            \psi \land 0 = 0
+         \psi \land 0 = 0
          \]
+         #+END_LaTex
 
        - This simplifies our expression to:
 
+         #+BEGIN_LaTex
          \[
-            \phi \lor (\psi \land 0) = \psi \lor 0
+         \phi \lor (\psi \land 0) = \psi \lor 0
          \]
+         #+END_LaTex
 
     2. *Simplify the OR statement*:
 
        - \(\phi \lor 0\): Since 0 represent FALSE, the OR operation \(\phi \lor 0\) does not change the value of \(\phi\). This is
          because:
 
+         #+BEGIN_LaTex
          \[
-            \phi \lor 0 = \phi
+         \phi \lor 0 = \phi
          \]
+         #+END_LaTex
 
     So, \(\phi \lor (\psi \land 0)\) simplifies to \(\phi\)
 
 *Expression-2*: \((\phi \lor \psi) \land (\phi \lor 0)\)
-
 
     1. *Evaluate each part inside parentheses*:
 
@@ -1918,30 +2007,34 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
        - \(\phi \lor 0\) simplifies to \(\phi\), because the OR with FALSE does not change the value f \(\phi\):
 
+         #+BEGIN_LaTex
          \[
-            \phi \lor 0 = \phi
+         \phi \lor 0 = \phi
          \]
-
+         #+END_LaTex
 
        - This simplifies our expression to:
 
+         #+BEGIN_LaTex
          \[
-            (\phi \lor \psi) \lor (\phi \lor 0) = (\phi \lor \psi) \land \phi
+         (\phi \lor \psi) \lor (\phi \lor 0) = (\phi \lor \psi) \land \phi
          \]
+         #+END_LaTex
 
     1. *Simplify the AND operation*:
 
        - The expression \((\phi \lor \psi) \land \phi\) simplifies to \(\phi), because for any \(\phi\) and \(\psi\):
 
+         #+BEGIN_LaTex
          \[
-            (\psi \lor \phi) \land \phi = \phi
+         (\psi \lor \phi) \land \phi = \phi
          \]
+         #+END_LaTex
 
        - This is because if \(\phi\) is true, then \(\phi \land \phi\) is true, and if \(\phi\) is false, \((\phi \lor \psi) \land \phi\) will still be
          false.
 
     So, \((\phi \lor \psi) \land (\phi \lor 0)\) simplifies to \(\phi\).
-
 
     *Conclusion*
 
@@ -1952,15 +2045,19 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
     The distributive property for disjunction over conjunction states that:
 
+    #+BEGIN_LaTex
     \[
-        \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
+    \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
     \]
+    #+END_LaTex
 
     In this case, substituting 0(FALSE) for \(i\):
 
+    #+BEGIN_LaTex
     \[
-        \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
+    \phi \lor (\psi \land 0) = (\phi \lor \psi) \land (\phi \lor \psi)
     \]
+    #+END_LaTex
 
     Since both expression simplify to \(\phi\), this demonstrate that the distributive property holds for disjunction over
     conjunction in this context.
@@ -2002,18 +2099,15 @@ expression \(\phi \lor (\psi \land 0)\) and \((\phi \lor \psi) \land (\phi \lor 
 
    - If \(\neg \phi\) is false, by definition, \(\phi\) must be true.
 
-
 *Practical Example*:
 
 1. Statement: \(\phi\): "It is raining."
 
 2. Negation: \(\neg \phi\): "It is not raining."
 
-
 - If "It is not raining" \((\neg \phi)\) is true, then the statement "it is raining" \((\phi)\) must false.
 
 - Conversely, if "It is not raining" \((\neg \phi)\) is false, then the statement "it is raining" \((\phi)\) must true.
-
 
 *Conclusion*
 
@@ -2039,107 +2133,106 @@ concept in propositional logic, and is used extensively in mathematical proofs, 
     generality, Also known as [[https://en.wikipedia.org/wiki/Occam's_razor][Occam's Razor]]. This principle suggest that the simplest explanation or assumption is
     typically the most likely.
 
-    Let's break down each statement and use logical symbol to represent them:
+Let's break down each statement and use logical symbol to represent them:
 
-    1. *Alice is a rock star and works in a bank*.
+1. *Alice is a rock star and works in a bank*.
 
-       - \(R \land B\)
+   - \(R \land B\)
 
-       - \(R\): Alice is a rock star.
+   - \(R\): Alice is a rock star.
 
-       - \(B\): Alice works in a bank.
+   - \(B\): Alice works in a bank.
 
-    2. *Alice is quiet and works in a bank*.
+2. *Alice is quiet and works in a bank*.
 
-       - \(Q \land B\)
+   - \(Q \land B\)
 
-       - \(Q\): Alice is quiet.
+   - \(Q\): Alice is quiet.
 
-       - \(B\): Alice works in a bank.
+   - \(B\): Alice works in a bank.
 
-    3. *Alice is quiet and reserved and works in a bank*.
+3. *Alice is quiet and reserved and works in a bank*.
 
-       - \(Q \land R \land B\)
+   - \(Q \land R \land B\)
 
-       - \(Q\): Alice is quiet.
+   - \(Q\): Alice is quiet.
 
-       - \(R\): Alice is reserved.
+   - \(R\): Alice is reserved.
 
-       - \(B\): Alice works in a bank.
+   - \(B\): Alice works in a bank.
 
-    4. *Alice is honest and works in a bank*.
+4. *Alice is honest and works in a bank*.
 
-       - \(H \land B\)
+   - \(H \land B\)
 
-       - \(Q\): Alice is honest.
+   - \(Q\): Alice is honest.
 
-       - \(B\): Alice works in a bank.
+   - \(B\): Alice works in a bank.
 
-    5. *Alice work in a bank*.
+5. *Alice work in a bank*.
 
-       - \(B\): Alice works in a bank.
+   - \(B\): Alice works in a bank.
 
-    6. *None of these is more or less likely*.
+6. *None of these is more or less likely*.
 
-       - This statement suggest that no particular information given about Alice influences the likehood of her working
-         in a bank more than any other.
+   - This statement suggest that no particular information given about Alice influences the likehood of her working
+     in a bank more than any other.
 
-    *Logical Analysis*
+*Logical Analysis*
 
-    We will use basic probability and logical principles to analyze these statements. Since we know nothing about else
-    about Alice, we should assume that base probability of her having any specific characteristic (like being a rock
-    star, quiet, reserved, or honest) is independent of her working in a bank.
+We will use basic probability and logical principles to analyze these statements. Since we know nothing about else
+about Alice, we should assume that base probability of her having any specific characteristic (like being a rock
+star, quiet, reserved, or honest) is independent of her working in a bank.
 
-    *Simplifying the Problem*:
+*Simplifying the Problem*:
 
-        - \(R \land B\): Alice is both a rock star and works in a bank.
+- \(R \land B\): Alice is both a rock star and works in a bank.
 
-        - \(Q \land B\): Alice is both quiet and works in a bank.
+- \(Q \land B\): Alice is both quiet and works in a bank.
 
-        - \(Q \land R \land B\): Alice is quiet, reserved, and works in a bank.
+- \(Q \land R \land B\): Alice is quiet, reserved, and works in a bank.
 
-        - \(H \land B\): Alice is both honest and works in a bank.
+- \(H \land B\): Alice is both honest and works in a bank.
 
-        - \(B\): Alice works in a bank.
+- \(B\): Alice works in a bank.
 
-        The simplest and most general statement is \(B\) (Alice works in a bank) without any additional specific
-        characteristic. This is because \(B\) alone makes a fewest assumption and introduces the least amount additional
-        information.
+  The simplest and most general statement is \(B\) (Alice works in a bank) without any additional specific
+  characteristic. This is because \(B\) alone makes a fewest assumption and introduces the least amount additional
+  information.
 
-    *Logical Argument*
+*Logical Argument*
 
-    To formalize this, let's use the concept of probability:
+To formalize this, let's use the concept of probability:
 
-        - Let \(P(X)\) denote the probability of event \(X\)
+- Let \(P(X)\) denote the probability of event \(X\)
 
-            1. \(P (R \land B) \leq P (B)\): The probability that Alice is both a rock star and works in a bank cannot exceed
-               the probability that she works in a bank.
+  1. \(P (R \land B) \leq P (B)\): The probability that Alice is both a rock star and works in a bank cannot exceed
+     the probability that she works in a bank.
 
-            2. \(P (Q \land B) \le P(B)\): The probability that Alice is both quiet and works in a bank cannot exceed the
-               probability that she works in a bank.
+  2. \(P (Q \land B) \le P(B)\): The probability that Alice is both quiet and works in a bank cannot exceed the
+     probability that she works in a bank.
 
-            3. \(P (Q \land R \land B) \le P(B)\): The probability that Alice is both quiet, reserved and works in a bank cannot
-               exceed the probability that she works in a bank.
+  3. \(P (Q \land R \land B) \le P(B)\): The probability that Alice is both quiet, reserved and works in a bank cannot
+     exceed the probability that she works in a bank.
 
-            4. \(P (H \land B) \le P(B)\): The probability that Alice is both honest and works in a bank cannot exceed the
-               probability that she works in a bank.
+  4. \(P (H \land B) \le P(B)\): The probability that Alice is both honest and works in a bank cannot exceed the
+     probability that she works in a bank.
 
-        Since each conjunction (i.e, combining two or more characteristics with \(\land\)) must have a probability that is
-        less than or equal to the probability of \(B\), the simplest assumption is that Alice is works in a bank
-        (statement 5).
+Since each conjunction (i.e, combining two or more characteristics with \(\land\)) must have a probability that is less than
+or equal to the probability of \(B\), the simplest assumption is that Alice is works in a bank (statement 5).
 
-    *Conclusion*
+*Conclusion*
 
-    Statement 5 (Alice is works in a bank) is the most likely statement given the information provided.
+Statement 5 (Alice is works in a bank) is the most likely statement given the information provided.
 
-    *In Natural Language*
+*In Natural Language*
 
-    Given no additional information about Alice, the simplest and least assumptive statement is that she works in a
-    bank. Adding more characteristics (like being a rock star, quiet, reserved, or honest) only decreases the likehood
-    since it adds more conditions that need to be meet simultaneously.
+Given no additional information about Alice, the simplest and least assumptive statement is that she works in a bank.
+Adding more characteristics (like being a rock star, quiet, reserved, or honest) only decreases the likehood since it
+adds more conditions that need to be meet simultaneously.
 
-    Thus, the logical and probabilistic reasoning shows that the simplest, least specific statement (Alice works in a
-    bank) is the most likely to be true.
+Thus, the logical and probabilistic reasoning shows that the simplest, least specific statement (Alice works in a bank)
+is the most likely to be true.
 
 ** Identify which is of the following are true (where \(x\) denotes an arbitrary real number.) If you do not select a particular statement, the system will assume you think it is false.
 
@@ -2163,9 +2256,7 @@ concept in propositional logic, and is used extensively in mathematical proofs, 
 
 10. If \(x^2 = 9\) then \(x = 3 \lor x = -3\)
 
-
 *A*: Let's evaluate each statement to determine whether it is true or false, and provide the necessary mathematics.
-
 
 1. *Statement-1: \((x > 0) \land (x \le 10)\) means \(0 \le x \le 10\)*
 
@@ -2251,7 +2342,7 @@ concept in propositional logic, and is used extensively in mathematical proofs, 
 
    *TRUE*:
 
-   - \(x > 0) means \(x\) is positive.
+   - \(x > 0\) means \(x\) is positive.
 
    - \(x < 0\) means \(x\) is negative.
 
@@ -2266,7 +2357,6 @@ concept in propositional logic, and is used extensively in mathematical proofs, 
     - The solution to this equation are \(x = 3\) and \(x = -3\)
 
     - Therefore, if \(x^2 = 9\) then \(x\) must be either 3 or -3.
-
 
 *Summary*:
 
