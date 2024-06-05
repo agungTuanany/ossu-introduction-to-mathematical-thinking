@@ -1,0 +1,598 @@
+#+TITLE: WEEK-II
+#+AUTHOR: Agung Tuanany
+#+DATE: 2024-06-02 Sun
+#+OPTIONS:
+#+STARTUP: Course,
+#+TAGS: ossu, math-ossu
+#+TOC: headlines 2
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan, pdfstartview=FitH}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{mdframed}
+#+LATEX_HEADER: \usepackage{centernot}
+#+LATEX_HEADER: \newenvironment{graypar}{\begin{mdframed}[backgroundcolor=gray!20,hidealllines=true,innertopmargin=10pt,innerbottommargin=10pt,innerrightmargin=10pt,innerleftmargin=20pt,skipabove=10pt,skipbelow=10pt]}{\end{mdframed}}
+
+* Lecture-III: Analysis of Language Implication
+
+Our next step in becoming more precise about our use of language for use in mathematics is to take a close look at the
+meaning of the word implies[fn:1].
+
+Most of the benefit from understanding the way our language is used in mathematics comes from trying to figure it out.
+The benefit in this case is helping to develop your mathematical thinking ability, and extra process of trying to
+understand the issue that goes out for you.
+
+In mathematics we frequently encouter expresion:
+
+\begin{center}
+\text{\(\phi\) implies \(\psi\)}
+\end{center}
+
+ Indeed, implication is the means by which we prove result in mathematics, starting with observations or axioms[fn:2].
+So we'd better understand how the word /implies/ behaves.
+
+In particular, how does the truth or falsity of a statement (\(\phi\) implies \(\psi\)), depend on the truth or falsity
+of \(\phi\) and \(\psi\)?
+
+Well, the obvious answer is:
+
+\begin{center}
+\text{ The truth of \(\phi\), follows from the truth of \(\psi\)}
+\end{center}
+
+Let me give you an example,
+
+# \begin{center}
+# \text{ \(\phi: \sqrt{2}\) \hspace{2cm} \($\psi: \( 0 < 1\)}
+# \end{center}
+
+# Line 69 (or relevant line number)
+
+\begin{center}
+\text{ (\(\phi: \sqrt{2}\)) \hspace{2cm} (\(\psi: (0 < 1)\)}
+\end{center}
+
+
+That \(\phi\) of the statement square root of 2 is a rational; and that \(\psi\) of the statement is 0 less than 1. Let's ask
+ourselves, is the statement "\(\phi\) implies \(\psi\)" true?
+
+Well, \(\phi\) is TRUE, and we all know that \(\psi\) is true, cause 0 less than 1. So we have both \(\phi\) and \(\psi\) are truth.
+
+Does that mean "\(\phi\) implies \(\psi\)"? Obviously not. There is no relationship between \(\phi\) and \(\psi\).
+
+The \((\psi: \sqrt{2}\)) is take some effort as you see.
+
+And  \((\psi: ( 0 < 1\)) we all know.
+
+So yes, the truth from first statement (\(\phi\)) doesn't follow from truth of (\(\psi)\).
+
+Now, we realize there's complexity with implication that we didn't meet before when we were dealing with "AND", with
+"OR", and with "NOT".
+
+Now we know,
+
+\begin{center}
+ {\large\textbf{implication involves causality}}
+\end{center}
+
+Causality is an issue of great complexity that philosophers have been discussing for generations.
+
+now we're facing a problem. It didn't arise before, because when we're dealing with conjunction (AND) and disjunction
+(OR), it didn't matter whether there was any kind of relationship between the two conjuncts or the two disjuncts.
+
+For example, let's look at the sentence:
+
+\begin{center}
+\text{{\textbf{1.}} (Julius Caesar is death) \(\land\) \((1 + 1 = 3)\)}
+
+\text{{\textbf{2.}} (Julius Caesar is death) \(\lor\) \((1 + 1 = 3)\)}
+\end{center}
+
+Forming a conjunction and disjunction didn't require any kind of relationship between these two sentences. Clearly,
+they're independent. One's statement about a long dead individual, and the other one is a mathematical statement.
+
+Let examine above statements:
+
+- Understanding the conjunction Expression:
+
+   1. (Julius Caesar is death) is TRUE
+
+   2. \((1 + 1 = 3)\): is FALSE
+
+So, the conjunction is FALSE.
+
+- Understanding the disjunction Expression:
+
+   1. (Julius Caesar is death) is TRUE.
+
+   2. \((1 + 1 = 3)\): is FALSE
+
+So, the disjunction is TRUE.
+
+The fact that there's no meaningful relationship between the two conjuncts in the first case, or the two disjuncts in
+the second case. Created no lull in determining what the truth value was. It was purely in terms of truth and falsity.
+
+But it's no sitting wit implication, because implication involves /causality/.
+
+So let me just express explicitly,
+
+\begin{center}
+\text{implication has a truth part and causation part}
+\end{center}
+
+What we're going to do? Ignore the /causation/--part. We're going to leave that to the philosophers if you like, and we're
+just going to focus on the /truth/--part.
+
+Throwing away a causation, we can't be left with anything useful, but it turns out, it might seem dangerous thing to do,
+to throw away this important causation-part implication, but it turns out when we focus on the truth part we left with
+enough to save our leaves in mathematics.
+
+So much that we're going to give (truth part) a name,
+
+\begin{center}
+\text{(\uline{Julius Caesar is dead}) \(\land\) \((1 + 1 = 3)\)}
+\end{center}
+
+We're going to call it *the conditional* or *material conditional*. That's the part we're going to focus on.
+
+So, we're going to split implication into two part:
+
+\begin{center}
+\text{implication = \hspace{0.5cm} conditional \hspace{0.5cm} + \hspace{0.5cm} causation}
+\end{center}
+
+The first part, the conditional, we're going to define entirely in terms of /*truth value*/. The second part, we're going
+to leave to the philosophers.
+
+The symbol that we use normally for *conditional*, at least the symbol I'm going to use, is:
+
+ \begin{equation}
+    \implies
+ \end{equation}
+
+So I'm going to write conditional expression like this?
+
+\[
+ \phi \implies \psi
+\]
+
+That's the truth path of \(\phi\) implies \(\psi\).
+
+When we have a conditional expression like above, we call \(\phi\) /*antecedent*/, and we call \(\psi\) the /*consequent*/; And we
+going to formally define the truth of \(\phi\) conditional \(\psi\) in terms of the truth of \(\phi\), and the truth of \(\psi\), we
+can write like:
+
+\begin{center}
+\text{Define the truth of \(\phi \implies \psi\) in terms of the truth | falsity of \(\phi, \psi\)}
+\end{center}
+
+Well, you might worry that by throwing away a /causation/, we're going to be left with a notion that's really of no use
+whatsoever. That actually is not the case. Even though we're throwing away something of great significance, hanging on
+the truth-part leaves us something very useful.
+
+And the reason is, whenever we have a genuine implication, which are actually the only circumstances in which we're
+ultimately going to be interested, whenever we have a genuine implication, the truth behavior of the conditional is the
+correct one. It really does capture what happens with truth and falsity, when we have genuine implication, we can write
+it down:
+
+\begin{center}
+\text{When \(\phi\) \uline{does} implies \(\phi\), \(\phi \implies \psi\) behaves "correctly".}
+\end{center}
+
+That probably seems a bit mysterious at this stage, but when we start to look at some examples, I think it should become
+clear what I mean.
+
+\begin{center}
+\text{The advantage is that the conditional is always defined.}
+\end{center}
+
+For real implication, you've got that issue of /causation/. the (\(\phi:\sqrt{2}) (\psi: ( 0 < 1\)) example, the truth or
+falsity wasn't the issue, it was whether there was a relationship between those two statements. Now, that's a
+complicated issue.
+
+But because we're going to define the conditional, purely in terms of the truth value of the two constituents, the
+antecedent and the consequent, it turns out that the conditional will always be defined. When we do a genuine
+implication, the definition of the conditional will agree with the way implication behaves.
+
+When we don't have a genuine implication, the conditional will still be defined, and so we can proceed.
+
+Again, this probably seems very mysterious when I describe it in this way. But as we develop some examples, I hope
+you'll be able to understand what I'm trying to get at.
+
+Let me take a quiz:
+
+\begin{center}
+The truth of the conditional \(\phi \implies \psi\) is defined in terms of
+\vspace{1em}
+\begin{tabular}{l}
+    [ ] The truth of \(\phi\) and \(\psi\) \\[1em]
+    [ ] Whether \(\phi\) causes \(\psi\)  \\[1em]
+    [ ] Both
+\end{tabular}
+\end{center}
+
+Which is it?
+
+It's number 1.
+
+We define the truth of a conditional in terms of the truth and falsity of the antecedents and the consequent; And
+because we define the truth of the conditional in terms of truth and falsity in that way, it has a truth table.
+
+
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |         <c>         |        <c>         |                <c>                |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\)   (Implication) |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    | / |          <          |         <          |                 <                 | > |
+    |   |          T          |         T          |                 ?                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |          T          |         F          |                 ?                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |          F          |         F          |                 ?                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |          F          |         F          |                 ?                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+
+** Fill the First Table
+
+This part We've already looked at.
+
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |         <c>         |        <c>         |                <c>                |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\)   (Implication) |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    | / |          <          |         <          |                 <                 | > |
+    |   |          T          |         T          |                 T                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+
+We define the conditional (\(\phi\)) as the truth part of implication; And implication has a property that a true
+implication leads to a true conclusion (\(\psi\)) from a true assumption.
+
+So because we take the conditional from real implication, we have truths all the way throughout the top level.
+
+#+BEGIN_FOLD
+#+begin_export latex
+\begin{graypar}
+#+end_export
+
+NOTE:
+
+Lets break down the definition of implication and how it works with logical statements, so it makes sense in the
+contexts.
+
+*Understanding implication (\(\implies\))*
+
+1. *Conditional (\phi)*: This is the "IF" part of the statement.
+
+2. *Conclusion (\psi)*: This is the "THEN" part of the statement.
+
+In logic, the implication (\(\phi \implies \psi\)) read as "IF \(\phi\), then \(\psi\)", this means:
+
+- When \(\psi\) (the condition) is TRUE, \(\phi\) (the conclusion) must be TRUE for the entire statement to be true.
+
+- If \(\phi\) is TRUE and \(\psi\) is FALSE, the implication is FALSE.
+
+- If \(phi\) is FALSE, the implication is TRUE regardless of the truth value of \(\psi\).
+
+*Truth Table for Implication*
+
+Here's how we can visualize this truth table:
+
+|---+---------------------+--------------------+-----------------------------------+---|
+|   |         <c>         |        <c>         |                <c>                |   |
+|   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\)   (Implication) |   |
+|---+---------------------+--------------------+-----------------------------------+---|
+| / |          <          |         <          |                 <                 | > |
+|   |          T          |         T          |                 T                 |   |
+|---+---------------------+--------------------+-----------------------------------+---|
+|   |          T          |         F          |                 F                 |   |
+|---+---------------------+--------------------+-----------------------------------+---|
+|   |          F          |         T          |                 T                 |   |
+|---+---------------------+--------------------+-----------------------------------+---|
+|   |          F          |         F          |                 T                 |   |
+|---+---------------------+--------------------+-----------------------------------+---|
+
+*Explanation in Simple Terms*
+
+- If both the condition (\(\phi\)) and the conclusion (\(\psi\)) are true, the implication is true.
+
+- If the condition (\(\phi\)) is true and the conclusion (\(\psi\)) is false, the implication is false. This because the truth
+  of the condition did not lead a true conclusion.
+
+- If the condition (\(\phi\)) is false, the implication is always true, regardless of whether the conclusion (\(\psi\)) is
+  true or false. This might seem counterintuitive, but it's because an implication with a false condition doesn't make
+  any promise about the conclusion.
+
+*Putting it All Together*
+
+*Statement*: "We define the conditional (\(\phi\)) as the truth part of implication; and implication has a property that a true implication leads
+to a true conclusion (\(\psi\)) from a true assumption."
+
+This means:
+
+- The conditional (\(\phi\)) is the part we assume or check first.
+
+- The implication (\(\phi \implies \psi\)) says that if our assumption (\(\phi\)) is true, then the conclusion (\(\psi\)) must also
+  be true.
+
+- If our assumption (\(\phi\)) is true and leads to a true conclusion(\(\psi\)), then the implication (\(\phi \implies \psi\)) is
+  true.
+
+- If our assumption (\(\phi\)) is false, we don't care about the conclusion (\(\psi\)); the implication (\(\phi \implies \psi\)) is
+  considered true by default.
+
+*Simplified Example*
+
+Consider the statement "If it rains (\(\phi\)), then the ground will be wet (\(\psi\))."
+
+- If it rains and ground is wet, the implication is true.
+
+- If it rains and ground is not we, the implication is false.
+
+- If it doesn't rain, the implication is true regardless of whether the ground is wet or not.
+
+#+begin_export latex
+\end{graypar}
+#+end_export
+#+END_FOLD
+
+Let's look at the first row of the truth table above, and I give you some example to observe:
+
+\begin{center}
+\text{\((\phi: N > 7) \hspace{1.5cm} (\psi: N^2 > 40)\)}
+
+\text{This is consistent with the truth table.}
+\end{center}
+
+Suppose \(\phi\) is the statement (\(N > 87\)); And suppose \(\psi\) is the statement (\(N^2 > 40\)). In other words
+
+  - If \(N\) is bigger than 7, then \(N^2\) is bigger than 40.
+
+In fact, it's bigger than 40 now. So, certainly, in this case \(\phi\) implies \(psi\) or it is TRUE.
+
+Now let's look at different example.
+
+\begin{center}
+\text{(Julius Caesar is death) \hspace{1.5cm} \((\pi > 3)\)}
+
+\end{center}
+
+\(\phi\) is true,  \(\psi\) is true, According to the truth table, it follows that
+
+\begin{center}
+\text{\(\phi \implies \psi\)}
+\end{center}
+
+In other words,
+
+\begin{center}
+\text{(Julius Caesar is death) \(\implies\) \((\pi > 3)\)}
+\end{center}
+
+Now, if you read this as Julius Caesar is dead implies pi bigger than 3, then you're in a nonsensical situation. But
+remember above statement isn't implication, this is just truth part implication, and in terms of the truth part there's
+no problem.
+
+In the first example, (\((\phi: N > 7) (\psi: N^2 > 40)\)) there is meaningful relationship between \(\phi\) and \(\psi\).
+
+When we know that \(N\) is bigger than 7, than we can conclude that \(N^2\) is certainly bigger than 40. There's
+connection between the two statement (condition and conclusion); And in this case, the behavior of the conditional is
+certainly consistent with what's really going on.
+
+In the second example, there's no connection between the two.
+
+The conditional is true, but it's got nothing to do with one thing following from the other.
+
+The value of doing this (in the second example), is even though has no meaning in terms of implication, its truth value
+is defined.
+
+In both cases, we have a well-defined truth value. In the first case, it's a meaningful truth value. In the second case,
+it's purely defined truth value.
+
+But that's not going to cause us any problem, because we're never going to encouter like second case in mathematics. We
+encounter the first case all the time.
+
+So all we've done is we've extended a notion to be defined under all circumstances; And we've done it in a way that's
+consistent with the behavior we want when something meaningful is going on.
+
+This is actually quite common in mathematics to extend the domain of definition of something so that it's always defined.
+
+So long as it has the correct behavior, the correct definition for the meaningful cases, and provided we do the
+definition correctly, it really doesn't cause any problems. In fact, it solves a lot of problems and eliminates a lot of
+difficulties. If we extend the definition so that it covers all cases.
+
+Is it just something we do in mathematics all the time? May seem strange when you first meet it, but it is a part of
+modern advanced mathematics. Incidentally, if you think is just playing games, let me mention that the computer system
+that controls that aircraft that you'll be flying in next time depends upon the fact that expressions like (\(\phi \implies
+\psi\)) are always well defined.
+
+But software control system doesn't depend upon knowing "Julius Caesar is death" or things like that. It doesn't depend
+on those kind of facts of the world.
+
+Computer systems, by and large, don't depend upon understanding causation, which is just as well, because they don't.
+
+What computer systems depends upon is that things are always accurately and precisesly defined.
+
+And this expression, (\(\phi \implies \psi\)) occurs all over the places in software systems. So, quite literally, your life
+depends upon the fact that this is always well-defined. It doesn't depend upon the fact that the computer doesn't know
+whether "Julius Caesar is death."
+
+** Fill the second table
+
+Okay, time to look at the second table,
+
+    |---+---------------------+--------------------+-----------------------------------+---|
+    |   |         <c>         |        <c>         |                <c>                |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\)   (Implication) |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+    | / |          <          |         <          |                 <                 | > |
+    |   |          T          |         F          |                 ?                 |   |
+    |---+---------------------+--------------------+-----------------------------------+---|
+
+What will the value on (\(\phi \implies \psi\)), if \(\phi\) is true, and \(\psi\) is false?
+
+When we think about it in terms of genuine implication, because we trying to capture the truth behavior with genuine
+implication.
+
+So if it was the case that (\(\phi \implies \psi\), if that statement was true when we interpret it as real implication, Then
+the truth of \(\psi\) would follow from the truth of \(\psi\). That's how we began remember.
+
+That's real implication means, the truth of \(\psi\) will follow from truth from \(\phi\).
+
+So, if the result of implication is TRUE, then when we have a TRUE of \(\phi\), we would have TRUE in \(\psi\). But we don't.
+We've got FALSE in \(\psi\). So, we cannot have a TRUE value in implication \(\phi\) of \(\psi\), because if we put TRUE as a
+result, the conditional is contrary, it contradicts real implication and we're trying to extend implication to be
+defined in all cases where there's no causation.
+
+So it has to be FALSE.
+
+    |---+---------------------+--------------------+---------------------------------+---|
+    |   |         <c>         |        <c>         |               <c>               |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\) (Implication) |   |
+    |---+---------------------+--------------------+---------------------------------+---|
+    | / |          <          |         <          |                <                | > |
+    |   |          T          |         F          |                F                |   |
+    |---+---------------------+--------------------+---------------------------------+---|
+
+In order that the conditional agrees with real implication, that has to be an FALSE. If it's a truth, then we would have
+true antecedent and false consequence from a true implication.
+
+Let me write that down just to make sure everyone's following what I'm trying to say.
+
+\begin{quote}
+If there were a genuine implication "\(\phi\) implies \(\psi\), and if that implication were TRUE then \(\psi\) would have to be
+TRUE if \(\phi\) were TRUE.
+
+So we cannot have \(\phi\) TRUE and \(\psi\) FALSE if \(\phi \implies \psi\) is TRUE
+\end{quote}
+
+That means, that in the case where \(\phi\) is true and \(\psi\) is false we have a false implication.
+
+** Fill the last two table
+
+    |---+---------------------+--------------------+---------------------------------+---|
+    |   |         <c>         |        <c>         |               <c>               |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \implies  \psi\) (Implication) |   |
+    |---+---------------------+--------------------+---------------------------------+---|
+    | / |          <          |         <          |                <                | > |
+    |   |          F          |         T          |                ?                |   |
+    |   |          F          |         F          |                ?                |   |
+    |---+---------------------+--------------------+---------------------------------+---|
+
+ Now if you're like me, you have no intuitions as to what to put above; And the reason you have no intuition is that
+ even though you're used to dealing with implication you've never dealt with an implication where the antecedent
+ (conditional) was false. You're only ever interested in drawing conclusions from true assumptions.
+
+ You do have an intuition with:
+
+ \begin{center}
+ \text{\(\phi \centernot\implies \psi\)}
+ \end{center}
+
+ The reason that's going to help us out, that negation implication (\(\centernot\implies\)) swap around falsity of
+ \(\phi\). So corresponding to the "F" for \(\phi\) here when we look at \(\phi\) on (\(\phi \centernot\implies \psi\)) we'll have
+ truths.
+
+ So you are used to having deal with (\(\phi \centernot\implies \psi\)),
+
+So The trick, or at least the idea by which we're going to figure out what goes here, is to stop looking at implication
+(\(\implies\)) and look at (\(\centernot\implies\)). \(\phi\) does not imply \(\psi\) if even though \(\phi\) is true, \(\psi\)
+neverthenless false.
+
+That's how you know that (\(\phi \centernot\implies \psi\)) holds. You know that \(\phi\) doesn't imply \(\psi\) if you can check
+\(\phi\) is true but \(\psi\) neverthenless false.
+
+    |---+---------------------+--------------------+------------------------------------------+---|
+    |   |         <c>         |        <c>         |                   <c>                    |   |
+    |   | \(\phi\) (Conditional) | \(\psi\) (Conclusion) | \(\phi \centernot\implies \psi\) (Implication) |   |
+    |---+---------------------+--------------------+------------------------------------------+---|
+    | / |          <          |         <          |                    <                     | > |
+    |   |          T          |         F          |                    T                     |   |
+    |---+---------------------+--------------------+------------------------------------------+---|
+
+That's the how you now that (\(\phi \centernot\implies \psi\)) holds, you know that \(\phi\) doesn't imply \(\psi\) if you can check
+that \(\phi\) is true but \(\psi\) is false.
+
+That's the only circumstance under which you can conclude (\(\centernot\implies\)) is true. In all other circumstances
+(\(\phi \centernot\implies \psi\)) will be false.
+
+Let me write a conclusions:
+
+ \begin{center}
+ \text{In all other circumstances \(\phi \centernot\implies \psi\) will be false}
+
+ \text{In all other circumstances \(\phi \implies \psi\) will be true}
+ \end{center}
+
+Because \((\neg)\) swap false and true, \(\phi \centernot\implies \psi\) will be false, and \(\phi \implies \psi\) will be true
+
+Let me give you a little quiz?
+
+\begin{center}
+\text{Which of the following are true?}
+
+\text{\(\phi \implies \psi\) is true, whenever:}
+
+\vspace{1em}
+\begin{tabular}{l}
+   [ ] \(\phi\) and \(\psi\) are both true \\[1em]
+   [ ] \(\phi\) is false and \(\psi\) is true \\[1em]
+   [ ] \(\phi\) and \(\psi\) are both false \\[1em]
+   [ ] \(\phi\) is true and \(\psi\) is false \\[2em]
+\end{tabular}
+
+\text{check all that are true!!}
+\end{center}
+
+Which of these four conditions all the case when \(\phi \implies \psi\) is true?
+
+The answer is 1, 2, and 3.
+
+** Summary
+
+We've defined a notion, the conditional, that captures only part of what implies means.
+
+To avoid difficulties, we base our definition solely on the notion of truth and falsity. Our definition agrees with our
+intuition concerning implication in all meaningful cases.
+
+The definition for a true anticedent is based on analysis of the truth values of genuine implication.
+
+The definition for false antecedent, is based n a truth value analysis of the notion does not imply.
+
+In defining the conditional the way we do, we do not end up with a notion that contradicts a notion of genuine
+implication.
+
+Rather, we obtain a notion that extends genuine implication to cover those cases where the claim of implication is
+irrelevant, because the antecedent is false or meaningless when there's no real connection between the antecedent and
+the consequences.
+
+In the meaningful case where there is a relationship between \(\phi\) and \(\psi\), and in addition, where \(\phi\) is true,
+namely, the cases covered by the first two rows of the truth table, the truth value of the conditional will be the same
+as the truth value of the actual implication.
+
+Remember, it's the fact that the conditional always has a well-defined truth value that makes this notion important in
+mathematics since in mathematics, we can't afford to have statements with undefined truth values floating around.
+
+I've kept assignment three fairly short since I expect you'll need most of your time simply understanding our analysis
+of implication and the definition of the conditional.
+
+Here the last quiz:
+
+\begin{center}
+\text{If the conditional is true, check the corresponding box.}
+
+\vspace{1em}
+\begin{tabular}{l}
+   [ ] \((\pi^2 > 2) \implies (\pi > 1.2)\) \\[1em]
+   [ ] \((\pi^2 < 0) \implies (\pi = 3)\) \\[1em]
+   [ ] \((\pi^2 > 0) \implies (1 + 2 = 3)\) \\[1em]
+   [ ] (The area of a circle of radius is \(\pi\)) \(\implies\) (3 is prime) \\[1em]
+   [ ] (Triangles have four sides) \(\implies\) (Squares have five sides) \\[1em]
+   [ ] (Euclid's brithday was july 4) \(\implies\) (Rectangles have four sides) \\ [2em]
+\end{tabular}
+\end{center}
+
+* Footnotes
+[fn:2] axiom: a statement or proposition which is regarded as being established, accepted, or self-evidently true.
+[fn:1] implies : strongly suggest the truth or existence of (something not expressly stated).
