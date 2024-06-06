@@ -577,6 +577,10 @@ mathematics since in mathematics, we can't afford to have statements with undefi
 I've kept assignment three fairly short since I expect you'll need most of your time simply understanding our analysis
 of implication and the definition of the conditional.
 
+** Last Quiz
+
+Here the last quiz:
+
 Here the last quiz:
 
 \begin{center}
@@ -592,6 +596,295 @@ Here the last quiz:
    [ ] (Euclid's brithday was july 4) \(\implies\) (Rectangles have four sides) \\ [2em]
 \end{tabular}
 \end{center}
+
+|---+---------------+---------------+-------------------------------------+---|
+|   |      <c>      |      <c>      |                 <c>                 |   |
+|   | \((\pi^2 > 0)\) | \((\pi > 1.2)\) | \((\pi^2 > 0 ) \p\implies (\pi > 1.2)\) |   |
+|---+---------------+---------------+-------------------------------------+---|
+| / |       <       |       <       |                  <                  | > |
+|   |       T       |       T       |                  T                  |   |
+|---+---------------+---------------+-------------------------------------+---|
+
+The answer for the first one is that it's TRUE. The antecedent \((\pi^2 > 2)\) is true and the consequence is true, so the
+conditional is true.
+
+In fact there's deeper result is going on the first one. Providing you take a positive number, instead of \(\pi\), any
+positive number, then if the \(N^2\) of that positive number bigger than 2, that number must be bigger than 1.2. Because
+the \(2^2 = 1.41421356237\).
+
+So for positive numbers, it doesn't have to be \((\pi)\) it can be anything. Any positive number whose square is bigger
+than 2, it must be bigger than 1.2.
+
+The first question would be a case of genuine causation and genuine implication. But in terms of the conditional, it's
+enough that the antecedent its true, then the consequence is true.
+
+|---+---------------+-------------+----------------------------+---|
+|   |      <c>      |     <c>     |            <c>             |   |
+|   | \((\pi^2 < 0)\) | \((\pi = 3)\) | \((\pi^2) \implies (\pi = 3)\) |   |
+|---+---------------+-------------+----------------------------+---|
+| / |       <       |      <      |             <              | > |
+|   |       F       |      F      |             T              |   |
+|---+---------------+-------------+----------------------------+---|
+
+For the second question it's also TRUE. Now the consequence is false \((\pi = 3)\) but the antecedent is false \((\pi^2 <
+0)\); And if you have false antecedent, the conditional is always true. \(\pi^2\) is most certainly not less than 0. So
+you've got \((\pi^2 < 0)\) is false, \((\pi = 3)\) is false, that makes the conditional true.
+
+|---+---------------+-----------------+-------------------------------+---|
+|   |      <c>      |       <c>       |              <c>              |   |
+|   | \((\pi^2 > 0)\) | \((1 + 2 = 3)\) | \((\pi^2) \implies (1 + 2 =3)\) |   |
+|---+---------------+-----------------+-------------------------------+---|
+| / |       <       |        <        |               <               | > |
+|   |       T       |        F        |               F               |   |
+|---+---------------+-----------------+-------------------------------+---|
+
+Number three, that's one false. The antecedent is true, and the consequence is false; And you cannot obtain a false
+conclusion from a true assumption.
+
+|---+--------------------------+--------------+----------------------------------------------------+---|
+|   |           <c>            |     <c>      |                        <c>                         |   |
+|   | (circle radius is \(\pi\)) | (3 is prime) | (circle radius is \(\pi\)) \(\implies\) (3 is prime) |   |
+|---+--------------------------+--------------+----------------------------------------------------+---|
+| / |            <             |      <       |                         <                          | > |
+|   |            T             |      T       |                         T                          |   |
+|---+--------------------------+--------------+----------------------------------------------------+---|
+
+The forth is true. The antecedent is true, and the consequence is true.
+
+|---+-----------------------+---------------------+--------------------------------------------------------+---|
+|   |          <c>          |         <c>         |                          <c>                           |   |
+|   | (Triangles = 4 sides) | (Squares = 5 sides) | (Triangles = 4 sides) \(\implies\) (Squares = 5 sides) |   |
+|---+-----------------------+---------------------+--------------------------------------------------------+---|
+| / |           <           |          <          |                           <                            | > |
+|   |           F           |          F          |                           T                            |   |
+|---+-----------------------+---------------------+--------------------------------------------------------+---|
+
+Do triangles have four sides? No. Do squares have five sides? No. But anything with a false antecedent is true, so
+that's true.
+
+You've got conditional false, conclusion false, so that's true.
+
+|---+---------------------+------------------------+---------------------------------------------------------+---|
+|   |         <c>         |          <c>           |                           <c>                           |   |
+|   | (Euclid's = july 4) | (Rectangles = 4 sides) | (Euclid's = july 4) \(\implies\) (Rectangles = 4 sides) |   |
+|---+---------------------+------------------------+---------------------------------------------------------+---|
+| / |          <          |           <            |                            <                            | > |
+|   |          T          |           T            |                            T                            |   |
+|   |          F          |           T            |                            T                            |   |
+|---+---------------------+------------------------+---------------------------------------------------------+---|
+
+We don't know Euclid's birthday was. At least, I don't know when Euclid's birthday was. I suspect you either.
+
+Either the consequences is true, or it's false.
+
+Either way, since the consequence is true, the thing is true.
+
+We've going to run down /using two consequences/, so either we have true consequence and true conclusion, in which case,
+it's true; or we have false consequence and true conclusion, in which case, it's true.
+
+* Assignment 3 for Lecture 3
+
+** Q: Let /D/ be the statement "The dollar is strong", /Y/ the statement "The yuan is strong", and /T/ statement "New US-China trade agreement signed". Express the main content of each of the following (fictitious) newspaper headlines in logical notation.
+
+Remember, logical notation captures truth, but not the many nuances and inferences of natural language. As before, make sure you could justify and defend your answer.
+
+1. New trade agreement will leas to strong currencies in both countries.
+
+2. Strong Dollar means a weak Yuan
+
+3. Trade agreement fails on news of weak Dollar.
+
+4. If new trade agreement is signed. Dollar and Yuan can't both remain strongly
+
+5. Dollar weak but Yuan strong. Following new trade agreement.
+
+6. If the trade agreement is signed, a rise in the Yuan will result in a fall in the Dollar.
+
+7. New trade agreement means Dollar and Yuan will rise and fall together.
+
+8. New trade agreement will be good for one side. But no one knows which
+
+
+*A*:
+
+Let's start by converting each of the statement into logical notation. Then we will create a truth table to illustrate
+the possible truth values.
+
+1. New trade agreement will leas to strong currencies in both countries.
+
+   - Logical notation: \(T \implies (D \land Y)\)
+
+2. Strong Dollar means a weak Yuan
+
+   - Logical notation: \(D \implies \neg Y\)
+
+3. Trade agreement fails on news of weak Dollar.
+
+   - Logical notation: \(\neg D \implies \neg D\)
+
+4. If new trade agreement is signed. Dollar and Yuan can't both remain strongly
+
+   - Logical notation: \(T \implies \neg (D \land T)\)
+
+5. Dollar weak but Yuan strong. Following new trade agreement.
+
+   - Logical notation: \(T \implies (\neg D \land T)\)
+
+6. If the trade agreement is signed, a rise in the Yuan will result in a fall in the Dollar.
+
+   - Logical notation: \(T \implies (Y \implies \neg D)\)
+
+7. New trade agreement means Dollar and Yuan will rise and fall together.
+
+   - Logical notation: \(T \implies (Y \iff \neg D)\)
+
+8. New trade agreement will be good for one side. But no one knows which
+
+   - Logical notation: \(T \implies (D \oplus Y)\)
+
+** Q: Complete the following truth table
+
+|---+-------+---------+-------+------------------+-------------+---|
+|   |  <c>  |   <c>   |  <c>  |       <c>        |     <c>     |   |
+|   | \(\phi\) | \(\neg \phi\) | \(\psi\) | \(\phi \implies \psi\) | \(\neg \phi \lor \psi\) |   |
+|---+-------+---------+-------+------------------+-------------+---|
+| / |   <   |    <    |   <   |        <         |      <      | > |
+|   |   T   |    ?    |   T   |        ?         |      ?      |   |
+|   |   T   |    ?    |   F   |        ?         |      ?      |   |
+|   |   F   |    ?    |   T   |        ?         |      ?      |   |
+|   |   F   |    ?    |   F   |        ?         |      ?      |   |
+|---+-------+---------+-------+------------------+-------------+---|
+
+Note: \((\neg)\) has the same binding rules as \((-)\) (minus) in arithmetic and algebra, so \(\neg \phi \lor \psi\) is the same as
+\((\neg \phi) \lor \psi\)
+
+*A*:
+
+|---+-------+---------+-------+------------------+-------------+---|
+|   |  <c>  |   <c>   |  <c>  |       <c>        |     <c>     |   |
+|   | \(\phi\) | \(\neg \phi\) | \(\psi\) | \(\phi \implies \psi\) | \(\neg \phi \lor \psi\) |   |
+|---+-------+---------+-------+------------------+-------------+---|
+| / |   <   |    <    |   <   |        <         |      <      | > |
+|   |   T   |    F    |   T   |        T         |      T      |   |
+|   |   T   |    F    |   F   |        F         |      F      |   |
+|   |   F   |    T    |   T   |        T         |      T      |   |
+|   |   F   |    T    |   F   |        T         |      T      |   |
+|---+-------+---------+-------+------------------+-------------+---|
+
+*Explanation*:
+
+1. First row (\(\phi = T, \psi = T\))
+
+   -  \(\neg \phi\) = F
+
+   - \(\phi \implies \psi = T \implies T = T\)
+
+        1. When \(\phi = T\) and \(\phi = T\):
+
+           - Statement: \(\phi \implies \psi\)
+
+           - Substitution: \(T \implies T\)
+
+           - Evaluation:
+
+             - According to the truth table, if both \(\phi\) and \(\psi\) are true, then the implication \(\phi \implies \psi\) is true.
+
+             - Therefore, \(T \implies T\) evaluates to \(T\).
+
+        So, \(T \implies T = T\) evaluates to \(T\)
+
+   - \(\neg \phi \lor \psi = F \lor T = T\)
+
+2. Second row (\(\phi = T, \psi = F)\)
+
+   - \(\neg \phi = F\)
+
+   - \(\phi \implies \psi = T \implies F = F\)
+
+   - \(\neg \phi \lor \psi = F \lor F = F)
+
+3. Third row (\(\phi = F, \psi = T)\)
+
+   - \(\neg \phi = T\)
+
+   - \(\phi \implies \psi = F \implies T = T\)
+
+   - \(\neg \phi \lor \psi = T \lor T = T)
+
+4. Fourth row (\(\phi = F, \psi = F)\)
+
+   - \(\neg \phi = T\)
+
+   - \(\phi \implies \psi = F \implies F = T\)
+
+   - \(\neg \phi \lor \psi = T \lor F = T)
+
+** Q: What conclusion can you draw from the above table?
+
+From the truth table, we can observer the following:
+
+- The expression \(\phi \implies \psi\)A and \(\neg \phi \lor \psi\) have identical truth value in all cases.
+
+- This demonstrates tat \(\phi \implies \psi\) is logical equivalent to \(\neg \phi \lor \psi\). This is a fundamental equivalence in propositional logic
+  known as the implication equivalence.
+
+** Q: Complete the following truth table.
+
+Recall that \((\phi \centernot\implies \psi)\) is another way of writing \((\neg [\phi \implies \psi])\).
+
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
+|   |   T   |   T   |    ?    |        ?         |              ?              |      ?      |   |
+|   |   T   |   F   |    ?    |        ?         |              ?              |      ?      |   |
+|   |   F   |   T   |    ?    |        ?         |              ?              |      ?      |   |
+|   |   F   |   F   |    ?    |        ?         |              ?              |      ?      |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+
+*A*:
+
+My first attempt:
+
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
+|   |   T   |   T   |    F    |        T         |              F              |      F      |   |
+|   |   T   |   F   |    T    |        F         |              T              |      T      |   |
+|   |   F   |   T   |    T    |        T         |              T              |      T      |   |
+|   |   F   |   F   |    T    |        T         |              T              |      F      |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+
+(This have incorrect answers, take a look at below table.)
+
+My second attempt:
+
+|---+-------+-------+------------------------------+---|
+|   |  <c>  |  <c>  |             <c>              |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \centernot \implies  \psi\) |   |
+|---+-------+-------+------------------------------+---|
+| / |   <   |   <   |              <               | > |
+|   |   T   |   T   |              F               |   |
+|   |   T   |   F   |              T               |   |
+|   |   F   |   T   |              F               |   |
+|   |   F   |   F   |              F               |   |
+|---+-------+-------+------------------------------+---|
+
+- I have to fix the negation of the implication (\(\phi\) does not imply \(\psi\))
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
+|   |   T   |   T   |    F    |        T         |              F              |      F      |   |
+|   |   T   |   F   |    F    |        F         |              T              |      T      |   |
+|   |   F   |   T   |    T    |        T         |              F              |      F      |   |
+|   |   F   |   F   |    T    |        T         |              F              |      F      |   |
+|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+
 
 * Footnotes
 [fn:2] axiom: a statement or proposition which is regarded as being established, accepted, or self-evidently true.
