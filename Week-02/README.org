@@ -1,4 +1,4 @@
-#+TITLE: WEEK-II
+#+TITLE: Introduction to Mathematical Thinking: Week-II
 #+AUTHOR: Agung Tuanany
 #+DATE: 2024-06-02 Sun
 #+OPTIONS:
@@ -251,7 +251,6 @@ implication leads to a true conclusion (\(\psi\)) from a true assumption.
 
 So because we take the conditional from real implication, we have truths all the way throughout the top level.
 
-#+BEGIN_FOLD
 #+begin_export latex
 \begin{graypar}
 #+end_export
@@ -261,7 +260,7 @@ NOTE:
 Lets break down the definition of implication and how it works with logical statements, so it makes sense in the
 contexts.
 
-*Understanding implication (\(\implies\))*
+*Understanding implication (\(\implies \))*
 
 1. *Conditional (\phi)*: This is the "IF" part of the statement.
 
@@ -335,7 +334,6 @@ Consider the statement "If it rains (\(\phi\)), then the ground will be wet (\(\
 #+begin_export latex
 \end{graypar}
 #+end_export
-#+END_FOLD
 
 Let's look at the first row of the truth table above, and I give you some example to observe:
 
@@ -480,21 +478,21 @@ That means, that in the case where \(\phi\) is true and \(\psi\) is false we hav
     |   |          F          |         F          |                ?                |   |
     |---+---------------------+--------------------+---------------------------------+---|
 
- Now if you're like me, you have no intuitions as to what to put above; And the reason you have no intuition is that
- even though you're used to dealing with implication you've never dealt with an implication where the antecedent
- (conditional) was false. You're only ever interested in drawing conclusions from true assumptions.
+Now if you're like me, you have no intuitions as to what to put above; And the reason you have no intuition is that
+even though you're used to dealing with implication you've never dealt with an implication where the antecedent
+(conditional) was false. You're only ever interested in drawing conclusions from true assumptions.
 
- You do have an intuition with:
+You do have an intuition with:
 
  \begin{center}
  \text{\(\phi \centernot\implies \psi\)}
  \end{center}
 
- The reason that's going to help us out, that negation implication (\(\centernot\implies\)) swap around falsity of
- \(\phi\). So corresponding to the "F" for \(\phi\) here when we look at \(\phi\) on (\(\phi \centernot\implies \psi\)) we'll have
- truths.
+The reason that's going to help us out, that negation implication (\(\centernot\implies\)) swap around falsity of
+\(\phi\). So corresponding to the "F" for \(\phi\) here when we look at \(\phi\) on (\(\phi \centernot\implies \psi\)) we'll have
+truths.
 
- So you are used to having deal with (\(\phi \centernot\implies \psi\)),
+So you are used to having deal with (\(\phi \centernot\implies \psi\)),
 
 So The trick, or at least the idea by which we're going to figure out what goes here, is to stop looking at implication
 (\(\implies\)) and look at (\(\centernot\implies\)). \(\phi\) does not imply \(\psi\) if even though \(\phi\) is true, \(\psi\)
@@ -682,8 +680,7 @@ Either way, since the consequence is true, the thing is true.
 We've going to run down /using two consequences/, so either we have true consequence and true conclusion, in which case,
 it's true; or we have false consequence and true conclusion, in which case, it's true.
 
-* Assignment 3 for Lecture 3
-
+* Assignment 3 for Lecture-III
 ** Q: Let /D/ be the statement "The dollar is strong", /Y/ the statement "The yuan is strong", and /T/ statement "New US-China trade agreement signed". Express the main content of each of the following (fictitious) newspaper headlines in logical notation.
 
 Remember, logical notation captures truth, but not the many nuances and inferences of natural language. As before, make sure you could justify and defend your answer.
@@ -885,7 +882,513 @@ My second attempt:
 |   |   F   |   F   |    T    |        T         |              F              |      F      |   |
 |---+-------+-------+---------+------------------+-----------------------------+-------------+---|
 
+* Lecture-IV: Analysis of Language Equivalent
+
+This lecture's going to be fairly short as well. The next topic I want to look at is logical equivalence[fn:3].
+
+Equivalence is closely related to implication. Two statements are said to be equivalent, or more fully, logically
+equivalent, if each implies the other. Equivalence is a central notion in mathematics.
+
+Many mathematical result are proofs that two statement are equivalent. In fact, equivalence is to logic as equations are
+to arithmetic and algebra; And you already know that equations play a central role in mathematics.
+
+Just as we had introduce a formal version implication that avoids the complex issue of causation, namely the
+conditional. We have to introduce an analogous version of equivalence. It called "Biconditional". Fortunately, we did
+all the difficult work with implication. Now we can reap the benefits of those efforts.
+
+Two statement \(\Phi\) and \(\Psi\) area said to be (logically) equivalent, or just equivalent if each implies the other we
+call it the biconditional.
+
+The biconditional of \(\phi\) and \(\psi\) is denoted by "\(\iff\)".
+
+\begin{center}
+    \(\iff\)
+\end{center}
+
+Formally, the biconditional is an abbreviation of:
+
+\begin{center}
+   \((\phi \implies \psi) \land (\psi \implies \phi)\)
+\end{center}
+
+Since the conditional is defined it terms of truth values, it follows that biconditional is defined in terms of truth
+values.
+
+If you work out the truth table for \(\phi\) conditional \(\psi\) (\(\phi \implies \psi\)) and \(\psi\) conditional \(\phi\) (\(\psi
+\implies \phi\)) then you work out the conjunction, you'll get the truth table for (\(\phi \iff \psi\))
+
+If you that, what you will find is that \(\phi \iff \psi\) is true, if \(\phi\) and \(\psi\) are both true or both false.
+
+
+One way to show two statements \(\Phi\), \(\Psi\) are equivalent is to show they have the same truth table.
+
+Actually to avoid confusion, I choose to use capital phi (\(\Phi\)) and capital psi (\(\Psi\)), because I want to use
+the lower case phi (\(\phi\)) and psi (\(\psi\)) for something else.
+
+For example,
+
+\begin{center}
+  \text{(i)\uline{\((\phi \land \psi) \lor (\neg \psi)\)} is equivalent to (ii)\uline{\(\phi \implies \psi\)}}
+
+  \text{(i) = \(\Phi\), (ii) = \(\Psi\) }
+\end{center}
+
+If I was teaching this material at high school level, I'd be very careful to choose different letters to denote
+everything, but we're looking at college, university level mathematics now; And university mathematicians, professional
+mathematicians frequently use upper case and lower case symbol in the same context; And part of being able to master
+university level is actually getting use to disambiguous notations.
+
+What we have to do is to work up truth table for \(\Phi\) and truth table for \(\Psi\).
+
+|---+-------+-------+-----------+---------+----------------------+------------------+---|
+|   |  <c>  |  <c>  |    <c>    |   <c>   |         <c>          |       <c>        |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \land \phi\) | \(\neg \phi\) | \((\phi \land \psi) \lor (\neg \phi)\) | \(\phi \implies \psi\) |   |
+|---+-------+-------+-----------+---------+----------------------+------------------+---|
+| / |   <   |   <   |     <     |    <    |          <           |        <         | > |
+|   |   T   |   T   |     T     |    F    |          T           |        T         |   |
+|   |   T   |   F   |     F     |    F    |          F           |        F         |   |
+|   |   F   |   T   |     F     |    T    |          T           |        T         |   |
+|   |   F   |   F   |     T     |    T    |          T           |        T         |   |
+|---+-------+-------+-----------+---------+----------------------+------------------+---|
+
+You can check the last two table above, it's the same.
+
+I should mention that provind equivalence by means of truth tables is very unusual. It's only special case of
+equivalence.
+
+In general proving equivalence is really quite hard. You have to look at what the two statements mean and develop a
+proof based on their meaning.
+
+Equivalence itself is not too difficult to notion deal with. What is problematic is mastering the various nomenclatures
+that are associated with implication.
+
+** Expression \(\phi \implies \psi\)
+
+There are many different expression we use to describe "\(\phi \implies \psi\)", some of them intuitively obvious and some of them
+are actually counter-intuitive when you first meet them.
+
+NOTE:
+\begin{center}
+ \text{\(\phi \implies \psi\)}
+
+ \text{\(\phi\): antecedent} \\
+ \text{\(\psi\): consequent}
+\end{center}
+
+The following all mean "\(\phi \implies \psi\)":
+
+*** If \(\phi\), the \(\psi\)
+
+This is the most straightforward way to express an implication, it means that whenever \(\phi\) is true, \(\psi\) must also
+true.
+
+*Example*:
+  - \(\phi\): It is raining.
+  - \(\psi\): The ground is wet.
+  - Statement: If it is raining, the ground is wet.
+
+*** \(\phi\) is sufficient for \(\psi\)
+
+   This mean that \(\phi\) being true guarantees that \(\psi\) is true. If \(\phi\) happens, \(\psi\) must also happen.
+
+   *Example*:
+    - \(\phi\): You get 90% or more on a test.
+    - \(\psi\): You pass the test.
+    - Statement: Getting 90% or more on a test is sufficient for passign the test.
+
+   If you score 90% or more, you will definitely pass.
+
+*** \(\phi\) only if \(\psi\)  [NOT SAME as "IF \(\psi\) THEN \(\psi\)"]
+
+Let's clarify the difference between "\(\phi\) only if \(\psi\)" and "if \(\psi\), then \(\phi\)". These statement might sound
+similar, but they different meanings in logic.
+
+1. "\(\phi\) only if \(\psi\)":
+
+   - This statement means that \(\psi\) true only if \(\psi\) is also true.
+
+   - In logical terms, \(\phi\) only if \(\psi\) written as: \(\phi \implies \psi\).
+
+2. "If \(\psi\), then  \(\phi\)":
+
+   - This statement means that if \(\psi\) is true, then \(\phi\) must also be true.
+
+   - In logical terms, if \(\psi\), then \(\phi\) is written as: \(\psi \implies \phi\)
+
+*Difference*:
+
+Let look at each statement more closely:
+
+- *"\(\phi\) only if \(\psi\)"* (\(\phi \implies \psi\))
+
+  - This means that whenever \(\phi\) is true, \(\psi\) must also true.
+
+  - If \(\psi\) false, then \(\phi\) also be false.
+
+  - This does *not* necessarily mean that \(\psi\) being true implies that \(\phi\) is true.
+
+- *"if \(\psi\), then \(\phi\)"* (\(\psi \implies \phi\))
+
+  - This means that whenever \(\psi\) is true, \(\phi\) must also be true.
+
+  - If \(\phi\) false, then \(\psi\) must also be false.
+
+  - This does *not* necessarily means that \(\phi\) being true implies that \(\psi\) is true.
+
+*Example*:
+
+*A.* Consider the statements:
+
+  - \(\phi\): "It is raining."
+  - \(\psi\): "The ground is wet."
+
+*"\(\phi\) only if \(\psi\)"* means "It is raining only if ground is wet" (\(\phi \implies \psi\))
+
+  - This means: If it is raining, then the ground must be wet.
+
+  - It does *not* mean: If the ground is wet, then it is raining. (The ground could be wet for other reasons, such as
+    someone watering the garden.)
+
+*"if \(\psi\), then \(\phi\)"* means "If the ground is wet, then it is raining" (\(\psi \implies \phi\))
+
+  - This means: If ground is wet, then it is raining.
+
+  - It does *not* mean: If it raining, then ground is wet. (The ground being wet is a consequence of rain, but rain can
+    occur without the ground getting wet if, for instance, it is raining in a different area.)
+
+
+*Visualizing with Truth Table*
+
+|---+-----------------+-----------------------+------------------+------------------+---|
+|   |       <c>       |          <c>          |       <c>        |       <c>        |   |
+|   | \(\phi\) (Raining) | \(\psi\) (Ground is wet) | \(\phi \implies \psi\) | \(\psi \implies \phi\) |   |
+|---+-----------------+-----------------------+------------------+------------------+---|
+| / |        <        |           <           |        <         |        <         | > |
+|   |        T        |           T           |        T         |        T         |   |
+|   |        T        |           F           |        F         |        T         |   |
+|   |        F        |           T           |        T         |        F         |   |
+|   |        F        |           F           |        T         |        T         |   |
+|---+-----------------+-----------------------+------------------+------------------+---|
+
+
+*B*: Consider the statements:
+
+  - \(\phi\): "I go to the Tour de France."
+  - \(\psi\): "I have a bike."
+
+*"\(\phi\) only if \(\psi\)" (\phi \implies \psi\)*
+
+This means: "I go to the Tour de France only if I have a bike."
+
+    - In logical terms: \(\phi \implies \psi\).
+
+      This implies that if you are going to the Tour de France, you must have a bike. Going to the Tour de France is
+      conditional upon having a bike. If you don't have a bike, you can't go to the tour de France. However, it does
+      *not* imply that having a bike means you are going to the Tour de France. You could have a bike and not go to the
+      Tour de France.
+
+*"if \(\psi\), then \(\phi\)" \(\psi \implies \phi\)*
+
+This means: "If I have a bike, then I go to the Tour de France."
+
+    - In logical terms: \(\psi \implies \phi\).
+
+      This implies that having a bike means you must be going to the tour de France. If you have a bike, then you are
+      definitely participating in the Tour de France. However, it does *not* imply that going to the Tour de France
+      requires having a bike. You could be going to the Tour de France without having a bike, perhaps as spectator or in
+      some other capacity.
+
+*Analysis Table of truth*
+
+- *"\(\phi\) only if \(\psi\)" (\phi \implies \psi\)*
+
+  - If \(\phi\) (I go to the Tour de France) is true, and \(\psi\) (I have a bike) is true, then the statement is true.
+
+  - If \(\phi\) is true, and \(\psi\) is false, then the statement is false because going to the Tour de France should mean
+    you have a bike.
+
+  - If \(\phi\) is false (I don't go to the Tour de France), then the statement is true regardless of \(\psi\), because not
+    going to the Tour de France does no contradict having a bike.
+
+  - If (\phi\) and \(\psi\) are both false, the statement is true because not going to the Tour de France and not having a
+    bike aligns the condition.
+
+- *"if \(\psi\), then \(\phi\)" \(\psi \implies \phi\)*
+
+  - If \(\psi\) (I have a bike) is true, and \(\phi\) (I go to the Tour de France) is true, then the statement is true.
+
+  - If \(\psi\) is true and \(\phi\) is false, the statement is false because having a bike should mean you are going to the
+    Tour de France.
+
+  - If \(\psi\) (I don't have a bike) is false, the statement is true regardless of \(\phi\), because not having a bike does
+    not require going to the Tour de France.
+
+  - If \(\psi\) and \(\phi\) are both false, the statement is true because not having a bike and not going to the Tour de
+    France aligns with the condition.
+
+*** \(\psi\) if \(\phi\)
+
+This is just different way of saying: "If \(\phi\), then \(\psi\)". It mean the same thing as #1.
+
+*Example*
+  - \(\psi\): It is raining.
+  - \(\phi\): The ground is wet.
+  - Statement: If it is raining, the ground is wet.
+
+*** \(\psi\) Whenever \(\phi\)
+
+This is just different way of saying that \(\psi\) happens every time \(\phi\) happens
+
+*Example*
+  - \(\psi\): You press the light switch.
+  - \(\phi\): The light turns on.
+  - Statement: The light turns on whenever you pres the light switch.
+
+*** \(\psi\) is necessary for \(\phi\)
+
+This means that \(\psi\) must be true for \(\phi\) to be true. If \(\phi\) is true, then \(\psi\) has to be true as well.
+
+*Example*
+  - \(\psi\): You can graduate.
+  - \(\phi\): You have passed all exam
+  - Statement: Passing all your exam is necessary for graduating.
+
+*** Summary
+
+It's important to really master this terminology, because it's used all the time, not just in mathematics, but in
+science, in analytic reasoning and tough in general.
+
+This is not just mathematical language, this is the language that people use in legal documents, in logical arguments,
+in analytic arguments, and in discussion and so forth.
+
+So understanding language as it's used is very important in many walks of life; And having introduced terminology commonly
+associated with implication, we have an associated terminology for equivalence.
+
+** Equivalence Terminology "\(\phi \iff \psi\)"
+
+\begin{center}
+\text{"\(\phi\) is equivalent to \(\psi\)" is itself \uline{equivalent to}}
+\end{center}
+
+By the way this already shows how ubiquitous the equivalence is, because the obvious word to describe this.
+
+The obvious way to describe that ("\(\phi\) is equivalent to \(\psi\)") is equivalent to something is to use world
+"equivalence" as well. It mean, equivalence is just very basic concept in mathematics.
+
+So this sentence ("\(\phi\) is equivalent to \(\psi\)") or statement, it's claim is itself equivalent to:
+
+*** \(\phi\) is _necessary and sufficient_ for \(\psi\)
+
+Notice we combining /necessary/ and /sufficient/. With necessary we have \(\psi\) before \(\phi\) ("\(\phi\) is sufficient fit
+\(\phi\)"), with sufficient we have \(\phi\) before \(\psi\) ("\(\phi\) is sufficient for \(\psi\)") that gets us the implication in
+both directions, and equivalence means /implication in both directions/.
+
+So, the fact that it's in both direction is captured by the fact that we have both sufficient and necessary with below
+expression:
+
+*** \(\phi\) _if and only if_ \(\psi\)
+
+Similarly with "if and only if" it combines /only if/ ("\(phi\) only if \(psi\)") where \(\phi\) comes before \(\psi\), with /if/,
+("\(\psi\) if \(\phi\)") where \(\psi\) comes before \(\phi\). So both in this cases, we have an implication from '\(\phi\) to \(\psi\)',
+and from \(\psi\) to \(\phi\).
+
+Final remark, this expression is often abbreviated */IFF/*. IFF is standard mathematicians abbreviation for 'if and only
+if'.
+
+So, 'if and only if' or 'iff' means the two things are equivalent.
+
+Okay, once you've mastered this terminology you should be able to read and make sense of pretty well any mathematics
+that you come across. That doesn't mean to say you understand the mathematics itself, but at least you should be able to
+understand what it's talking about.
+
+That's a first step towards understanding the mathematics itself. The rest is really up to you to spend some time
+mastering the concepts and the associated terminology.
+
+** Quiz Lecture 4
+
+This quiz comes in four parts.
+
+*** Quiz - Part 1 -- 1
+
+Which of the following conditions is necessary for the natural number \(n\) to be a multiple of 10?
+
+1. \(n\) is a multiple of 5.
+
+2. \(n\) is a multiple of 20.
+
+3. \(n\) is even and a multiple of 5.
+
+4. \(n\) = 100.
+
+5. \(n^2\) is multiple of 100.
+
+*A*:
+
+To answer this tricky question, we have to ask ourselves. "Does \(n\) being a multiple of 10 imply the statement?" To be
+necessary, \(n\) being a multiple of 10 has to imply the statement.
+
+1. \(n\) is a multiple of 5. [T]
+
+   - A number that is multiple of 10 is also a multiple of 5 because \(10 = 2 X 5\)
+
+   - However, not every multiple of 5 is a multiple of 10 (e.g, 15 is multiple of 5 but not 10).
+
+   - Therefore, this condition is not sufficient, *but* it is part of being a multiple of 10.
+
+2. \(n\) is a multiple of 20, [F]
+
+   - Any number that is multiple of 20 is also multiple of 10 because \(20 = X 10\)
+
+   - This condition is sufficient but not necessary since a multiple of 10 does not have to be a multiple of 20 (e.g, 10
+     is a multiple of 10 but not 20).
+
+3. \(n\) is even and a multiple of 5 [T]
+
+   - If \(n\) is even, it divisible by 2.
+
+   - If \(n\) is also multiple by 5, then \(n\) must be a multiple of \(2 X 5 = 10\).
+
+   - Therefore, this condition is both necessary and sufficient for \(n\) to be a multiple of 10.
+
+4. \(n\) = 100 [F]
+
+   - This is specific case of multiple of 10, but it is not necessary for \(n\) to equal 100 to be a multiple of 10
+     (e.g, 10, 20, and 30 are also multiple of 10).
+
+   - Therefore, this conditions is not necessary.
+
+5. \(n^2\) is multiple of 100. [T]
+
+   - If \(n^2\) is multiple of 100, then \(n\) must of 10 because if \(n\) were not a multiple of 10, \(n^2\) could not
+     be a multiple of 10.
+
+   - Thus, this condition is necessary for \(n\) to be multiple of 10.
+
+
+After evaluating each condition, the necessary condition for \(n\) to be a multiple of 10 is:
+
+3. \(n\) is even and a multiple of 5.
+
+   This condition ensure that \(n\) is divisible by both 2 and 5, which makes it divisible by 10. Additionally,
+   condition 5 (\(n^2\) is multiple of 100) is also valid, but condition 3 is more straightforward and directly confirms
+   the requirement.
+
+*** Quiz - Part 1 -- 2
+
+Which of the following conditions is sufficient for the natural number \(n\) to be a multiple of 10?
+
+1. \(n\) is a multiple of 5.
+
+2. \(n\) is a multiple of 20.
+
+3. \(n\) is even and a multiple of 5.
+
+4. \(n\) = 100.
+
+5. \(n^2\) is multiple of 100.
+
+*A:*
+
+1. \(n\) is a multiple of 5. [F]
+
+2. \(n\) is a multiple of 20. [T]
+
+3. \(n\) is even and a multiple of 5. [T]
+
+4. \(n\) = 100 [T]
+
+5. \(n^2\) is multiple of 100. [T]
+
+*** Quiz - Part 1 -- 3
+
+Which of the following conditions is necessary and sufficient for the natural number \(n\) to be a multiple of 10?
+
+1. \(n\) is a multiple of 5.
+
+2. \(n\) is a multiple of 20.
+
+3. \(n\) is even and a multiple of 5.
+
+4. \(n\) = 100.
+
+5. \(n^2\) is multiple of 100.
+
+*A:*
+
+|---+-----+-----------+------------+-----------+---|
+|   | <c> |    <c>    |    <c>     |    <c>    |   |
+|   |     | Necessity | Sufficient | N \(\land\) S |   |
+|---+-----+-----------+------------+-----------+---|
+| / |  <  |     <     |     <      |     <     | > |
+|   |  1  |     T     |     F      |     F     |   |
+|   |  2  |     F     |     T      |     F     |   |
+|   |  3  |     T     |     T      |     T     |   |
+|   |  4  |     F     |     T      |     F     |   |
+|   |  5  |     T     |     T      |     T     |   |
+|---+-----+-----------+------------+-----------+---|
+
+So the answer is number 3 and number 5.
+
+*** Quiz - Part 1 -- 4
+
+Identify the antecedent in each of the following conditional:
+
+  1 If the alarm rings, every one leaves
+
+  2 Everyone leaves if the alarm rings
+
+  3 Keith cycles only if the sun shines
+
+  4 Joe leaves whenever Amy arrives
+
+*A:*
+
+The following sentence is the antecedent:
+
+1. "The alarm rings"
+
+2. "The alarm rings"
+
+3. "Keith cycles"
+
+4. "Amy arrives"
+
+** Summary
+
+So far, I've distinguish between genuine implication and equivalents, and they're far more counterparts. The conditional
+and bi-conditional[fn:4], in the daily work however, Mathematicians are very not particular. For instance, we often use
+the arrow symbol (\(\implies\)) as an abbreviation for implies. On the double headed arrow (\(\iff\)) is an abbreviation
+for is equivalent to.
+
+Although this is very confusing for beginners, it's simply the way a mathematical practice is evolved and there's no
+getting around it. In fact, once you get used to the notions, it's not all this confusing as it might seem at first and
+here is why: The conditional and bi-conditional only differ from implication and equivalents in situation that not
+adrise in the cause of normal mathematical practice. In any real mathematical context, the conditional effectively is
+implication, and the bi-conditional effectively is equivalent.
+
+So having made note of where the formal notions differ from the everyday ones, mathematicians simply move on and turn
+their attention to other things. The very act of formulating definitions creates an understanding of implication and
+equivalence that allows us to use the everyday notion safely.
+
+Of course, computer programmer and people who develop aircraft control systems don't have such freedom. They have to
+make sure all the notions in their programs are defined and give answers in all circumstances.
+
+Okay, that's the end of the lecture-IV. As I said at the start, it's been a fairly short lecture. My reason for keeping
+the lecture is that the upcoming is much longer than the others, it has to be.
+
+Implication and equivalence are the heart of mathematics. Mastery of those concepts and of the terminology associated
+with them is fundamental to mathematical thinking.
+
+You simply have to master implication and equivalence before you can go much further; And there's only one way to
+achieve mastery, right? Remember the story of the elderly lady who approached a New York City policeman and asked,
+officer, how do I get to Carnegie Hall? The officer smiled and said, lady, there's only one way, practice, practice,
+practice. So, I suggest you carve out some time, grab some food and drink, and head off somewhere quiet to complete as
+much of assignment-IV as you possible can.
 
 * Footnotes
+
+[fn:4]Two statement \(\Phi\) and \(\Psi\) area said to be (logically) equivalent, or just equivalent if each implies the other
+we call it the biconditional.
+[fn:3] equivalence: a way of defining when two elements are considered equivalent.
 [fn:2] axiom: a statement or proposition which is regarded as being established, accepted, or self-evidently true.
 [fn:1] implies : strongly suggest the truth or existence of (something not expressly stated).
