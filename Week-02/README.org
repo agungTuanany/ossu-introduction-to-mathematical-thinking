@@ -725,19 +725,27 @@ the possible truth values.
 
 5. Dollar weak but Yuan strong. Following new trade agreement.
 
-   - Logical notation: \(T \implies (\neg D \land T)\)
+   - Logical notation: \(T \implies (\neg D \land T)\) or (\(\neg D \land Y \land T))
 
 6. If the trade agreement is signed, a rise in the Yuan will result in a fall in the Dollar.
 
-   - Logical notation: \(T \implies (Y \implies \neg D)\)
+   - Logical notation: \(T \implies [Y \implies \neg D]\) or \((T \land Y) \implies \neg D \)
 
 7. New trade agreement means Dollar and Yuan will rise and fall together.
 
-   - Logical notation: \(T \implies (Y \iff \neg D)\)
+   - Logical notation:
+
+     - \(T \implies (Y \iff \neg D)\) or
+
+     - \(T \implies [(D \implies Y) \land (Y \implies D)]\)
 
 8. New trade agreement will be good for one side. But no one knows which
 
-   - Logical notation: \(T \implies (D \oplus Y)\)
+   - Logical notation:
+
+     - \(T \implies (D \oplus Y)\)
+
+     - \(T \implies [(D \lor Y) \land \neg (D \land Y)]\)
 
 ** Q: Complete the following truth table
 
@@ -820,67 +828,69 @@ Note: \((\neg)\) has the same binding rules as \((-)\) (minus) in arithmetic and
 
 From the truth table, we can observer the following:
 
-- The expression \(\phi \implies \psi\)A and \(\neg \phi \lor \psi\) have identical truth value in all cases.
+- The expression \(\phi \implies \psi\) and \(\neg\phi \lor \psi\) have identical truth value in all cases.
 
-- This demonstrates tat \(\phi \implies \psi\) is logical equivalent to \(\neg \phi \lor \psi\). This is a fundamental equivalence in propositional logic
-  known as the implication equivalence.
+- This demonstrates that \(\phi \implies \psi\) is logical equivalent to \(\neg\phi \lor \psi\). This is a fundamental equivalence in
+  propositional logic known as the implication equivalence.
+
+- \(\phi \implies \psi) \iff (\neg\phi \lor \psi)\)
 
 ** Q: Complete the following truth table.
 
 Recall that \((\phi \centernot\implies \psi)\) is another way of writing \((\neg [\phi \implies \psi])\).
 
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
-|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
-|   |   T   |   T   |    ?    |        ?         |              ?              |      ?      |   |
-|   |   T   |   F   |    ?    |        ?         |              ?              |      ?      |   |
-|   |   F   |   T   |    ?    |        ?         |              ?              |      ?      |   |
-|   |   F   |   F   |    ?    |        ?         |              ?              |      ?      |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |            <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot\implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |             <              |      <      | > |
+|   |   T   |   T   |    ?    |        ?         |             ?              |      ?      |   |
+|   |   T   |   F   |    ?    |        ?         |             ?              |      ?      |   |
+|   |   F   |   T   |    ?    |        ?         |             ?              |      ?      |   |
+|   |   F   |   F   |    ?    |        ?         |             ?              |      ?      |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
 
 *A*:
 
 My first attempt:
 
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
-|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
-|   |   T   |   T   |    F    |        T         |              F              |      F      |   |
-|   |   T   |   F   |    T    |        F         |              T              |      T      |   |
-|   |   F   |   T   |    T    |        T         |              T              |      T      |   |
-|   |   F   |   F   |    T    |        T         |              T              |      F      |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |            <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot\implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |             <              |      <      | > |
+|   |   T   |   T   |    F    |        T         |             F              |      F      |   |
+|   |   T   |   F   |    T    |        F         |             T              |      T      |   |
+|   |   F   |   T   |    T    |        T         |             T              |      T      |   |
+|   |   F   |   F   |    T    |        T         |             T              |      F      |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
 
 (This have incorrect answers, take a look at below table.)
 
 My second attempt:
 
-|---+-------+-------+------------------------------+---|
-|   |  <c>  |  <c>  |             <c>              |   |
-|   | \(\phi\) | \(\psi\) | \(\phi \centernot \implies  \psi\) |   |
-|---+-------+-------+------------------------------+---|
-| / |   <   |   <   |              <               | > |
-|   |   T   |   T   |              F               |   |
-|   |   T   |   F   |              T               |   |
-|   |   F   |   T   |              F               |   |
-|   |   F   |   F   |              F               |   |
-|---+-------+-------+------------------------------+---|
+|---+-------+-------+-----------------------------+---|
+|   |  <c>  |  <c>  |             <c>             |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \centernot\implies  \psi\) |   |
+|---+-------+-------+-----------------------------+---|
+| / |   <   |   <   |              <              | > |
+|   |   T   |   T   |              F              |   |
+|   |   T   |   F   |              T              |   |
+|   |   F   |   T   |              F              |   |
+|   |   F   |   F   |              F              |   |
+|---+-------+-------+-----------------------------+---|
 
 - I have to fix the negation of the implication (\(\phi\) does not imply \(\psi\))
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-|   |  <c>  |  <c>  |   <c>   |       <c>        |             <c>             |     <c>     |   |
-|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot \implies \psi\) | \(\phi \land \neg \psi\) |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
-| / |   <   |   <   |    <    |        <         |              <              |      <      | > |
-|   |   T   |   T   |    F    |        T         |              F              |      F      |   |
-|   |   T   |   F   |    F    |        F         |              T              |      T      |   |
-|   |   F   |   T   |    T    |        T         |              F              |      F      |   |
-|   |   F   |   F   |    T    |        T         |              F              |      F      |   |
-|---+-------+-------+---------+------------------+-----------------------------+-------------+---|
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+|   |  <c>  |  <c>  |   <c>   |       <c>        |            <c>             |     <c>     |   |
+|   | \(\phi\) | \(\psi\) | \(\neg \phi\) | \(\phi \implies \psi\) | \(\phi \centernot\implies \psi\) | \(\phi \land \neg \psi\) |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
+| / |   <   |   <   |    <    |        <         |             <              |      <      | > |
+|   |   T   |   T   |    F    |        T         |             F              |      F      |   |
+|   |   T   |   F   |    F    |        F         |             T              |      T      |   |
+|   |   F   |   T   |    T    |        T         |             F              |      F      |   |
+|   |   F   |   F   |    T    |        T         |             F              |      F      |   |
+|---+-------+-------+---------+------------------+----------------------------+-------------+---|
 
 * Lecture-IV: Analysis of Language Equivalent
 
@@ -1076,7 +1086,7 @@ Let look at each statement more closely:
   - \(\phi\): "I go to the Tour de France."
   - \(\psi\): "I have a bike."
 
-*"\(\phi\) only if \(\psi\)" (\phi \implies \psi\)*
+*"\(\phi\) only if \(\psi\)" \(\phi \implies \psi\)*
 
 This means: "I go to the Tour de France only if I have a bike."
 
@@ -1100,7 +1110,7 @@ This means: "If I have a bike, then I go to the Tour de France."
 
 *Analysis Table of truth*
 
-- *"\(\phi\) only if \(\psi\)" (\phi \implies \psi\)*
+- *"\(\phi\) only if \(\psi\)" \(\phi \implies \psi\)*
 
   - If \(\phi\) (I go to the Tour de France) is true, and \(\psi\) (I have a bike) is true, then the statement is true.
 
@@ -1385,10 +1395,1047 @@ officer, how do I get to Carnegie Hall? The officer smiled and said, lady, there
 practice. So, I suggest you carve out some time, grab some food and drink, and head off somewhere quiet to complete as
 much of assignment-IV as you possible can.
 
+* Assignment 4 for Lecture-IV
+
+The assignment is fairly log, but it deals with a number of (related) crucial notions that pervade modern mathematics.
+It's impossible to progress in advanced mathematics without mastering these ideas. You probably won't be able to get it
+all done before the next lecture, but keep coming back to it until you have at least tried all the questions. The
+concepts and methods covered by this assignment are the key to mathematical thinking, and work on this one assignment
+will yield wide-ranging benefits not just in mathematics but in many other parts of your life.
+
+** Assignment 4 - Part 1
+
+*Q*: Build a truth table to prove the claim I made earlier that "\(\phi \iff \psi\)" is true if \(\phi\) and \(\psi\) are both true,
+or both false, and "\(\phi \iff \psi\)" is false if exactly one of \(\phi\), \(\psi\) is true and the other false. (To constitute a
+proof, your table should have columns that shows how the entries for "\(\phi \iff \psi\)" are derived, one operate at a time.)
+
+*A*: To Prove the claim "\(\phi \iff \psi\)" is true if \(\phi\) and \(\psi\) are both true or both false, and "\(\phi \iff \psi\)" is false
+if exactly one of \(\phi\), \(\psi\) is true and the other is false, we will build a truth table.
+
+In this truth table, we will sow the steps to derive \(\phi \implies \psi\) using a basic logical operations.
+
+*Steps to Derive \(\phi \iff \psi\)*
+
+  1. List the possible truth values for \(\phi\) and \(\psi\).
+
+  2. Compute \(\phi \implies \psi\).
+
+  3. Compute \(\psi \implies \phi\).
+
+  4. Compute \((\phi \implies \psi) \land (\psi \implies \phi)\), which is equivalent to \(\phi \iff \psi\).
+
+Here is the truth table:
+
+|---+-------+-------+------------------+------------------+--------------------------------------------------------+---|
+|   |  <c>  |  <c>  |       <c>        |       <c>        |                          <c>                           |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \implies \psi\) | \(\psi \implies \phi\) | \((\phi \implies \psi) \land (\psi \implies \phi)\) (i.e \(\phi \iff \psi\)) |   |
+|---+-------+-------+------------------+------------------+--------------------------------------------------------+---|
+| / |   <   |   <   |        <         |        <         |                           <                            | > |
+|   |   T   |   T   |        T         |        T         |                           T                            |   |
+|   |   T   |   F   |        F         |        T         |                           F                            |   |
+|   |   F   |   T   |        T         |        F         |                           F                            |   |
+|   |   F   |   F   |        T         |        T         |                           T                            |   |
+|---+-------+-------+------------------+------------------+--------------------------------------------------------+---|
+
+*Explanation*:
+
+  - \(\phi \implies \psi\):
+
+    - This is true when either \(\phi\) is false or \(\psi\) is true (if \(\phi\) is true, \(\psi\) must be true).
+
+    - \(\phi \implies \psi\) is false only when \(\phi\) is true and \(\psi\) is false.
+
+  - \(\psi \implies \phi\):
+
+    - This is true when either \(\psi\) is false or \(\phi\) is true (if \(\psi\) is true, \(\phi\) must be true).
+
+    -
+      \(\psi \implies \phi\) is false only when \(\psi\) is true and \(\phi\) is false.
+
+  - \((\phi \implies \psi) \land (\psi \implies \phi)\):
+
+    - This is true only when both \(\phi \implies \psi\) and \(\psi \implies \phi\) are true.
+
+    - This happens when \(\phi\) and \(\psi\) are both true or both false.
+
+ *Conclusion*:
+
+ The truth table confirm the claim:
+
+    - \(\phi \iff \psi\) is true when \(\phi\) and \(\psi\) are both true or both false.
+
+    - \(\phi \iff \psi\) is false when exactly one of \(\phi\) and \(\psi\) is true and the other is false.
+
+** Assignment 4 - Part 2
+
+*Q:* Build a truth table to show that
+
+\begin{center}
+\text{\((\phi \iff \psi) \iff (\neg\phi \lor \psi)\)}
+\end{center}
+
+Is true for all truth values of \(\phi\) and \(\psi\). A statement whose truth values are all T is called /logical validity/,
+or sometimes /tautology/.
+
+
+*A:* To prove that \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\) is a tautology, we need to construct a truth table that shows this expression is true for all possible truth values of \(\phi\) and \(\psi\).
+
+*Steps to Derive \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\)*:
+
+    1. List the possible truth values for \(\phi\) and \(\psi\)
+
+    2. Compute \(\phi \iff \psi\)
+
+    3. Compute \(\neg\phi\)
+
+    4. Compute \(\neg\phi \lor \psi\)
+
+    5. Compute \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\).
+
+Here is the truth table:
+
+|---+-------+-------+--------------+--------+------------+------------------------------+---|
+|   |  <c>  |  <c>  |     <c>      |  <c>   |    <c>     |             <c>              |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \iff \psi\) | \(\neg\phi\) | \(\neg\phi \lor \psi\) | \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\) |   |
+|---+-------+-------+--------------+--------+------------+------------------------------+---|
+| / |   <   |   <   |      <       |   <    |     <      |              <               | > |
+|   |   T   |   T   |      T       |   F    |     T      |              T               |   |
+|   |   T   |   F   |      F       |   F    |     F      |              T               |   |
+|   |   F   |   T   |      F       |   T    |     T      |              F               |   |
+|   |   F   |   F   |      T       |   T    |     T      |              F               |   |
+|---+-------+-------+--------------+--------+------------+------------------------------+---|
+
+*Explanation*:
+
+- \(\phi \iff \psi\):
+
+  - True when \(\phi\) and \(\psi\) are both true or both false.
+
+  - False when \(\phi\) and \(\psi\) have different truth values.
+
+- \(\neg\phi\)
+
+  - Negation of \(\phi\), true when \(\phi\) is false, false when \(\phi\) is true.
+
+- \(\neg\phi \lor \psi\)
+
+  - True when at least one \(\neg\phi\) or \(\psi\) is true.
+
+- \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\)
+
+  - True if both expression have the same truth value (both true or both false)
+
+*Conclusion*:
+
+- The truth table conform that \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\) is not true for all possible truth values of \(\phi\) and
+  \(\psi\). Hence \((\phi \iff \psi) \iff (\neg\phi \lor \psi)\) is not tautology, as it is not true for every combination of truth values
+  for \(\phi\) and \(\psi\).
+
+** Assignment 4 - Part 3
+
+*Q:* Build a truth table to show that
+
+\begin{center}
+\text{\((\phi \centernot\implies \psi) \iff (\phi \land \neg\psi)\) }
+\end{center}
+
+Is a /tautology/.
+
+*A*: To show that \((\phi \centernot\implies \psi) \iff \(\phi \land \neg\psi)\) is tautoglogy, we need to build a truth table and verify
+if this expression holds true for all possible truth values of \(\phi\) and \(\psi\).
+
+Let's break down the component of the expression:
+
+*Understand the components*:
+
+  1. \(\phi \centernot\implies \psi\): This represent the negation of \(\phi \implies \psi\). Recall that \(\phi \implies \psi\) is false
+     only when \(\phi\) is true and \(\psi\) is false. Thus, \(\phi \centernot\implies \psi\) is true when \(\phi\) is true and \(\psi\)
+     is false.
+
+  2. \(\phi \land \neg\psi\): This represent the conjunction of \(\phi\) and the negation of \(\psi\). This is true only when \(\phi\) is true
+     and \(\psi\) is false.
+
+We aim to prove that \(\phi \centernot\implies \psi\) is equivalent to \(\phi \land \neg\psi\), meaning both should have the same truth
+value for all combinations of \(\phi\) and \(\psi\).
+
+Here is the truth table:
+
+|---+-------+-------+--------+------------------+----------------------------+------------+----------------------------------------------+---|
+|   |  <c>  |  <c>  |  <c>   |       <c>        |            <c>             |    <c>     |                     <c>                      |   |
+|   | \(\phi\) | \(\psi\) | \(\neg\psi\) | \(\phi \implies \psi\) | \(\phi \centernot\implies \psi\) | \(\phi \land \neg\psi\) | \((phi \centernot\implies \psi) \iff (\phi \land \neg\psi)\) |   |
+|---+-------+-------+--------+------------------+----------------------------+------------+----------------------------------------------+---|
+| / |   <   |   <   |   <    |        <         |             <              |     <      |                      <                       | > |
+|   |   T   |   T   |   F    |        T         |             F              |     F      |                      T                       |   |
+|   |   T   |   F   |   T    |        F         |             T              |     T      |                      T                       |   |
+|   |   F   |   T   |   F    |        T         |             F              |     F      |                      T                       |   |
+|   |   F   |   F   |   T    |        T         |             F              |     F      |                      T                       |   |
+|---+-------+-------+--------+------------------+----------------------------+------------+----------------------------------------------+---|
+
+*Explanation*:
+
+  1. \(\phi \implies \psi\)
+
+     - True when \(\phi\) is false or \(\psi\) is true.
+
+     - False only when \(\phi\) is true and \(\psi\) is false.
+
+  2. \(\phi \centernot\implies \psi\)
+
+     - negation of \(\phi \implies \psi\)
+
+     - True when \(\phi\) is true and \(\psi\) is false.
+
+  3. \(\neg\psi\)
+
+     - Negation of \(\psi\).
+
+     - True when \(\psi\) is false.
+
+     - False when \(\psi\) is true.
+
+  4. \(\phi \land \neg\psi\)
+
+     - Conjunction of \(\phi\) and \(\neg\psi\).
+
+     - True when \(\phi\) is true and \(\psi\) is false.
+
+     - False otherwise.
+
+  5. \((\phi centernot\implies \psi) \iff (\phi \land \neg\psi)\)
+
+     - This bi-conditional checks if \(\phi \centernot\implies \psi\) and \(\phi \land \psi\) have the same truth value.
+
+*Conclusion*:
+
+The truth table confirms that \((\phi \centernot\implies \psi) \iff (\phi \land \neg\psi)\) is true for all possible truth values of \(\phi\)
+and \(\psi\). Hence \((\phi \centernot\implies \psi) \iff (\phi \land \neg\psi)\) is tautology, as it is true for every combination of truth
+values for \(\phi\) and \(\psi\).
+
+** Assignment 4 - Part 4
+
+*Q* The ancient Greek formulated a basic rule of reasoning for proving mathematical statements. Called /modus ponens/, it says
+that if you know \(\phi\) and you know \(\phi \implies \psi\), then you can conclude \(\psi\),
+
+(a) Construct a truth table for the logical statement
+
+\begin{center}
+\text{\([\phi \land (\phi \implies \psi)] \implies \psi\)}
+\end{center}
+
+(b) Explain how the truth table you obtain demonstrates that /modus ponens/ is a valid rule of inference[fn:5].
+
+*A*: Let's start by constructing the truth table for the logical \([\phi \land (\phi \implies \psi)] \implies \psi\). Then we'll
+use the truth table to demonstrate that modus ponens is a valid of inference.
+
+*Step-by-Step Truth Table Construction*:
+
+  1. List all possible truth values for \(\phi\) and \(\psi\).
+
+  2. Compute \(\phi \implies \psi\).
+
+  3. Compute \(\phi \land (\phi \implies \psi)\).
+
+  4. Compute \([\phi \land (\phi \implies \psi) \implies \psi]\).
+
+Truth Table:
+
+|---+-------+-------+------------------+------------------------+-------------------------------------+---|
+|   |  <c>  |  <c>  |       <c>        |          <c>           |                 <c>                 |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \implies \psi\) | \(\phi \land (\phi \implies \psi)\) | \([\phi \land (\phi \implies \psi) \implies \psi]\) |   |
+|---+-------+-------+------------------+------------------------+-------------------------------------+---|
+| / |   <   |   <   |        <         |           <            |                  <                  | > |
+|   |   T   |   T   |        T         |           T            |                  T                  |   |
+|   |   T   |   F   |        F         |           F            |                  T                  |   |
+|   |   F   |   T   |        T         |           F            |                  T                  |   |
+|   |   F   |   F   |        T         |           F            |                  T                  |   |
+|---+-------+-------+------------------+------------------------+-------------------------------------+---|
+
+*Explanation of the Truth Table*:
+
+1. First row \((\phi = T, \psi = T)\)
+
+   - \(\phi \implies \psi\) = T (since T implies T is T)
+   - \(\phi \land (\phi \implies \psi)\) = T (since T and T is T)
+   - \([\phi \land (\phi \implies \psi)] \implies \psi\) = T (since T implies T is T)
+
+2. Second row \((\phi = T, \psi = F)\)
+
+   - \(\phi \implies \psi\) = F (since T implies F is F)
+   - \(\phi \land (\phi \implies \psi)\) = F (since T and F is F)
+   - \([\phi \land (\phi \implies \psi)] \implies \psi\) = T (since F implies F is T)
+
+3. Third row \((\phi = F, \psi = T)\)
+
+   - \(\phi \implies \psi\) = T (since F implies T is T)
+   - \(\phi \land (\phi \implies \psi)\) = F (since F and T is T)
+   - \([\phi \land (\phi \implies \psi)] \implies \psi\) = T (since F implies T is T)
+
+4. Fourth row \((\phi = F, \psi = F)\)
+
+   - \(\phi \implies \psi\) = T (since F implies F is T)
+   - \(\phi \land (\phi \implies \psi)\) = F (since F and T is F)
+   - \([\phi \land (\phi \implies \psi)] \implies \psi\) = T (since F implies F is T)
+
+
+*Explanation of Modus Ponens*:
+
+The truth table correctly shows that the statement \([\phi \land (\phi \implies \psi)] \implies \psi\) is always true:
+
+  - *First Row*: \(\phi\) is true, \(\psi\) is true, hence \(\phi \land (\phi \implies \psi\) is true. Thus, \([\phi \land (\phi \implies \psi)]
+    \implies \psi\) is true.
+
+  - *Second Row*: \(\phi\) is true, \(\psi\) is false, hence \(\phi \land (\phi \implies \psi\) is false. Thus, \([\phi \land (\phi \implies \psi)]
+    \implies \psi\) is true (since false implies anything is true).
+
+  - *First Row*: \(\phi\) is false, \(\psi\) is true, \(\phi \implies \psi\) is true (vacuously). Hence \(\phi \land (\phi \implies \psi\) is
+    false. Thus, \([\phi \land (\phi \implies \psi)] \implies \psi\) is true.
+
+  - *First Row*: \(\phi\) is false, \(\psi\) is false, \(\phi \implies \psi\) is true (vacuously). hence \(\phi \land (\phi \implies \psi\) is
+    false. Thus, \([\phi \land (\phi \implies \psi)] \implies \psi\) is true.
+
+This demonstrates that modus ponens is a valid rule of inference:
+
+  - When \(\phi\) is true and \(\phi \implies \psi\) is true, \(\psi\) must be true.
+
+  - In all other cases, the antecedent \(\phi \land (\phi \implies \psi)\) is false, making the implication true because an
+    implication with a false antecedent is always true.
+
+Thus, \([\phi \land (\phi \implies \psi) \implies \psi)]\) is a /tautology/, confirming the validity of modus ponens.
+
+*Additional*: What means 'vacuously' in above sentence?
+
+In logic and mathematics, a statement is said to be *vacuously true* if the asserts that something holds for all
+elements of an empty set or if it asserts that a conditional statement is true when the antecedent (the "if" part) is
+false.
+
+In the context of implication, \(\phi \implies \psi\), when \(\phi\) (the antecedent) is false, the implication is considered
+true regardless of truth value of \(\psi\) (the consequent). This is because the implication doesn't have to prove
+anything; it's not making any demands or requirements when the starting point (the antecedent) isn't met.
+
+Detailed Example:
+
+Let's consider the specific row in the truth table:
+
+  - \(\phi\) *is false* (for example, \(\phi\): "I go to the beach")
+
+  - \(\psi\) *is true* (for example: \(\psi\) : "It is sunny")
+
+The implication \(\phi \implies \psi\) ("If I go to the beach, then its sunny") is vacuously true because I did not go to the
+beach, so the condition does not apply. Whether it is sunny or not is irrelevant to the truth of the implication.
+
+Conclusion:
+
+The term "vacuously true" highlights that the truth of the implication in these cases doesn't provide meaningful
+information about the relationship between \(\phi\) and \(\psi\); it is true simply because the antecedent is /false/, and no
+further condition needs to be checked.
+
+** Assignment 4 - Part 5
+
+*Q:* [This question has a long set-up. The question itself is the very last sentence. *TAKE YOUR TIME*.]
+
+One way to prove
+
+\begin{center}
+\text{\(\neg(\phi \land \psi)\) and \((\neg\phi) \lor (\neg\psi)\)}
+\end{center}
+
+Are equivalent is to show they have the same truth table:
+
+|---+-------+-------+-----------+--------------+--------+--------+-----------------+---|
+|   |  <c>  |  <c>  |    <c>    |     <c>      |  <c>   |  <c>   |       <c>       |   |
+|   |       |       |           |      *       |        |        |        *        |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \land \psi\) | \(\neg(\phi \land \psi)\) | \(\neg\phi\) | \(\neg\psi\) | \((\neg\phi) \lor (\neg\psi)\) |   |
+|---+-------+-------+-----------+--------------+--------+--------+-----------------+---|
+| / |   <   |   <   |     <     |      <       |   <    |   <    |        <        | > |
+|   |       |       |           |              |        |        |                 |   |
+|   |   T   |   T   |     T     |      F       |   F    |   F    |        F        |   |
+|   |   T   |   F   |     F     |      T       |   F    |   T    |        T        |   |
+|   |   F   |   T   |     F     |      T       |   T    |   F    |        T        |   |
+|   |   F   |   F   |     F     |      T       |   T    |   T    |        T        |   |
+|---+-------+-------+-----------+--------------+--------+--------+-----------------+---|
+
+Since the two column marked * are identical, we know that the two expressions are equivalent.
+
+Thus negation has the affect it changes \(\lor\) into \(\land\) and changes \(\land\) into \(\lor\). An alternative approach way to
+prove this is to argue directly with the meaning of the first statement:
+
+  1. \(\phi \land \psi\) means both \(\phi\) and \(\psi\) are true.
+
+  2. Thus \(\neg(\phi \land \psi)\) means is not the case that both \(\psi\) and \(\psi\) are true.
+
+  3. If they are not both true, then at least one of \(\psi\), \(\psi\) must be false.
+
+  4. This is clearly the same as saying that at least one of \(\neg\phi\) and \(\neg\psi\) is true. (By the definition of negation).
+
+  5. By the meaning of /or/, this can be expressed as \((\neg\phi) \lor (\neg\psi)\).
+
+Provide an analogues logical arguments to show that \(\neg(\phi \lor \psi)\) and \((\neg\phi) \lor (\neg\psi)\) are equivalent.
+
+*A*: To prove that \(\neg(\phi \lor \psi)\) and \((\neg\phi) \land (\neg\psi)\) are equivalent, we can use logical reasoning similar to the argument
+provided for \(\neg(\phi \lor \psi)\) and \((\neg\phi) \land (\neg\psi)\). Here is the step-by-step argument:
+
+1. Definition of \(\phi \lor \psi\):
+
+   \(\phi \lor \psi\) means that at least one of \(\phi\) or \(\psi\) is true.
+
+2. Negation of \(\phi \lor \psi\):
+
+   \(\neg(\phi \lor \phi)\) means it is not case that at least one of \(\phi\) or \(\psi\) is true. In other words, neither \(\phi\) nor
+   \(\psi\) is true.
+
+3. Rephrasing the negation:
+
+   If neither \(\phi\) or \(\psi\) is true, then both \(\phi\) and \(\psi\) must be false.
+
+4. Using the definition of negation:
+
+   Saying that both \(\phi\) and \(\psi\) are false is the same as saying that \(\neg\phi\) and \(\neg\psi\) are both true.
+
+5. Expressing with logical "and":
+
+   By the meaning of "and", this can be expressed as \(\neg\phi) \land (\neg\psi)\)\).
+
+Thus, we have shown that through logical reason that:
+
+\begin{center}
+\text{\(\neg(\phi \land \psi) \equiv (\neg\phi) \lor (\neg\psi)\)}
+\end{center}
+
+*Truth Table Verification*:
+
+- In the first row, \(\phi\) and \(\psi\) are both true, so \(\phi \lor \psi\) is true, and \(\neg(\phi \lor \psi)\) is false. \(\neg\phi\) and \(\neg\psi\)
+  are both false, so \((\neg\phi) \land (\neg\psi)\) is false.
+
+- In the second row, \(\phi\) is true and \(\psi\) is false, so \(\phi \lor \psi\) is true, and \(\neg(\phi \lor \psi)\) is false. \(\neg\phi\) is false
+  and \(\neg\psi\) is true, so \((\neg\phi) \land (\neg\psi)\) is false.
+
+- In the third row, \(\phi\) is false and \(\psi\) is true, so \(\phi \lor \psi\) is true, and \(\neg(\phi \lor \psi)\) is false. \(\neg\phi\) is true
+  and \(\neg\psi\) is false, so \((\neg\phi) \land (\neg\psi)\) is false.
+
+- In the fourth row, \(\phi\) and \(\psi\) are both false, so \(\phi \lor \psi\) is false, and \(\neg(\phi \lor \psi)\) is true. \(\neg\phi\) and \(\neg\psi\)
+  are both true, so \((\neg\phi) \land (\neg\psi)\) is true.
+
+This demonstrates that the two expression are logically equivalent, making the argument and the truth table consistent
+with each other.
+
+** Assignment 4 - Part 6
+
+*Q* By a /denial/ of a statement \(\phi\) we mean any statement equivalent to \(\neg\phi\). Give a useful (and hence natural
+ sounding) denial of each the following statement with math symbol represent:
+
+   1. 34.159 is prime number
+
+   2. Roses are red and violets are blue
+
+   3. If there are no hamburgers, I'll have a hot dog.
+
+   4. Fred will go but he will not play.
+
+   5. The number \(x\) is either negative or greater than 10.
+
+   6. We will win the first game or the second.
+
+*A*: Let's create denial for each of the statement. These denials will be logically equivalent to the negation of the
+original statement and will be presented in a natural-sounding manner.
+
+   1. 34.159 is a prime number
+
+      *Original statement*: "34.159 is a prime number"
+
+      *Denial*: "34.159 is not a prime number"
+
+      *Mathematical Representation*: If we let \(P\) represent "34.159 is not a prime number", then denial is \(\neg P\)
+
+   2. Roses are red and violets are blue
+
+      *Original statement*: "Roses are red and violets are blue"
+
+      *Denial*: "Roses are not red and violets are not blue"
+
+      *Mathematical Representation*: If we let \(R\) is represent "Roses are red" and \(V\) represent "Violet are blue", the denials
+      is \(~(R \land V)\), which is equivalent to \(\neg R \lor \neg V\).
+
+   3. If there are no hamburgers, I'll have a hot dog.
+
+      *Original statement*: "If there are no hamburgers, I'll have a hot dog".
+
+      *Denial*: "there are no hamburger and I won't have a hot dog"
+
+      *Mathematical Representation*: If we let \(H\) represent "There are no hamburgers" and \(D\) represent "I'll have a hot dog",
+      the denial is \(\neg(H \implies D)\), which is equivalent to \(H \land \neg D\)
+
+   4. Fred will go but he will not play.
+
+      *Original statement*: "Fred will go but he will not play".
+
+      *Denial*"Fred will not or he will play".
+
+      *Mathematical Representation*: If we let \(G\) represent "Fred will go" and \(P\) represent "Fred will play", the
+      denial is \(\neg(G \land \neg P)\), which is equivalent to \(\neg G \lor P\).
+
+   5. The number \(x\) is either negative or greater than 10.
+
+      *Original statement*:"The number \(x\) is either negative or greater than 10."
+
+      *Denial*: "The number \(x\) is neither negative nor greater than 10."
+
+      *Mathematical Representation*: If we let \(N\) represent "The number \(x\) is negative" and \(G\) represent "The number \(x\)
+      is greater than 10", the denials is \(\neg(N \lor G)\), which is equivalent to \(\neg N \lor \neg G).
+
+   6. We will win the first game or the second.
+
+      *Original statement*: "We will win the first game of or the second".
+
+      *Denial*: "We will not win the first game and we will not win the second."
+
+      *Mathematical Representation*: If we let \(W_1\) represent "We will win the first game" and \(W_2\) represent "We will win the second game",
+      the denial is \(\neg(W_1 \lor W_2)\), which is equivalent to \(\neg W_1 land \neg W_2\).
+
+   These denials provide alternative statement that are logically equivalent tho the negation of the original statements while sounding natural and clear.
+
+** Assignment 4 - Part 7
+
+*Q* Show that \(\phi \iff \psi\) is equivalent to \((\neg\phi) \iff (\neg\psi)\).
+
+*A* Tho show that \(\phi \iff \psi\) is equivalent to \((\neg\phi) \iff (\neg\psi)\), we can use logical equivalences and truth tables.
+
+*Logical Equivalences*:
+
+  1. Definition of Biconditional: \(\phi \iff \psi\) means \((\phi implies \psi) \land (\psi \implies \phi)\).
+
+  2. Negation of Implication: \(\neg(\phi \implies \psi)\) is equivalent to \(\phi \land \psi\)
+
+*Proof using Logical Equivalences*:
+
+  1. Start with \(\phi \iff \psi\):
+
+     \(\phi \implies \psi \equiv (\phi \implies \psi) \land (\psi implies \phi)\)
+
+  2. Translate each implication into an equivalent form:
+
+     \(\phi \implies \psi \equiv \neg\phi \lor \psi \psi \implies \psi \equiv \neg\psi \lor \phi\)
+
+  3. Substitute these into the biconditional:
+
+     \((\phi \implies \psi) \land (\psi \implies \phi) \equiv (\neg\phi \lor \psi) \land \(\neg\psi \lor \phi)\)
+
+  4. Now consider \((\neg\phi) \implies (\neg\psi)\):
+
+     \((\neg\phi) \iff (\neg\psi) \equiv ((\neg\phi \implies \neg\psi) \land (\neg\psi \implies \neg\phi))\)
+
+  5. Translate each implication similarly:
+
+     \(\neg\phi \implies \neg\psi \equiv \neg\psi \neg\psi implies \neg\phi \equiv \psi \lor \neg\phi\)
+
+  6. Substitute these back:
+
+     \(((\neg\phi \implies \neg\psi) \lor (\neg\psi \implies \neg\phi)) \equiv (\phi \lor \neg\psi) \land (\psi \lor \neg\phi)\)
+
+*Truth Table*:
+
+To confirm the equivalence, we can construct a truth table for both \(\phi \iff \psi\) and \((\neg\phi) \iff (\neg\psi)\):
+
+|---+-------+-------+-------+-------+--------------+--------------------+---|
+|   |  <c>  |  <c>  |  <c>  |  <c>  |     <c>      |        <c>         |   |
+|   | \(\phi\) | \(\psi\) | \(\neg\phi) | \(\neg\psi) | \(\phi \iff \psi\) | \((\neg\phi) \iff (\neg\psi)\) |   |
+|---+-------+-------+-------+-------+--------------+--------------------+---|
+| / |   <   |   <   |   <   |   <   |      <       |         <          | > |
+|   |   T   |   T   |   F   |   F   |      T       |         T          |   |
+|   |   T   |   F   |   F   |   T   |      F       |         F          |   |
+|   |   F   |   T   |   T   |   F   |      F       |         F          |   |
+|   |   F   |   F   |   T   |   T   |      T       |         T          |   |
+|---+-------+-------+-------+-------+--------------+--------------------+---|
+
+** Assignment 4 - Part 8
+
+*Q* Construct truth tables to illustrate the following:
+
+  1. \(\phi \iff \psi\)
+  2. \(\phi \implies (\psi \land 0)\)
+
+*A*: To construct the truth tables for the logical statement \(\phi \iff \psi\) and \(\phi \implies (\psi \land 0)\), we will analyze each row of possible
+truth values for \(\phi\) and \(\psi\) and compute the corresponding truth values for the statements:
+
+1. Truth table for \(\phi \iff \psi\)
+
+   |---+-------+-------+--------------+---|
+   |   |  <c>  |  <c>  |     <c>      |   |
+   |   | \(\phi\) | \(\psi\) | \(\phi \iff \psi\) |   |
+   |---+-------+-------+--------------+---|
+   | / |   <   |   <   |      <       | > |
+   |   |   T   |   T   |      T       |   |
+   |   |   T   |   F   |      F       |   |
+   |   |   F   |   T   |      F       |   |
+   |   |   F   |   F   |      T       |   |
+   |---+-------+-------+--------------+---|
+
+
+2. Truth table for \(\phi \implies (\psi \land 0)\)
+
+   |---+-------+-------+-----------+------------------------+---|
+   |   |  <c>  |  <c>  |    <c>    |          <c>           |   |
+   |   | \(\phi\) | \(\psi\) | \(\psi \land 0\) | \(\phi \implies (\psi \land 0)\) |   |
+   |---+-------+-------+-----------+------------------------+---|
+   | / |   <   |   <   |     <     |           <            | > |
+   |   |   T   |   T   |  F        |           F            |   |
+   |   |   T   |   F   |  F        |           F            |   |
+   |   |   F   |   T   |  F        |           T            |   |
+   |   |   F   |   F   |  F        |           T            |   |
+   |---+-------+-------+-----------+------------------------+---|
+
+3. Comparison of Truth Tables
+
+   Let's compare the truth values between \(\phi \iff \psi\) and \(\phi \implies (\psi \land 0)\) for each combination of \(\phi\) and \(\psi\):
+
+   |---+-------+-------+-----------+------------------------+---|
+   |   |  <c>  |  <c>  |    <c>    |          <c>           |   |
+   |   | \(\phi\) | \(\psi\) | \(\psi \land 0\) | \(\phi \implies (\psi \land 0)\) |   |
+   |---+-------+-------+-----------+------------------------+---|
+   | / |   <   |   <   |     <     |           <            | > |
+   |   |   T   |   T   |     F     |           F            |   |
+   |   |   T   |   F   |     F     |           F            |   |
+   |   |   F   |   T   |     F     |           T            |   |
+   |   |   F   |   F   |     F     |           T            |   |
+   |---+-------+-------+-----------+------------------------+---|
+
+Explanation:
+
+1. For \(\phi \implies \psi\):
+
+   - The statement is true when both \(\phi\) and \(\psi\) are either both true or both false.
+
+   - It is false when one is true and other is false.
+
+2. For \(\phi \implies (\psi \land 0)\):
+
+   - Since \(\psi \land 0\) is always false, the implication \(\phi \implies False\) (which is \(\neg\phi\)) holds.
+
+   - The implication is false only when is true (since true does not imply false.)
+
+Conclusion:
+
+The truth table for \(\phi \iff \psi\) and \(\phi \implies (\psi \land 0)\) are not congruent. This is evidence because the truth values
+for the two expression differ for some combination of \(\phi\) and \(\psi\), Specifically:
+
+  - When \(\phi\) is True and \(\psi\) is True, \(\phi \iff \psi\) is True, but \(\phi \implies (\psi \land 0)\) is False.
+
+  - When \(\phi\) is False and \(\psi\) is True, \(\phi \iff \psi\) is False, but \(\phi \implies (\psi \land 0)\) is False.
+
+** Assignment 4 - Part 9
+
+Use truth tables to prove that the following are equivalent:
+
+\begin{center}
+\text{\(\phi \implies (\psi \land 0)\) and \((\phi \implies \psi) \land (\phi \implies 0)\)}
+\end{center}
+
+*A*: To prove that \(\phi \implies (\psi \land 0)\) and \((\phi \implies \psi) \land (\phi \implies 0)\), we will construct their truth
+tables and compare the results.
+
+*Truth table for \(\phi \implies (\psi \land 0)\)*:
+
+   |---+-------+-------+-----------+------------------------+---|
+   |   |  <c>  |  <c>  |    <c>    |          <c>           |   |
+   |   | \(\phi\) | \(\psi\) | \(\psi \land 0\) | \(\phi \implies (\psi \land 0)\) |   |
+   |---+-------+-------+-----------+------------------------+---|
+   | / |   <   |   <   |     <     |           <            | > |
+   |   |   T   |   T   |     F     |           F            |   |
+   |   |   T   |   F   |     F     |           F            |   |
+   |   |   F   |   T   |     F     |           T            |   |
+   |   |   F   |   F   |     F     |           T            |   |
+   |---+-------+-------+-----------+------------------------+---|
+
+*Truth Table for \((\phi \implies \psi) \land (\phi \implies 0)\)*:
+
+Here, \(\phi \implies 0\) simplified to \(\neg\phi\), since \(\phi\) implies false only when \(\phi\) is false.
+
+   |---+-------+-------+-----------------+-------------------+-------------------------------------+---|
+   |   |  <c>  |  <c>  |       <c>       |        <c>        |                 <c>                 |   |
+   |   | \(\phi\) | \(\psi\) | \(\phi \implies \psi) | \(\phi \implies  0\) | \((\phi \implies \psi) \land (\phi \implies 0)\) |   |
+   |---+-------+-------+-----------------+-------------------+-------------------------------------+---|
+   | / |   <   |   <   |        <        |         <         |                  <                  | > |
+   |   |   T   |   T   |        T        |         F         |                  F                  |   |
+   |   |   T   |   F   |        F        |         F         |                  F                  |   |
+   |   |   F   |   T   |        T        |         F         |                  T                  |   |
+   |   |   F   |   F   |        T        |         F         |                  T                  |   |
+   |---+-------+-------+-----------------+-------------------+-------------------------------------+---|
+
+*Comparison of the Truth Tables*:
+
+Let's compare the truth values of \(\phi \implies (\psi \land 0)\) and \((\phi \implies \psi) land \(\phi \implies 0)\) for each
+combination of \(\phi\) and \(\psi\):
+
+   |---+-------+-------+------------------------+-------------------------------+---|
+   |   |  <c>  |  <c>  |          <c>           |              <c>              |   |
+   |   | \(\phi\) | \(\psi\) | \(\phi \implies (\psi \land 0)\) | \((\phi \implies \psi) \land (\psi \land 0)\) |   |
+   |---+-------+-------+------------------------+-------------------------------+---|
+   | / |   <   |   <   |           <            |               <               | > |
+   |   |   T   |   T   |           F            |               F               |   |
+   |   |   T   |   F   |           F            |               F               |   |
+   |   |   F   |   T   |           T            |               T               |   |
+   |   |   F   |   F   |           T            |               T               |   |
+   |---+-------+-------+------------------------+-------------------------------+---|
+
+*Conclusion*
+
+The truth tables for \(\phi \implies (\psi \land 0)\) and \((\phi \implies \psi) \land (\phi \implies 0)\) are identical. For each combination
+of \(\phi\) and \(\psi\), the truth values of the two expression match exactly.
+
+** Assignment 4 - Part 10
+
+Verify the equivalence in the previous question by means of a logical argument. (So, you must show that assuming \(\phi\)
+and deducing \(\psi \land 0\) is the same as both deducing \(\psi\) from \(\phi\) and \(0\) from \(\phi\)).
+
+*A*: To verify the equivalency of \(\phi \implies (\psi \land 0)\) and \((\phi \implies \psi) \land (\phi \implies 0)\) using a logical argument,
+we need to show that the two expression produce the same result under the same conditions. Let's break down the logical
+of each expressions step by step.
+
+*Logical Argument*:
+
+*Expression 1*: \(\phi \implies (\psi \land 0)\)
+
+  - \(\phi \land 0\) is always false because 0 (false) AND anything is false.
+
+  - Therefore, \(\phi \implies (\psi \land 0)\) simplifies to \(\phi \implies False\)
+
+  - The implication \(\phi \implies False) is true if and only if \(\phi\) is false. If \(\phi\) is true, than the implication is
+    false.
+
+*Expression 2*: \((\phi \implies \psi) \land (\phi \implies 0)\)
+
+  - \(\phi \implies \psi\) means that if \(\phi\) is true, then  \(\psi\) must be true.
+
+  - \(\phi \implies 0\) means that if \(\phi\) is true, than 0 (false) must be true, this is contradiction, so \(\phi \implies
+    0\) is true if and only if \(\phi\) is false.
+
+  - Therefore, \(\phi \implies \psi) \land (\phi \implies 0)\) is true if and only if \(\phi\) is false. If \(\phi\) is true, than \(\phi
+    \implies 0\) is false, making the entire conjunction false.
+
+
+*Step-by-Step Proof*:
+
+*1.Assume*: \(\phi \implies (\psi \land 0)\)
+
+  - \(\phi \implies (\psi \land 0)\) is equivalent to \(\phi \implies False\)
+
+  - This means that if \(\phi\) is true, then the result must be false.
+
+  - Therefore, \(\phi\) must be false for the implication to hold true.
+
+*2.Assume*: \((\phi \implies \psi) \land (\phi \implies 0)\)
+
+  - \(\phi \implies \psi\) means that if \(\phi\) is true, then \(\psi\) must be true.
+
+  - \(\phi \implies 0\) means that if (\phi\) is true, then 0 (false) must be true, which is contradiction.
+
+  - Therefore, \(\phi\) must be false for \(\phi \implies 0\) to hold true.
+
+  - If \(\phi\) is false, then \(\phi \implies \psi\) is true regardless of (\psi\)
+
+
+*Conclusion*:
+
+Both expression \(\phi \implies (\phi \land 0)\) and \((\phi \implies \psi) \land (\phi \land 0)\) are true if and only if \(\phi\) is false. If
+\(\phi\) is true, both expression are false. Therefore, the two expression are logicallay equivalent.
+
+This logical argument shows that assuming \(\phi\) and deducing \(\psi \land 0\) is the same as both deducing \(\psi\) from \(\phi\) and
+\(0\) from \(\phi\)
+
+** Assignment 4 - Part 11
+
+Use truth tables to prove the equivalence of \(\phi \implies \psi\) and \((\neg\psi) \implies (\neg\phi)\).
+
+\((\neg\psi) \implies (\neg\phi)\) is called /contrapositive/ of \(\phi \implies \psi\). The logical equivalence of a conditional and its
+contrapositive means that one way to prove an implication it is to verify the contrapositive. This is a common form of
+proof in mathematics that we'll encouter later.
+
+*A* To prove the equivalence of \(\phi \implies \psi\) and \((\neg\psi) \implies \(\neg\phi)\) using truth tables, we need to construct the truth
+tables for both expression and compare the results.
+
+*Truth Table for* \(\phi \implies \psi\):
+
+The implication \(\phi \implies \psi\) is false only when \(\phi\) is true and \(\psi\) is false. In all other cases, it is true.
+
+|---+-------+-------+------------------+---|
+|   |  <c>  |  <c>  |       <c>        |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \implies \psi\) |   |
+|---+-------+-------+------------------+---|
+| / |   <   |   <   |        <         | > |
+|   |   T   |   T   |        T         |   |
+|   |   T   |   F   |        F         |   |
+|   |   F   |   T   |        T         |   |
+|   |   F   |   F   |        T         |   |
+|---+-------+-------+------------------+---|
+
+
+*Truth Table for* \(\neg\phi) \implies (\neg\psi)\):
+
+The contrapositive \(\neg\phi) \implies \(\neg\psi)\) is false only when \(\neg\psi\) is true, and \(\neg\phi\) is false, which means \(\psi\) is
+false and \(\phi\) is true. In all other cases, it is true.
+
+|---+-------+-------+--------+-------+-----------------------+---|
+|   |  <c>  |  <c>  |  <c>   |  <c>  |          <c>          |   |
+|   | \(\phi\) | \(\psi\) | \(\neg\phi\) | \(\neg\psi) | \(\neg\phi) \implies (\neg\psi)\) |   |
+|---+-------+-------+--------+-------+-----------------------+---|
+| / |   <   |   <   |   <    |   <   |           <           | > |
+|   |   T   |   T   |   F    |   F   |           T           |   |
+|   |   T   |   F   |   F    |   T   |           F           |   |
+|   |   F   |   T   |   T    |   F   |           T           |   |
+|   |   F   |   F   |   T    |   T   |           T           |   |
+|---+-------+-------+--------+-------+-----------------------+---|
+
+*Comparison of the Truth Tables*:
+
+|---+-------+-------+-----------------+-----------------------+---|
+|   |  <c>  |  <c>  |       <c>       |          <c>          |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \implies \psi) | \(\neg\phi) \implies (\neg\psi)\) |   |
+|---+-------+-------+-----------------+-----------------------+---|
+| / |   <   |   <   |        <        |           <           | > |
+|   |   T   |   T   |        T        |           T           |   |
+|   |   T   |   F   |        F        |           F           |   |
+|   |   F   |   T   |        T        |           T           |   |
+|   |   F   |   F   |        T        |           T           |   |
+|---+-------+-------+-----------------+-----------------------+---|
+
+*Conclusion*:
+
+The truth tables for \(\phi \implies \psi\) and \(\neg\phi) \implies (\neg\psi)\) are identical. For each combination of \(\phi\) and \(\psi\),
+the truth values of the two expression match exactly.
+
+This we have, proven using truth tables that \(\phi \implies \psi\) and \(\neg\phi) \implies (\neg\psi)\). This logical equivalence is
+known as the *contrapositive*, and it is powerful tool in mathematical proofs. By proofing the contrapositive, we can
+verify the validity of an implication.
+
+** Assignment 4 - Part 12
+
+*Q* Write down the contrapositive of the following statements:
+
+  1. If two rectangles are [fn:6]congruent, they have the same area.
+
+  2. If a triangle with sides a, b, c (c largest) is right-angled, then \(a^2 + b^2 = c^2\).
+
+  3. If \(2^n - 1\)  is prime, then \(n\) is prime.
+
+  4. If the Yuan rises, the Dollar will fall.
+
+*A* To write down the contrapositive of each statement, we will first identify the hypothesis \((p)\) and the conclusion
+\(q)\) in the form of \(\phi \implies \psi\). The contrapositive of \(\phi \implies \psi\) is \(\neg\psi \implies \neg\phi\).
+
+  1. If two rectangles are congruent, they have the same area.
+
+     - Original statement: If two rectangles are congruent, they have the same area.
+
+        - Hypothesis \((\phi)\): Two rectangles are congruent.
+
+        - Conclusion \((\psi)\): They have the same area.
+
+     - Contrapositive: If two rectangles do not have the same area, they are not congruent.
+
+        - \(\neg\psi \implies \neg\phi\): If two rectangles do not have the same area, the are not congruent.
+
+  2. If a triangle with sides a, b, c (c largest) is right-angled, then \(a^2 + b^2 = c^2\).
+
+     - Original statement: If a triangle with sides a, b, c (c largest) is right-angled, then \(a^2 + b^2 = c^2\).
+
+        - Hypothesis \((\phi)\): A triangle with sides \(a, b, c\), (\(c\) is largest) is not right-angled.
+
+        - Conclusion \((\psi)\): \(a^2 + b^2 = c^2\)
+
+    - Contrapositive: If \(a^2 + b^2 \ne c^2\), then the triangle with sides \(a, b, c\) (\(\c\) largest) is not
+      right-angled.
+
+       - \(\neg\psi \implies \neg\phi\): If \(a^2 + b^2 \ne c^2\), then the triangle with sides \(a, b, c\) (\(\c\) largest) is not
+          right-angled.
+
+  3. If \(2^n - 1\)  is prime, then \(n\) is prime.
+
+     - Original statement: If \(2^n - 1\)  is prime, then \(n\) is prime.
+
+       - Hypothesis \((\phi)\): If \(2^n - 1\)  is prime
+
+       - Conclusion \((\psi)\): \(n\) is prime.
+
+     - Contrapositive: if \(\n\) is not prime number, then \(2^n - 1\) is not prime.
+
+        - \(\neg\psi \implies \neg\phi\): if \(\n\) is not prime number, then \(2^n - 1\) is not prime.
+
+
+  4. If the Yuan rises, the Dollar will fall.
+
+     - original statement: If the Yuan rises, the Dollar will fall.
+
+       - Hypothesis \((\phi)\): The Yuan rises
+
+       - Conclusion \((\psi)\): Dollar will fall.
+
+     - Contrapositive: If the Dollar does not fall, the Yuan will not rise.
+
+       - \(\neg\psi \implies \neg\phi\): If the Dollar does not fall, the Yuan will not rise.
+
+** Assignment 4 - Part 13
+
+*Q* It is important not to confuse the contrapositive of a conditional \(\phi \implies \psi\) with is /converse/ \(\psi \implies
+\phi\). Use truth tables to show that the contrapositive and the converse of \(\phi \implies \psi\) are not equivalent.
+
+*A* To demonsrate that the contrapositive and the converse of \(\phi \implies \psi\) are not equivalent, we can construct truth tables
+for both the contrapositive \((\neg\phi) \implies (\neg\psi)\) and the converse  \(\psi \implies \phi\). We will then compare the truth values.
+
+Truth Table for \(\phi \implies \psi\)
+
+|---+-------+------+------------------+---|
+|   |  <c>  | <c>  |       <c>        |   |
+|   | \(\phi\) | \(\psi) | \(\phi \implies \psi\) |   |
+|---+-------+------+------------------+---|
+| / |   <   |  <   |        <         | > |
+|   |   T   |  T   |        T         |   |
+|   |   T   |  F   |        F         |   |
+|   |   F   |  T   |        T         |   |
+|   |   F   |  F   |        T         |   |
+|---+-------+------+------------------+---|
+
+
+Truth Table for Contrapositive \(\neg\psi) \implies \(\neg\phi)\)
+
+|---+-------+------+--------+--------+------------------------+---|
+|   |  <c>  | <c>  |  <c>   |  <c>   |          <c>           |   |
+|   | \(\phi\) | \(\psi) | \(\neg\psi\) | \(\neg\phi\) | \((\neg\psi) \implies (\neg\phi)\) |   |
+|---+-------+------+--------+--------+------------------------+---|
+| / |   <   |  <   |   <    |   <    |           <            | > |
+|   |   T   |  T   |   F    |   F    |           T            |   |
+|   |   T   |  F   |   T    |   F    |           F            |   |
+|   |   F   |  T   |   F    |   T    |           T            |   |
+|   |   F   |  F   |   T    |   T    |           T            |   |
+|---+-------+------+--------+--------+------------------------+---|
+
+Truth Table for Converse \(\psi \implies \phi\)
+
+|---+-------+------+------------------+---|
+|   |  <c>  | <c>  |       <c>        |   |
+|   | \(\phi\) | \(\psi) | \(\psi \implies \phi\) |   |
+|---+-------+------+------------------+---|
+| / |   <   |  <   |        <         | > |
+|   |   T   |  T   |        T         |   |
+|   |   T   |  F   |        T         |   |
+|   |   F   |  T   |        F         |   |
+|   |   F   |  F   |        T         |   |
+|---+-------+------+------------------+---|
+
+Comparing Truth Values:
+
+from the truth tables, we see that:
+
+- For the original implication \(\phi \implies \psi\)
+
+  - \(\phi = T, \psi = T\) result in \(T\)
+  - \(\phi = T, \psi = F\) result in \(F\)
+  - \(\phi = F, \psi = T\) result in \(T\)
+  - \(\phi = F, \psi = F\) result in \(T\)
+
+- For the contrapositive \((\neg\psi) \implies (\neg\phi)\)
+
+  - \(\phi = T, \psi = T\) result in \(T\)
+  - \(\phi = T, \psi = F\) result in \(F\)
+  - \(\phi = F, \psi = T\) result in \(T\)
+  - \(\phi = F, \psi = F\) result in \(T\)
+
+- For the converse \(\psi \implies \phi\)
+
+  - \(\phi = T, \psi = T\) result in \(T\)
+  - \(\phi = T, \psi = F\) result in \(T\)
+  - \(\phi = F, \psi = T\) result in \(F\)
+  - \(\phi = F, \psi = F\) result in \(T\)
+
+
+The truth values for the contrapositive \((\neg\psi) \implies (\neg\phi)\) match exactly with the original implication \(\phi \implies
+\psi\), demonstrating that they are equivalent. However, the truth values for the converse \(\psi \implies \phi\) do not matching
+with the original \(\phi \implies \psi\), showing that the converse is not equivalent to the original implication.
+
+Thus, the contrapositive and the converse of \(\phi \implies \psi\) are not equivalent.
+
+** Assignment 4 - Part 14
+
+*Q* Write down the converse of the four statement in question 12.
+
+*A*:
+
+1. If two rectangles are congruent, they have the same area.
+
+   - Original Statement: If two rectangles are congruent, they have the same area.
+
+     - \(\phi\): Two rectangles are congruent.
+
+     - \(\psi\): They have the same area.
+
+     - Conditional: \(\phi \implies \psi\).
+
+   - Converse: If two rectangles have the same area, they are congruent.
+
+     - Conditional: \(\psi \implies \phi\).
+
+   - Contrapositive: If two rectangles do not have the same area, they are not congruent.
+
+     - Conditional: \(\neg\psi) \implies (\neg\phi)\).
+
+2. If a triangle with sides a, b, c (c largest) is right-angled, then \(a^2 + b^2 = c^2\).
+
+   - Original Statement: If a triangle with sides a, b, c (c largest) is right-angled, then \(a^2 + b^2 = c^2\).
+
+     - \(\phi\): A triangle with sides a, b, c (c largest) is right-angled.
+
+     - \(\psi\): \(a^2 + b^2 = c^2\).
+
+     - Conditional: \(\phi \implies \psi\)
+
+   - Converse: If \(a^2 + b^2 = c^2\), then a triangle with a sides \(a, b, c\) (\(c\) largest) is right angled.
+
+     - Conditional: \(\psi \implies \phi\)
+
+   - Contrapositive: If \(a^2 + b^2 \ne c^2\), then a triangle with a sides \(a, b, c\) (\(c\) largest) is right angled.
+
+     - Conditional: \(\neg\psi) \implies (\neg\phi)\)
+
+3. If \(2^n - 1\)  is prime, then \(n\) is prime.
+
+   - Original Statement: If \(2^n - 1\)  is prime, then \(n\) is prime.
+
+     - \(\phi\): \(2^n - 1\)  is prime.
+
+     - \(\psi\): \(n\) is prime.
+
+     - Conditional: \(\phi \implies \psi\).
+
+   - Converse: If \(n\) is prime, then \(2^n - 1\) is prime.
+
+     - Conditional: \(\psi \implies \phi\).
+
+   - Contrapositive: If \(n\) is not prime, then \(2^n - 1\) is not prime.
+
+     - Conditional: \(\neg\phi) \implies (\neg\psi)\).
+
+4. If the Yuan rises, the Dollar will fall.
+
+   - Original Statement: If the Yuan rises, the Dollar will fall.
+
+     - \(\phi\): The Yuan rises.
+
+     - \(\psi\): The Dollar will fall.
+
+     - Conditional: \(\phi \implies \psi\)
+
+   - Converse: If the Dollar fail, the Yuan will rise.
+
+     - Conditional: \(\psi \implies \phi\)
+
+   - Contrapositive: If the Dollar does not fail, the Yuan will not rise.
+
+     - Conditional: \(\neg\psi) \implies (\neg\phi)\).
+
 * Footnotes
 
-[fn:4]Two statement \(\Phi\) and \(\Psi\) area said to be (logically) equivalent, or just equivalent if each implies the other
-we call it the biconditional.
+[fn:6] identical in form
+[fn:5] a conclusion reached based on evidence and reasoning.
+[fn:4] Two statement \(\Phi\) and \(\Psi\) area said to be (logically) equivalent, or just equivalent if each implies the
+other we call it the biconditional.
 [fn:3] equivalence: a way of defining when two elements are considered equivalent.
 [fn:2] axiom: a statement or proposition which is regarded as being established, accepted, or self-evidently true.
-[fn:1] implies : strongly suggest the truth or existence of (something not expressly stated).
+[fn:1] implies: strongly suggest the truth or existence of (something not expressly stated).
