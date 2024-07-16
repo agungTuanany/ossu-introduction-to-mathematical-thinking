@@ -266,6 +266,7 @@ You can open [[file:./02-Supplement-Set-Theory-math.pdf][Supplement Set Theory m
   to mathematical problem-solving. It highlights the importance of gradual progress, patience, and the accumulation of
   small insights that collectively lead to significant breakthroughs in understanding and solving mathematical problems.
 
+
 * Assignment-1 -- Lecture Introductory Material
 
 This material pdf is [[file:./reading-material/04-assignment-week-1--mathematical-thinking.pdf][here]].
@@ -741,14 +742,14 @@ you can check [[file:./check-prime-number-original.el][lisp code]] here.
 
   |---+-----+-----+---------+---|
   |   | <c> | <c> |   <c>   |   |
-  |   |  \phi  |  \psi  | \phi  \vee  \psi |   |
+  |   |  \phi  |  \psi  | \phi  \lor  \psi |   |
   |---+-----+-----+---------+---|
   | / |  <  |  <  |    <    | > |
   |   |  T  |  T  |    T    |   |
   |---+-----+-----+---------+---|
   |   |  T  |  F  |    T    |   |
   |---+-----+-----+---------+---|
-  |   |  F  |  F  |    T    |   |
+  |   |  F  |  T  |    T    |   |
   |---+-----+-----+---------+---|
   |   |  F  |  F  |    F    |   |
   |---+-----+-----+---------+---|
@@ -1443,6 +1444,7 @@ propositionfails to meet the "or" condition, thus proving the conjunction false.
 
 These Logical notations capture the essence of the headlines, focusing on the truth conditions described by each statement.
 
+
 * Summary Lecture-2
 
 ** Negation (NOT)
@@ -1549,6 +1551,7 @@ These Logical notations capture the essence of the headlines, focusing on the tr
   - Example: \(P \lor Q\) mans "either \(P\) or \(Q\) or both".
 
 These logical operators help us form complex statements and reason about their truth values in a structured way.
+
 
 * Problem SET 1
 
