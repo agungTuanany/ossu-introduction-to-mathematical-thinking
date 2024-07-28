@@ -680,7 +680,7 @@ Either way, since the consequence is true, the thing is true.
 We've going to run down /using two consequences/, so either we have true consequence and true conclusion, in which case,
 it's true; or we have false consequence and true conclusion, in which case, it's true.
 
-* Assignment 3 for Lecture-III
+* Assignment-3 for Lecture-III
 ** Q: Let /D/ be the statement "The dollar is strong", /Y/ the statement "The yuan is strong", and /T/ statement "New US-China trade agreement signed". Express the main content of each of the following (fictitious) newspaper headlines in logical notation.
 
 Remember, logical notation captures truth, but not the many nuances and inferences of natural language. As before, make sure you could justify and defend your answer.
@@ -950,16 +950,17 @@ university level is actually getting use to disambiguous notations.
 
 What we have to do is to work up truth table for \(\Phi\) and truth table for \(\Psi\).
 
-|---+-------+-------+-----------+---------+----------------------+------------------+---|
-|   |  <c>  |  <c>  |    <c>    |   <c>   |         <c>          |       <c>        |   |
-|   | \(\phi\) | \(\psi\) | \(\phi \land \phi\) | \(\neg \phi\) | \((\phi \land \psi) \lor (\neg \phi)\) | \(\phi \implies \psi\) |   |
-|---+-------+-------+-----------+---------+----------------------+------------------+---|
-| / |   <   |   <   |     <     |    <    |          <           |        <         | > |
-|   |   T   |   T   |     T     |    F    |          T           |        T         |   |
-|   |   T   |   F   |     F     |    F    |          F           |        F         |   |
-|   |   F   |   T   |     F     |    T    |          T           |        T         |   |
-|   |   F   |   F   |     T     |    T    |          T           |        T         |   |
-|---+-------+-------+-----------+---------+----------------------+------------------+---|
+|---+-------+-------+-----------+--------+---------------------+------------------+---|
+|   |  <c>  |  <c>  |    <c>    |  <c>   |         <c>         |       <c>        |   |
+|   | \(\phi\) | \(\psi\) | \(\phi \land \phi\) | \(\neg\phi\) | \((\phi \land \psi) \lor (\neg\phi)\) | \(\phi \implies \psi\) |   |
+|---+-------+-------+-----------+--------+---------------------+------------------+---|
+| / |   <   |   <   |     <     |   <    |          <          |        <         | > |
+|   |   T   |   T   |     T     |   F    |          T          |        T         |   |
+|   |   T   |   F   |     F     |   F    |          F          |        F         |   |
+|   |   F   |   T   |     F     |   T    |          T          |        T         |   |
+|   |   F   |   F   |     T     |   T    |          T          |        T         |   |
+|---+-------+-------+-----------+--------+---------------------+------------------+---|
+
 
 You can check the last two table above, it's the same.
 
@@ -1187,7 +1188,7 @@ The obvious way to describe that ("\(\phi\) is equivalent to \(\psi\)") is equiv
 
 So this sentence ("\(\phi\) is equivalent to \(\psi\)") or statement, it's claim is itself equivalent to:
 
-*** \(\phi\) is _necessary and sufficient_ for \(\psi\)
+*** \(\phi\) is necessary and sufficient for \(\psi\)
 
 Notice we combining /necessary/ and /sufficient/. With necessary we have \(\psi\) before \(\phi\) ("\(\phi\) is sufficient fit
 \(\phi\)"), with sufficient we have \(\phi\) before \(\psi\) ("\(\phi\) is sufficient for \(\psi\)") that gets us the implication in
@@ -1196,7 +1197,7 @@ both directions, and equivalence means /implication in both directions/.
 So, the fact that it's in both direction is captured by the fact that we have both sufficient and necessary with below
 expression:
 
-*** \(\phi\) _if and only if_ \(\psi\)
+*** \(\phi\) if and only if \(\psi\)
 
 Similarly with "if and only if" it combines /only if/ ("\(phi\) only if \(psi\)") where \(\phi\) comes before \(\psi\), with /if/,
 ("\(\psi\) if \(\phi\)") where \(\psi\) comes before \(\phi\). So both in this cases, we have an implication from '\(\phi\) to \(\psi\)',
@@ -1395,7 +1396,7 @@ officer, how do I get to Carnegie Hall? The officer smiled and said, lady, there
 practice. So, I suggest you carve out some time, grab some food and drink, and head off somewhere quiet to complete as
 much of assignment-IV as you possible can.
 
-* Assignment 4 for Lecture-IV
+* Assignment-4 for Lecture-IV
 
 The assignment is fairly log, but it deals with a number of (related) crucial notions that pervade modern mathematics.
 It's impossible to progress in advanced mathematics without mastering these ideas. You probably won't be able to get it
@@ -2854,6 +2855,661 @@ Thus, the contrapositive and the converse of \(\phi \implies \psi\) are not equi
    - Contrapositive: If the Dollar does not fail, the Yuan will not rise.
 
      - Conditional: \(\neg\psi) \implies (\neg\phi)\).
+
+* Problem Set 2
+
+This problem set focuses on material covered in Lectures-III and IV, so I recommend you to watch both lectures and attempt
+Assignment 3 and 4 before submitting your answers
+
+** Problem Set 2 - Part 1
+
+*Q* Which of the following condition are /necessary/ for the natural number \(n\) to be divisible by 6? Select all those
+you believe are necessary:
+
+  (a) \(n\) is divisible by 3.
+
+  (b) \(n\) is divisible by 9.
+
+  (c) \(n\) is divisible by 12.
+
+  (d) \(n\) = 24.
+
+  (e) \(n^2\) is divisible by 3.
+
+  (f) \(n\) is even and divisible by 3.
+
+*A* In summary, the necessary condition for a natural number \(n\) to be divisible by 6 are:
+
+(a) \(n\) is divisible by 3.
+
+(f) \(n\) is even and divisible by 3.
+
+Here's why:
+
+  - (a): If \(n\) divisible by 3, then \(n\) is also divisible by 6. This is because \(6 = 2 X 3\), and if \(n\) is
+    divisible by 3, then it also divisible by 2 (since it is even).
+
+  - (f): If \(n\) is even and divisible by 3, then \(n\) is divisible by 6. This is because \(6 = 2 X 3\), and if \(n\)
+    is even and divisible by 3, then it is divisible by 2 and 3, which means it is divisible by 6.
+
+The other option:
+
+  - (b): \(n\) being divisible by 9 is not necessary condition for it to be divisible by 6. For example, 12 is divisible
+    by 6 but not by 9.
+
+  - (c): \(n\) being divisible by 12 is not necessary condition for it to be divisible by 6. While 12 is a multiple of 6,
+    it is not a requirement for divisibility by 6. For example, the number 18 is divisible by 6 but not divisible by 12.
+
+
+  - (d) \(n\) = 24, This statement is sufficient for \(n\) to be divisible by 6, but is not necessary. If \(n = 24\), it
+    is divisible by 6. However, there are other numbers that are divisible by 6 without being equal to 24, such as 12,
+    18, or 30.
+
+  - (e) \(n^2\) is divisible by 3. This statement is not necessary for \(n\) to be divisible by 6. The divisibility of
+    \(n^2\) by 3 does not guarantee that \(n\) itself is divisible by 6. For example, if \(n = 9\) then \(n^2 = 81\),
+    which is divisible by 3, but 9 is not divisible by 6.
+
+** Problem Set 2 - Part 2
+
+*Q* Which of the following condition are /sufficient/ for the natural number \(n\) to be divisible by 6? Select all those
+you believe are necessary:
+
+  (a) \(n\) is divisible by 3.
+
+  (b) \(n\) is divisible by 9.
+
+  (c) \(n\) is divisible by 12.
+
+  (d) \(n\) = 24.
+
+  (e) \(n^2\) is divisible by 3.
+
+  (f) \(n\) is even and divisible by 3.
+
+  *A* To determine which conditions are sufficient for a natural number \(n\) to be divisible by 6, we need to remember that a number
+  is divisible by 6 if and only if it is divisible by both 2 and 3.
+
+  The condition that are sufficient for natural number, \(n\) to be divisible by 6 are follows:
+
+  (c) \(n\) divisible by 12
+
+    - Example: \(n\) = 24. Since 24 is divisible by 12, it is also divisible by 6.
+
+  (d) \(n\) = 24
+
+    - Example: \(n\) = 25. This is self-explanatory as 24 is divisible by 6.
+
+  (f) \(n\) is even and divisible by 3
+
+    - Example: \(n\) = 18. Since 18 is even and divisible by 3, it meets both criteria and is therefore divisible by 6.
+
+** Problem Set 2 - Part 3
+
+*Q* Which of the following condition are /necessary/ and /sufficient/ for the natural number \(n\) to be divisible by 6?
+Select all those you believe are necessary and sufficient, give all the example and explanation:
+
+  (a) \(n\) is divisible by 3.
+
+  (b) \(n\) is divisible by 9.
+
+  (c) \(n\) is divisible by 12.
+
+  (d) \(n\) = 24.
+
+  (e) \(n^2\) is divisible by 3.
+
+  (f) \(n\) is even and divisible by 3.
+
+*A* To determine which conditions are both necessary and sufficient for the natural number \(n\) to be divisible by 6,
+we need to identify conditions that must hold true for \(n\) to be divisible by 6 and that are also enough to guarantee
+divisibility by 6.
+
+*Necessary and Sufficient Conditions*:
+
+  (f) \(n\) is even and divisible by 3.
+
+    - Necessary: If \(n\) is divisible by 6, it must be both even and divisible by 3,
+
+    - Sufficient: If \(n\) is even and divisible by 3, it will be divisible by 6.
+
+    - Example: \(n = 18\). Since 18 is even and divisible by 3, it is divisible by 6.
+
+*Other Condition*:
+
+  (a) \(n\) divisible by 3.
+
+    - Not Sufficient: \(n\) also needs to be even.
+
+    - Not Necessary: Being divisible by 3 alone does not ensure \(n\) is divisible by 6.
+
+    - Example: \(n = 9\) is divisible by 3 but not by 6.
+
+  (b) \(n\) divisible by 9.
+
+    - Not Sufficient: \(n\) must also be even.
+
+    - Not Necessary: \(n\) can be divisible by 6 without being divisible by 9.
+
+    - Example: \(n = 9\) is divisible by 3 but not by 6.
+
+  (c) \(n\) divisible by 12.
+
+    - Sufficient: If \(n\) divisible by 12, it will also divisible by 6.
+
+    - Not Necessary: \(n\) does not need to be divisible by 12 to be divisible by 6.
+
+    - Example: \(n = 12\). Since 12 is divisible by 12, it also divisible by 6.
+
+  (d) \(n = 24\)
+
+    - Sufficient: 24 is divisible by 6.
+
+    - Not Necessary: The specific value 24 is not needed for \(n\) to be divisible by 6.
+
+    - Example: \(n = 24\). Since 24 is divisible by 6, it is satisfies the condition.
+
+  (e) \(n^2\) is divisible by 3.
+
+    - Not Sufficient: \(n\) must also be even.
+
+    - Not Necessary: Being divisible by 3 alone does not ensure \(n\) is divisible by 6.
+
+    - Example: \(n = 9\). Since \(9^2 = 81\) it is divisible by 3, but 9 is not divisible by 6.
+
+** Problem Set 2 - Part 4
+
+Identify the antecedent and in the conditional "If the apples are red, they are ready to eat".
+
+*THE APPLES ARE RED* \hspace{0.2in} *THE APPLES ARE READY TO EAT*
+
+*A*:
+
+  - Antecedent: The apples are red
+
+  - Conditional: The apples are ready to eat
+
+In logical form:
+
+  - If (the apples are red) \(implies\) (they are ready to eat).
+
+** Problem Set 2 - Part 5
+
+Identify the antecedent and in the conditional "The differentiability of a function \(f\) is sufficient for \(f\) to be continuous."
+
+*\(f\) IS DIFFERENTIABLE* \hspace{0.2in} *\(f\) is CONTINUOUS*
+
+*A*:
+
+  - Antecedent: \(f\) is differentiable
+
+  - Conditional: \(f\) is continuous.
+
+Rewritten statement:
+
+  - "If \(f\) is differentiable (antecedent), then \(f\) is continuous (consequent)."
+
+In logical form:
+
+  - \(f\) is differentiable \(\implies\) \(f\) is continuous.
+
+** Problem Set 2 - Part 6
+
+Identify the antecedent and in the conditional "A function \(f\) is bounded if \(f\) is integrable"
+
+*\(f\) IS BOUNDED* \hspace{0.2in} *\(f\) IS INTEGRABLE*
+
+*A*:
+
+  - Antecedent: \(f\) is integrable
+
+  - Conditional: \(f\) is bounded
+
+Rewritten statement:
+
+  - "If \(f\) is integrable (antecedent), then \(f\) is bounded (consequent)."
+
+In logical form:
+
+  - \(f\) is integrable \(\implies\) \(f\) is bounded.
+
+** Problem Set 2 - Part 7
+
+Identify the antecedent and in the conditional "A sequence \(S\) is bounded whenever \(S\) is convergent"
+
+*\(S\) IS BOUNDED* \hspace{0.2in} *\(S\) IS CONVERGENT*
+
+*A*:
+
+  - Antecedent: S is convergent
+
+  - Conditional: S is bounded
+
+Rewritten statement:
+
+  - "If \(S\) is convergent (antecedent), then \(S\) is bounded"
+
+In logical form:
+
+  - \(S\) is convergent \(\implies\) \(S\) is bounded.
+
+** Problem Set 2 - Part 8
+
+Identify the antecedent and in the conditional "It is necessary that \(n\) is prime in order for \(2^n - 1\) to be
+prime"
+
+*\(n\) IS PRIME* \hspace{0.2in} *\(2^n - 1\) IS PRIME*
+
+*A*:
+
+  - Antecedent: \(2^n - 1\) is prime
+
+  - Conditional: \(n\) is prime
+
+Rewritten statement:
+
+   - "If (\2^n - 1\) is prime (antecedent), then \(n\) is prime (consequent)".
+
+In logical form:
+
+  - \(2^n - 1\) is prime \(\implies\) \(n\) is prime.
+
+** Problem Set 2 - Part 9
+
+Identify the antecedent and in the conditional "The team wins only when Karl is playing"
+
+*THE TEAM WINS* \hspace{0.2in} *KARL IS PLAYING*
+
+*A*:
+
+The antecedent is the condition that must be met for the consequent occur.
+
+The consequent is the result or outcome that follows from the antecedent.
+
+  - Antecedent: Karl is playing
+
+  - Consequent: The teams wins
+
+So the conditional statement can be rewritten as:
+
+  - "If the team wins, then Karl is playing."
+
+In logical form:
+
+  - Symbolic: Team wins \(\implies\) Karl is playing
+
+** Problem Set 2 - Part 10
+
+Identify the antecedent and in the conditional "when Karl plays the team wins"
+
+*THE TEAM WINS* \hspace{0.2in} *KARL IS PLAYING*
+
+*A*:
+
+The antecedent is the condition that must be met for the consequent occur.
+
+The consequent is the result or outcome that follows from the antecedent.
+
+  - Antecedent: Karl is playing
+
+  - Consequent: The team wins
+
+So the conditional statement can be rewritten as:
+
+  - "If Karl plays, then the team wins."
+
+In logical form:
+
+  - Symbolic: Karl is playing \(\implies\) The teams wins.
+
+** Problem Set 2 - Part 11
+
+Identify the antecedent and in the conditional "The team wins when Karl is playing"
+
+*THE TEAM WINS* \hspace{0.2in} *KARL IS PLAYING*
+
+*A*:
+
+The antecedent is the condition that must be met for the consequent occur.
+
+The consequent is the result or outcome that follows from the antecedent.
+
+  - Antecedent: Karl is playing
+
+  - Consequent: The team wins.
+
+So the conditional statement can be rewritten as:
+
+  - "If Karl is playing, then the team wins."
+
+In logical form:
+
+  - Symbolic: Karl is playing \(\implies\) The teams wins.
+
+** Problem Set 2 - Part 12
+
+*Q* For natural number \(m, n\), is it true than \(mn\) is even iff \(m\) and \(n\) are even?
+
+*A*: A number is even if it can be written as 2 times some integer and it can be divided by 2 without leaving a
+remainder. this is the definition we use in mathematics. For example:
+
+  - The number 4 is even because it can be written as \(2 X 2\)
+
+  - The number 10 is even because it can be written as \(2 X 5\)
+
+*Examples wit Variables*:
+
+If we let \(m\) and \(n\) be even numbers, we can write:
+
+  - \(m = 2k\), where \(k\) is an integer
+
+  - \(n = 2l\), where \(l\) is an integer.
+
+Here, \(k\) and \(l\) represent any integer values.
+
+*Calculating the Product \(mn\)*:
+
+Now, let's calculate the product \(mn\):
+
+  - \(m X n = (2k) x (2l) = 2 x k x 2 x l = 4kl\)
+
+Here's why:
+
+  - \(m\) is \(2k\) (since \(m\) is even).
+
+  - \(n\) is \(2l\) (since \(n\) is even).
+
+*Resulting Product*:
+
+The product \(mn = 4kl\)
+
+  - \(4kl\) is clearly divisible by 2, which makes \(mn\) an even number.
+
+*Truth Table Revisited*:
+
+|---+-------------------------+-------------------------+-----------------------------------------------+----------------------------+---|
+|   |           <c>           |           <c>           |                      <c>                      |            <c>             |   |
+|   | \(m\) is even \((E_m)\) | \(n\) is even \((E_n)\) | Both \(m\) and \(n\) are even \((E_m \land E_n)\) | \(mn\) is even \((E_m_n )\) |   |
+|---+-------------------------+-------------------------+-----------------------------------------------+----------------------------+---|
+| / |            <            |            <            |                       <                       |             <              | > |
+|   |            T            |            T            |                       T                       |             T              |   |
+|   |            T            |            F            |                       F                       |             T              |   |
+|   |            F            |            T            |                       F                       |             T              |   |
+|   |            F            |            F            |                       F                       |             F              |   |
+|---+-------------------------+-------------------------+-----------------------------------------------+----------------------------+---|
+
+|---+----------------------------+---|
+|   |            <c>             |   |
+|   | \(E_m_n \iff (E_m \land E_n)\) |   |
+|---+----------------------------+---|
+| / |             <              | > |
+|   |             T              |   |
+|   |             F              |   |
+|   |             F              |   |
+|   |             T              |   |
+|---+----------------------------+---|
+
+*Explanation of the Truth Table*:
+
+  - First Row: Both \(m\) and \(n\) are even. The product \(mn\) is even.
+
+    logical form:
+
+      - \(E_m_n \iff (E_m \land E_n)\) is true.
+
+  - Second Row: \(m\) is even, \(n\) is odd. The product \(mn\) is even.
+
+    logical form:
+
+      - \(E_m_n \iff (E_m \land E_n)\) is false.
+
+  - Third Row: \(m\) is odd, \(n\) is even, the product \(mn\) is even.
+
+    logical form:
+
+      - \(E_m_n \iff (E_m \land E_n)\) is false.
+
+  - Fourth Row: Both \(m\) and \(n\) are odd. The product \(mn\) is odd.
+
+      - \(E_m_n \iff (E_m \land E_n)\) is true.
+
+From the truth table, we see that \(E_m_n \iff (E_m \land E_n)\) is not true in all cases. This confirms that the statement
+"\(mn\) is even if and only iff both \(m\) and \(n\) are even" is false. The correct statement is "\(mn\) is even if at
+least one of \(m\) or \(n\) is even".
+
+** Problem Set 2 - Part 13
+
+*Q* Is it true than \(mn\) is odd iff \(m\) and \(n\) are odd?
+
+*A* Yes, the statement "\(mn\) is odd if and only if \(m\) and \(n\) are odd" is true. Here's the reasoning and proof
+using a truth table.
+
+*Proof*:
+
+forward Direction:
+
+If \(m\) and \(n\) are both odd, then \(mn\) is odd.
+
+  - let \(m = 2a + 1\) and \(n = 2b + 1\) where \(a\) and \(b\) are integers (since \(m\) and \(n\) are odd).
+
+  - Then \(mn = (2a + 1) (2b + 1) = 4ab + 2a + 2b + 1 = 2(2ab + a + b) + 1\).
+
+  - \(2(2ab + a + b) + 1\) is clearly of the form \(2k + 1\) where \(k = 2ab + a + b\), hence \(mn\) is odd.
+
+Reserve Direction:
+
+If \(mn\) is odd, then both \(m\) and \(n\) must be odd.
+
+  - Suppose \(mn\) is odd.
+
+  - If either \(m\) \(n\) were even, \(mn\) would be even (since an even number multiplied by any other number is even).
+
+  - Therefore, for \(mn\) to be odd, both \(m\) and \(n\) must be odd.
+
+*Truth Tables*
+
+Let's construct a truth table to illustrate this.
+
+|---+------------------------+------------------------+----------------------------------------------+---------------------------+---|
+|   |          <c>           |          <c>           |                     <c>                      |            <c>            |   |
+|   | \(m\) is odd \((O_m)\) | \(n\) is odd \((O_n)\) | Both \(m\) and \(n\) are odd \((O_m \land O_n)\) | \(mn\) is odd \((O_m_n\)) |   |
+|---+------------------------+------------------------+----------------------------------------------+---------------------------+---|
+| / |           <            |           <            |                      <                       |             <             | > |
+|   |           T            |           T            |                      T                       |             T             |   |
+|   |           T            |           F            |                      F                       |             F             |   |
+|   |           F            |           T            |                      F                       |             F             |   |
+|   |           F            |           F            |                      F                       |             F             |   |
+|---+------------------------+------------------------+----------------------------------------------+---------------------------+---|
+
+*Explanation of the Truth Table*:
+
+  - First Row: Both \(m\) and \(n\) are odd. The product \(mn\) is odd.
+
+  - Second Row: \(m\) is odd, \(n\) is even. the product \(mn\) is even.
+
+  - Third Row: \(m\) is even, \(n\) is odd. The product \(mn\) is even.
+
+  - Fourth Row: Both \(m\) and \(n\) are even. The product \(mn\) is even.
+
+*Conclusion*:
+
+The truth table confirms that \(mn\) is odd if and only if both \(mn\) are odd. This means that the statement "\(mn\) is
+odd iff \(m\) and \(n\) is odd" are true.
+
+** Problem Set 2 - Part 14
+
+Which the following pairs of proposition are equivalent?
+
+(a) \(\neg P \lor Q\), \(P \implies Q\)
+
+(b) \(\neg(P \lor Q))\, \(\neg P \land \neg Q\)
+
+(c) \(\neg P \lor \neg Q\), \(P \lor \neg Q\)
+
+(d) \(\neg(P \and Q)\), \(\neg P \lor Q\)
+
+(e) \(\neg(P \implies (Q \lor R))\), \(\neg(P \implies Q) \lor \neg(P \implies R)\)
+
+(f) \(P \implies (Q \implies R)\), \((P \land Q) \implies R\)
+
+*A*: Let's analyze each pair of propositions to determine if they are logically equivalent:
+
+*(a) \(\neg P \lor Q\), \(P \implies Q\)*
+
+We start with the truth tables for these two proposition:
+
+|---+-----+-----+---------+-------------+------------------+---|
+|   | <c> | <c> |   <c>   |     <c>     |       <c>        |   |
+|   |  P  |  Q  | \(\neg P\) | \(\neg P \lor Q\) | \(P \implies Q\) |   |
+|---+-----+-----+---------+-------------+------------------+---|
+| / |  <  |  <  |    <    |      <      |        <         | > |
+|   |  T  |  T  |    F    |      T      |        T         |   |
+|   |  T  |  F  |    F    |      F      |        F         |   |
+|   |  F  |  T  |    T    |      T      |        T         |   |
+|   |  F  |  F  |    T    |      T      |        T         |   |
+|---+-----+-----+---------+-------------+------------------+---|
+
+From the table, we see that \(\neg P \lor Q\) and \(P \implies Q\) have the same truth values in all cases. Thus, they are
+*equivalent*.
+
+*(b) \(\neg(P \lor Q))\, \(\neg P \land \neg Q\)*
+
+|---+-----+-----+-----------+--------------+---------+---------+---------------+---|
+|   | <c> | <c> |    <c>    |     <c>      |   <c>   |   <c>   |      <c>      |   |
+|   |  P  |  Q  | \(P \lor Q\) | \(\neg(P \lor Q)\) | \(\neg P\) | \(\neg Q\) | \(\neg P \land \neg Q\) |   |
+|---+-----+-----+-----------+--------------+---------+---------+---------------+---|
+| / |  <  |  <  |     <     |      <       |    <    |    <    |       <       | > |
+|   |  T  |  T  |     T     |      F       |    F    |    F    |       F       |   |
+|   |  T  |  F  |     T     |      F       |    F    |    T    |       F       |   |
+|   |  F  |  T  |     T     |      F       |    T    |    F    |       F       |   |
+|   |  F  |  F  |     F     |      T       |    T    |    T    |       T       |   |
+|---+-----+-----+-----------+--------------+---------+---------+---------------+---|
+
+Form the table, we see that \(\neg(P \lor Q)\) and \(\neg P \land \neg Q\) have the same truth values in all cases. This, they are
+*equivalent*.
+
+*(c) \(\neg P \lor \neg Q\), \(P \lor \neg Q\)*
+
+|---+-----+-----+---------+---------+---------------+------------+---|
+|   | <c> | <c> |   <c>   |   <c>   |      <c>      |    <c>     |   |
+|   |  P  |  Q  | \(\neg P\) | \(\neg Q\) | \(\neg P \lor \neg Q\) | \(P \lor \neg Q) |   |
+|---+-----+-----+---------+---------+---------------+------------+---|
+| / |  <  |  <  |    <    |    <    |       <       |     <      | > |
+|   |  T  |  T  |    F    |    F    |       F       |     T      |   |
+|   |  T  |  F  |    F    |    T    |       T       |     T      |   |
+|   |  F  |  T  |    T    |    F    |       T       |     F      |   |
+|   |  F  |  F  |    T    |    T    |       T       |     T      |   |
+|---+-----+-----+---------+---------+---------------+------------+---|
+
+From the table, we see that \(\neg P \lor \neg Q\) and \(P \lor \neg Q\) do not have the same truth values in all cases. Thus, they are
+*not equivalent*.
+
+*(d) \(\neg(P \and Q)\), \(\neg P \lor Q\)*
+
+|---+-----+-----+-----------+--------------+---------+------------+---|
+|   | <c> | <c> |    <c>    |     <c>      |   <c>   |    <c>     |   |
+|   |  P  |  Q  | \(P \land Q\) | \(\neg(P \land Q)\) | \(\neg P\) | \(\neg P \lor Q) |   |
+|---+-----+-----+-----------+--------------+---------+------------+---|
+| / |  <  |  <  |     <     |      <       |    <    |     <      | > |
+|   |  T  |  T  |     T     |      F       |    F    |     T      |   |
+|   |  T  |  F  |     F     |      T       |    F    |     F      |   |
+|   |  F  |  T  |     F     |      T       |    T    |     T      |   |
+|   |  F  |  F  |     F     |      T       |    T    |     T      |   |
+|---+-----+-----+-----------+--------------+---------+------------+---|
+
+From the table, we see that \(\neg(P \land Q)\) and \(\neg P \lor Q\) do not have the same truth values in all cases. Thus, they are
+*not equivalent*.
+
+*(e) \(\neg(P \implies (Q \lor R))\), \(\neg(P \implies Q) \lor \neg(P \implies R)\)*
+
+|---+-----+-----+-----+-----------+------------------------+---------------------------+---|
+|   | <c> | <c> | <c> |    <c>    |          <c>           |            <c>            |   |
+|   |  P  |  Q  |  R  | \(Q \lor R\) | \(P \implies (Q \lor R)\) | \(\neg(P \implies (Q \lor R))\) |   |
+|---+-----+-----+-----+-----------+------------------------+---------------------------+---|
+| / |  <  |  <  |  <  |     <     |           <            |             <             | > |
+|   |  T  |  T  |  T  |     T     |           T            |             F             |   |
+|   |  T  |  T  |  F  |     T     |           T            |             F             |   |
+|   |  T  |  F  |  T  |     T     |           T            |             F             |   |
+|   |  T  |  F  |  F  |     F     |           F            |             T             |   |
+|   |  F  |  T  |  T  |     T     |           T            |             F             |   |
+|   |  F  |  T  |  F  |     T     |           T            |             F             |   |
+|   |  F  |  F  |  T  |     T     |           T            |             F             |   |
+|   |  F  |  F  |  F  |     F     |           T            |             F             |   |
+|---+-----+-----+-----+-----------+------------------------+---------------------------+---|
+
+|---+------------------+---------------------+------------------+----------------------+---|
+|   |       <c>        |         <c>         |       <c>        |         <c>          |   |
+|   | \(P \implies Q\) | \(\neg(P \implies Q)\) | \(P \implies R\) | \(\neg (P \implies R)\) |   |
+|---+------------------+---------------------+------------------+----------------------+---|
+| / |        <         |          <          |        <         |          <           | > |
+|   |        T         |          F          |        T         |          F           |   |
+|   |        T         |          F          |        F         |          T           |   |
+|   |        F         |          T          |        T         |          F           |   |
+|   |        F         |          T          |        F         |          T           |   |
+|   |        T         |          F          |        T         |          F           |   |
+|   |        T         |          F          |        T         |          F           |   |
+|   |        T         |          F          |        T         |          F           |   |
+|   |        T         |          F          |        T         |          F           |   |
+|---+------------------+---------------------+------------------+----------------------+---|
+
+From the table, we see that \(\neg(P \implies (Q \lor R))\) and \(\neg(P \implies Q) \lor \neg(P \implies R)\) have the same truth
+values in all cases. Thus, they are *not equivalent*.
+
+*(f) \(P \implies (Q \implies R)\), \((P \land Q) \implies R\)*
+
+|---+-----+-----+-----+------------------+-------------------------------+---|
+|   | <c> | <c> | <c> |       <c>        |              <c>              |   |
+|   |  P  |  Q  |  R  | \(Q \implies R\) | \(P \implies (Q \implies R)\) |   |
+|---+-----+-----+-----+------------------+-------------------------------+---|
+| / |  <  |  <  |  <  |        <         |               <               | > |
+|   |  T  |  T  |  T  |        T         |               T               |   |
+|   |  T  |  T  |  F  |        F         |               F               |   |
+|   |  T  |  F  |  T  |        T         |               T               |   |
+|   |  T  |  F  |  F  |        T         |               T               |   |
+|   |  F  |  T  |  T  |        T         |               T               |   |
+|   |  F  |  T  |  F  |        F         |               T               |   |
+|   |  F  |  F  |  T  |        T         |               T               |   |
+|   |  F  |  F  |  F  |        T         |               T               |   |
+|---+-----+-----+-----+------------------+-------------------------------+---|
+
+|---+-----------+------------------------+---|
+|   |    <c>    |          <c>           |   |
+|   | \(P \land Q\) | \((P \land Q) \implies R\) |   |
+|---+-----------+------------------------+---|
+| / |     <     |           <            | > |
+|   |     T     |           T            |   |
+|   |     T     |           F            |   |
+|   |     F     |           T            |   |
+|   |     F     |           T            |   |
+|   |     F     |           T            |   |
+|   |     F     |           T            |   |
+|   |     F     |           T            |   |
+|   |     F     |           T            |   |
+|---+-----------+------------------------+---|
+
+From the table, we see that \(P \implies (Q \implies R)\) and \((P \land Q) \implies R\) have the same truth values in all
+cases. Thus, they are *equivalent*.
+
+** Problem Set 2 - Part 15
+
+A major focus of this course is learning how to assess mathematical reasoning. How good you are at doing that lies on
+sliding scale. Your task is to evaluate the purported (claim to be) proof below, and evaluate it according to the course
+rubric. Enter your evaluation (which should be a whole number between 0 and 24, inclusive) in the box. A number within 4
+points of the instructor's evaluation cunts as correct. *You should read the article "Using the evaluation rubric" on
+the course website (it includes a short explanatory video) before attempt this question*. There will be many more proof
+evaluation question like this as the course progress.
+
+[The scoring system somewhat arbitrary, due to limitation platform. But the goal is to provide opportunities for you to
+reflect on what makes an argument a good proof, and you are allowed to repeat the Problem Sets as many times as it takes
+to be able to progress. Your "scores" is simply feedback information. Moreover, the "passing grade" for Problem Sets is
+a low 35%.]
+
+HERE IS WHAT THE INDIVIDUAL SUBMITTED
+
+*Claim*: For any two proposition (P, Q), \(\neg P \land \neg Q\) is equivalent to \(\neg[P \land Q]\).
+
+Proof: Suppose that \(\neg P \land \neg Q\) is true, then booth \(\neg P\) and \(\neg Q\) are true. So \(P\) and \(Q\) are both false.
+Thus \(P \land Q\) is false. Hence \(\neg [P \land Q]\) is true. This argument clearly works other way. So we have implication in
+both directions, which proves to claim.
 
 
 * Footnotes
